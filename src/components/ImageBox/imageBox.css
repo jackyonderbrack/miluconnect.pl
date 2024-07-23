@@ -1,0 +1,45 @@
+#ImageBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 1.5rem;
+  background-color: var(--primary-dark-color);
+  align-items: left;
+  transition: all 161ms ease-in-out;
+
+  flex: 1 1 50%;
+}
+
+.box_image_heading {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  height: 40px;
+  h3 {
+    font-size: 1.05rem;
+  }
+}
+
+#ImageBox:hover {
+  border: 1px solid var(--secondary-dark-color);
+  background-color: transparent;
+}
+
+img {
+  width: 6rem;
+}
+
+.icon-box-divider {
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  width: 5rem;
+  height: 0.2rem;
+  background-color: var(--secondary-dark-color);
+  border-radius: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .ImageBox {
+    flex-basis: 50%;
+  }
+}

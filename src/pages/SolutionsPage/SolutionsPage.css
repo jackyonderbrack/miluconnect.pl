@@ -1,0 +1,9 @@
+.imageRows img {
+  flex: 1 1 25%;
+  max-width: 20%;
+}
+.imageRows {
+  padding: 1dvw 1rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}

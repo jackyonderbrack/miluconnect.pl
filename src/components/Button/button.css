@@ -1,0 +1,35 @@
+.btn-primary {
+  display: block;
+  color: var(--primary-dark-color);
+  background-color: var(--secondary-light-color);
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  min-width: 6rem;
+  text-align: center;
+  transition: all 161ms ease-in-out;
+}
+
+.btn-primary:hover {
+  border-color: var(--secondary-light-color);
+  color: var(--light-color);
+  background-color: transparent;
+}
+
+.btn-secondary {
+  display: block;
+  color: white;
+  background-color: var(--secondary-dark-color);
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  min-width: 6rem;
+  text-align: center;
+  transition: all 161ms ease-in-out;
+}
+
+.btn-secondary:hover {
+  border-color: var(--secondary-dark-color);
+  color: var(--light-color);
+  background-color: transparent;
+}

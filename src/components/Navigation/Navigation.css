@@ -1,0 +1,145 @@
+#Navigation {
+  background-color: #242424;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#NavigationHeader {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainLogoImg {
+  width: 3rem;
+}
+
+.mainLogoContent {
+  margin-top: -0.2rem;
+  font-size: 0.7rem;
+  flex-direction: column;
+  p:nth-child(1) {
+    margin-bottom: -1rem;
+  }
+  span:nth-child(1) {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  span:nth-child(2) {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  span::nth-child(3) {
+    font-size: 0.65rem;
+  }
+}
+
+.mainLogoContainer:hover {
+  color: white;
+}
+
+.mainLogoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.main-navigation-links {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.205);
+  border-radius: 1rem 1rem 0 0;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.nav-mobile-icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mainLogoContainer {
+    padding: 0.5rem;
+  }
+  .mainLogoImg {
+    width: 1rem;
+  }
+  .nav-mobile-icon {
+    display: block;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .main-navigation-links {
+    display: none;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out; /* Płynna animacja */
+    transform: translateX(-100%); /* Początkowe przesunięcie poza ekran */
+  }
+
+  .navigation-active {
+    display: flex;
+    position: fixed;
+    width: 200px;
+    height: 100dvh;
+    text-align: left;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #242424;
+    box-shadow: 0 15px 10px black;
+    align-items: flex-start;
+    justify-content: start;
+    animation: slideIn 0.3s forwards;
+    z-index: 25;
+  }
+
+  .navigation-hidden {
+    animation: slideOut 0.3s forwards;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.618);
+    pointer-events: none;
+    z-index: 25;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}

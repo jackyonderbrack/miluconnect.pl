@@ -1,0 +1,12 @@
+.ani-transition.enter {
+  animation: fadeIn 300ms ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

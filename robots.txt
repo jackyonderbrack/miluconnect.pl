@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /kontakt/
+Allow: /public/
+Allow: /rozwiazania/
+Allow: /
+
+Sitemap: https://miluconnect.pl/sitemap.xml

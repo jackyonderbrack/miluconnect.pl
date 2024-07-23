@@ -1,0 +1,7 @@
+.images-row img {
+  width: 8rem;
+  height: auto; /* Zachowuje proporcje obrazu */
+  object-fit: cover; /* Zapobiega rozciąganiu obrazów */
+  opacity: 0.7;
+  padding: 0.5rem;
+}

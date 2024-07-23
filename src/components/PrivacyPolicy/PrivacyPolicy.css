@@ -1,0 +1,13 @@
+.contactInfo, .tags {
+  font-size: 0.6rem;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  span:nth-child(2) {
+    font-size: 0.75rem;
+  }
+}

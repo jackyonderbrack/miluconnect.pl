@@ -1,0 +1,28 @@
+@keyframes slide-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#Header {
+  position: relative;
+  height: 50dvh;
+  display: flex;
+  align-items: center;
+}
+
+.headerContent {
+  margin-left: 6dvw;
+}
+
+.headerPicture {
+  position: absolute;
+  animation: slide-up 3.5s forwards;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  width: 60dvw;
+}

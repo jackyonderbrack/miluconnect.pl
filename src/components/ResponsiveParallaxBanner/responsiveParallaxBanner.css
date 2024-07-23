@@ -1,0 +1,103 @@
+.parallax-wrapper {
+  border-radius: 1rem;
+  height: auto;
+}
+
+.banner-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.banner-container-reverse {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.text-box {
+  background: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.796),
+    rgba(37, 60, 58, 0.6)
+  );
+  color: var(--secondary-dark-color);
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  && span {
+    color: white;
+  }
+}
+
+.image-box {
+  margin-top: 2rem;
+  position: relative;
+  height: auto;
+}
+.imageContainerFirst {
+  position: absolute;
+  width: min-content;
+}
+.firstPicture {
+  position: relative;
+  width: 24rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.firstOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  width: 24rem;
+  height: 20rem;
+  opacity: 0.5;
+  background-color: rgba(211, 123, 72, 0.377);
+}
+
+.imageContainerSecond {
+  position: relative;
+  width: min-content;
+}
+
+.secondPicture {
+  position: relative;
+  margin-left: 20rem;
+  margin-top: 10rem;
+  width: 20rem;
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.secondOverlay {
+  position: absolute;
+  top: 10rem;
+  bottom: 0;
+  left: 20rem;
+  right: 0;
+  width: 20rem;
+  height: 16rem;
+  border-radius: 100%;
+  opacity: 0.5;
+  background-color: rgba(211, 174, 72, 0.377);
+}
+
+@media screen and (max-width: 980px) {
+  .banner-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .image-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}

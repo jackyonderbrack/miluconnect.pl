@@ -1,0 +1,17 @@
+#Title h1 {
+    margin-bottom: 0;
+}
+
+#Title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1rem;
+}
+
+#Title .divider{
+    width: 17rem;
+}
