@@ -69,17 +69,17 @@ const HomePage = () => {
   return (
     <>
       <MetaTags
-        title="miluConnect - Rybnik"
-        description="miluConnect: Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu. Katowice, Rybnik, Żory, Mikołów, Śląsk"
+        title="MILU Connect"
+        description="Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu. Katowice, Rybnik, Żory, Mikołów, Śląsk"
       />
       <Header
         content={
           <div>
             <h1>
-              Zbudujemy Twoją <br />
-              <span className="text-gradient">Stronę internetową</span>
+              Potrzebujesz nowego rozwiązania? <br />
+              Twoja <span className="text-gradient">strona internetowa</span>
               <br />
-              od podstaw
+              pozyska klientów dla ciebie
             </h1>
           </div>
         }

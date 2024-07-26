@@ -11,6 +11,8 @@ import AniTransition from "./utils/AniTransition/AniTransition";
 import TrackPageView from "./components/GoogleAnalytics/TrackPageView";
 import CustomCookieConsent from "./components/CookieConsent/CookieConsent";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
+import ContactPageSent from "./pages/ContactPage/ContactPageSent";
+import { AccessProvider } from "./contexts/AccessContext";
 
 function Layout() {
   return (
@@ -35,8 +37,9 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "rozwiazania", element: <SolutionsPage /> },
       { path: "kontakt", element: <ContactPage /> },
+      { path: "wyslano", element: <ContactPageSent /> },
       { path: "*", element: <NotFoundPage /> },
-      { path: "polityka-prywatnosci", element: <PrivacyPolicyPage /> }
+      { path: "polityka-prywatnosci", element: <PrivacyPolicyPage /> },
     ],
   },
 ]);
@@ -44,7 +47,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div id="App">
-      <RouterProvider router={router} />
+      <AccessProvider>
+        <RouterProvider router={router} />
+      </AccessProvider>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 {
-  "name": "sofatechnologies_server",
+  "name": "miluconnect_server",
   "version": "1.0.1",
   "description": "",
   "main": "src/server.ts",

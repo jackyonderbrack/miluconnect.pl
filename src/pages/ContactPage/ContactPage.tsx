@@ -24,7 +24,7 @@ const ContactPage = () => {
         <div className="flex flex-col ">
           <h3>INFORMACJE DODATKOWE</h3>
           <p>Jeśli masz jakiekolwiek pytania zawsze możesz napisać do mnie zwykły prosty e-mail</p>
-          <h4>mike.projektowanie@gmail.com</h4>
+          <h4>kontakt@miluconnect.pl</h4>
         </div>
       </div>
     </>

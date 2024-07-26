@@ -14,9 +14,21 @@ router.get("/info", (_req, res) => {
   }
 });
 
+// router.post("/send-email", async (req, res) => {
+//   let transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//       user: process.env.USER_EMAIL,
+//       pass: process.env.USER_EMAIL_PWD,
+//     },
+//   });
+
+
 router.post("/send-email", async (req, res) => {
   let transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "s145.cyber-folks.pl",
+    port: 465,
+    secure: true, 
     auth: {
       user: process.env.USER_EMAIL,
       pass: process.env.USER_EMAIL_PWD,
@@ -24,7 +36,7 @@ router.post("/send-email", async (req, res) => {
   });
 
   let mailOptions = {
-    from: "contact@sofatechnologies.com",
+    from: "kontakt@miluconnect.pl",
     to: "mike.projektowanie@gmail.com",
     subject: `Wiadomość z witryny od: ${req.body.contactFormClientEmail}`,
     text: `Nadawca: ${req.body.contactFormClientName}\nWiadomość: ${req.body.contactFormMessage}`,
