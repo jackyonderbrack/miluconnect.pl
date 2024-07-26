@@ -1,4 +1,3 @@
-// src/components/CookieConsent/CookieConsent.tsx
 import React, { useEffect } from 'react';
 import CookieConsent, { Cookies } from 'react-cookie-consent';
 import { logPageView } from '../../analytics/analytics';
@@ -71,7 +70,7 @@ const CustomCookieConsent: React.FC = () => {
   return (
     <CookieConsent
       location="bottom"
-      buttonText="Tylko niezbędne"
+      buttonText="Akceptuj"
       declineButtonText="Odrzuć"
       enableDeclineButton
       onAccept={handleAccept}
