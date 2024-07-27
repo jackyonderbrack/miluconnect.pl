@@ -1,2 +1,12 @@
-.contactPageLayout {
+.contact-cta {
+    display: flex;
+    flex-direction: column;
+    img {
+        width: 1.5rem;
+    }
+    .contact-cta-child {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
 }

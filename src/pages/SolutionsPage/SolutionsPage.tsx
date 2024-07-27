@@ -88,8 +88,8 @@ const SolutionsPage = () => {
   return (
     <>
       <MetaTags
-       title="miluConnect - Sklepy internetowe Żory"
-       description="Poznaj nasze dedykowane rozwiązania IT: systemy zarządzania produkcją, zasobami oraz interaktywne gry i aplikacje. miluConnect - Tworzenie rozwiązań na miarę Twoich potrzeb."
+       title="MILU Connect - Sklepy internetowe Żory"
+       description="Poznaj nasze dedykowane rozwiązania IT: systemy zarządzania produkcją, zasobami oraz interaktywne gry i aplikacje."
       />
       <Header
         content={

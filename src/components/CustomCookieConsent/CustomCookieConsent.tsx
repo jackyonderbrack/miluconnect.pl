@@ -30,7 +30,7 @@ const CustomCookieConsent: React.FC = () => {
 
   const loadGtag = () => {
     const script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-18TG3P482S";
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-Z45CNGHHXT";
     script.async = true;
     document.head.appendChild(script);
 
@@ -38,7 +38,7 @@ const CustomCookieConsent: React.FC = () => {
       window.dataLayer = window.dataLayer || [];
       window.gtag = function(...args: any[]) { window.dataLayer.push(args); };
       window.gtag('js', new Date());
-      window.gtag('config', 'G-18TG3P482S');
+      window.gtag('config', 'G-Z45CNGHHXT');
     };
   };
 
