@@ -10,3 +10,16 @@
     opacity: 1;
   }
 }
+
+.ani-transition.exit {
+  animation: fadeOut 300ms ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

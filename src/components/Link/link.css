@@ -1,0 +1,13 @@
+.link-primary {
+    align-content: center;
+    color: var(--primary-light-color);
+    transition: all 160ms ease-in-out;
+}
+  
+.link-primary:hover {
+    color: var(--gradien-light-color-mid);
+    background-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    cursor: pointer;
+}

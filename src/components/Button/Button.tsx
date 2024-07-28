@@ -5,7 +5,7 @@ import useAnimateTransition from "../../utils/AniTransition/useAnimateTransition
 type ButtonProps = {
   linkTo: string;
   buttonText: string;
-  theme: "btn-primary" | "btn-secondary";
+  theme: "btn-primary" | "btn-secondary" | "btn-underline";
 };
 
 const Button: React.FC<ButtonProps> = ({ linkTo, buttonText, theme }) => {

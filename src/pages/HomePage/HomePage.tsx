@@ -37,8 +37,22 @@ import PortfolioHolisticSpaImg from "../../assets/portfolio/08_miluconnect-holis
 import PortfolioGentlemanshopImg from "../../assets/portfolio/02_miluconnect-gentlemanshop-strony-rybnik.png"
 import PortfolioStolarniaprecyzjaImg from "../../assets/portfolio/09_miluconnect-stolarniaprecyzja-spaslask-strony-rybnik-czerwionka-biznes.png"
 import MetaTags from "../../components/MetaTags/MetaTags";
+import Button from "../../components/Button/Button";
 
 const HomePage = () => {
+  const handleScroll = (targetId: string, offset: number) => {
+    const targetElement = document.getElementById (targetId);
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+    }
+  }
+
   const _homeContents_ImageBox = [
     {
       imgsrc: IconDedidcatedSolutions,
@@ -74,7 +88,8 @@ const HomePage = () => {
       />
       <Header
         content={
-          <div>
+          <>
+          <div className="home-page-header-text">
             <h1>
               Potrzebujesz nowego rozwiązania? <br />
               Twoja <span className="text-gradient">strona internetowa</span>
@@ -82,6 +97,11 @@ const HomePage = () => {
               pozyska klientów dla ciebie
             </h1>
           </div>
+          <div className="home-page-header-cta">
+            <Button linkTo="/kontakt" buttonText="Wycena" theme="btn-secondary" />
+            <Button linkTo={handleScroll('realizacje', 100)}
+          </div>
+          </>
         }
         imgUrl={EarthImg}
       />
@@ -97,7 +117,7 @@ const HomePage = () => {
           />
         ))}
       </section>
-      <section className="background-top my-3 py-4">
+      <section className="background-top my-3 py-4" id="realizacje">
         <div className="flex flex-col justify-content-center align-items-center">
           <h2>
             Sprawdź niektóre nasze <span className="text-gradient">realizacje</span>

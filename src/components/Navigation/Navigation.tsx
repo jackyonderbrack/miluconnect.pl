@@ -42,7 +42,7 @@ const Navigation: React.FC = () => {
               alt="Logo miluConnect"
               className="mainLogoImg"
             />
-            <div className="mainLogoContent">
+            <div className="mainLogoText">
               <p>
                 <span>m</span><span>ilu</span>
               </p>
