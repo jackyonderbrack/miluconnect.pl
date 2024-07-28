@@ -9,7 +9,7 @@
 
 #Header {
   position: relative;
-  height: 50dvh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
 }

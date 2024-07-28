@@ -38,18 +38,16 @@
   display: block;
   color: var(--primary-light-color);
   background-color: transparent;
-
   text-underline-offset: 0.4rem;
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
-  min-width: 6rem;
+  min-width: 4rem;
   text-align: center;
-  transition: all 161ms ease-in-out;
+  transition: all 160ms ease-in-out;
 }
 
 .btn-underline:hover {
-
-  border: 1px solid transparent;
-  text-decoration: underline;
+  border: 1px solid var(--secondary-light-color);
 }
+

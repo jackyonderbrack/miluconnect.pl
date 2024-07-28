@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import SolutionsPage from "./pages/SolutionsPage/SolutionsPage";
 import { ScrollToTop } from "./utils/ScrollToTop";
-import AniTransition from "./utils/AniTransition/AniTransition";
+// import AniTransition from "./utils/AniTransition/AniTransition";
 import TrackPageView from "./components/GoogleAnalytics/TrackPageView";
 import CustomCookieConsent from "./components/CustomCookieConsent/CustomCookieConsent";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
@@ -16,9 +16,6 @@ import { AccessProvider } from "./contexts/AccessContext";
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
-
-const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID
-ReactGA.initialize(GA4_MEASUREMENT_ID);
 
 function Layout() {
   const location = useLocation();
@@ -29,11 +26,12 @@ function Layout() {
 
   return (
     <>
-      <ScrollToTop />
+      
       <Navigation />
-      <AniTransition>
+      {/* <AniTransition> */}
+      <ScrollToTop />
         <Outlet />
-      </AniTransition>
+      {/* </AniTransition> */}
       <Footer />
       <TrackPageView />
       <CustomCookieConsent />

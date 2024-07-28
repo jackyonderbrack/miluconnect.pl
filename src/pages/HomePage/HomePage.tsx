@@ -7,7 +7,6 @@ import IconSpectialistTeam from "../../assets/icon-webspecialists-miluconnect.pn
 import IconPartnership from "../../assets/icon-partnership-miluconnect.png";
 // Banners
 import EarthImg from "../../assets/background-earth-01-miluconnect.webp";
-
 // Clients
 import Partner1 from "../../assets/partners/partner-artmageddon-miluconnect.png";
 import Partner2 from "../../assets/partners/partner-gentlemanshop-miluconnect.png";
@@ -17,14 +16,12 @@ import Partner5 from "../../assets/partners/partner-mensworldbarbershop-miluconn
 import Partner6 from "../../assets/partners/partner-metkom-miluconnect.png";
 import Partner7 from "../../assets/partners/partner-natarasie-miluconnect.png";
 import Partner8 from "../../assets/partners/partner-vending4all-miluconnect.png";
-
 // Components
 import ImageBox from "../../components/ImageBox/ImageBox";
 import Title from "../../components/Title/Title";
 import ImagesRow from "../../components/ImageRow/ImageRow";
 import Card from "../../components/Card/Card";
 import Header from "../../components/Header/Header";
-
 // Images
 import PortfolioSkinsnImg from "../../assets/portfolio/07_miluconnect-skinsn-plock-rybnik-strony.png";
 import PortfolioRestauracjaLesnaPerlaImg from "../../assets/portfolio/03_miluconnect-lesnaperla-strony-rybnik-radlin.png";
@@ -40,19 +37,6 @@ import MetaTags from "../../components/MetaTags/MetaTags";
 import Button from "../../components/Button/Button";
 
 const HomePage = () => {
-  const handleScroll = (targetId: string, offset: number) => {
-    const targetElement = document.getElementById (targetId);
-    if (targetElement) {
-      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      })
-    }
-  }
-
   const _homeContents_ImageBox = [
     {
       imgsrc: IconDedidcatedSolutions,
@@ -89,18 +73,18 @@ const HomePage = () => {
       <Header
         content={
           <>
-          <div className="home-page-header-text">
-            <h1>
-              Potrzebujesz nowego rozwiązania? <br />
-              Twoja <span className="text-gradient">strona internetowa</span>
-              <br />
-              pozyska klientów dla ciebie
-            </h1>
-          </div>
-          <div className="home-page-header-cta">
-            <Button linkTo="/kontakt" buttonText="Wycena" theme="btn-secondary" />
-            <Button linkTo={handleScroll('realizacje', 100)}
-          </div>
+            <div className="home-page-header-text">
+              <h1>
+                Potrzebujesz nowego rozwiązania? <br />
+                Twoja <span className="text-gradient">strona internetowa</span>
+                <br />
+                pozyska klientów dla ciebie
+              </h1>
+            </div>
+            <div className="home-page-header-cta">
+              <Button linkTo="/kontakt" buttonText="Wycena" theme="btn-secondary" />
+              <Button linkTo="#" buttonText="Realizacje" theme="btn-underline" targetId="realizacje" offset={125} />
+            </div>
           </>
         }
         imgUrl={EarthImg}

@@ -10,7 +10,6 @@ form {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 form .submitArea {
@@ -26,7 +25,6 @@ form textarea {
   border-bottom: 1px solid var(--primary-light-color);
   text-align: left;
   padding: var(--padding);
-  display: flex;
   margin-bottom: 2rem;
 }
 
@@ -43,11 +41,8 @@ form ::placeholder {
 
 .input-field {
   position: relative;
-  width: 100%;
-  min-width: 14rem;
-  max-width: 24rem;
   input, textarea {
-    width: 100%;
+    width: clamp(200px, 50vw, 300px);
     font-family: inherit;
     font-size: 1rem;
   }

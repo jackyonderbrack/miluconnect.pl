@@ -7,7 +7,6 @@
   background-color: var(--primary-dark-color);
   align-items: left;
   transition: all 161ms ease-in-out;
-
   flex: 1 1 50%;
 }
 
@@ -38,8 +37,32 @@ img {
   border-radius: 1rem;
 }
 
-@media (max-width: 1200px) {
-  .ImageBox {
-    flex-basis: 50%;
+.handleShowButton {
+  color: var(--primary-light-color);
+  font-size: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+.handleShowButton:hover {
+  cursor: pointer;
+}
+
+.icon-box-content.active {
+  height: 250px;
+  height: calc-size(auto); 
+  /* czekamy na update */
+}
+
+@media (max-width: 728px) {
+  #ImageBox {
+    padding-bottom: 0.8rem;
+  }
+  img {
+    width: 4rem;
+  }
+  .icon-box-content {
+    height: 50px;
+    transition: height 0.2s;
+    overflow: hidden;
   }
 }

@@ -5,31 +5,19 @@ import ContactImg from "../../assets/background-letters-01-miluconnect.webp";
 import { useAccess } from "../../contexts/AccessContext";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import { Helmet } from "react-helmet";
 
 const ContactPageSent = () => {
     const { accessGranted } = useAccess()
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (accessGranted) {
+        if (!accessGranted) {
             navigate('/kontakt')
         }
     }, [accessGranted, navigate]);
 
     return (
         <>
-            <Helmet>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z45CNGHHXT"></script>
-                <script>
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-Z45CNGHHXT');
-                `}
-                </script>
-            </Helmet>
             <Header
                 content={
                     <div>

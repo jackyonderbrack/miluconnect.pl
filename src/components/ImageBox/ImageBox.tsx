@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./imageBox.css";
 type ImageBoxProps = {
   imgsrc: string;
@@ -6,6 +7,11 @@ type ImageBoxProps = {
 };
 
 const ImageBox: React.FC<ImageBoxProps> = ({ imgsrc, heading, content }) => {
+  const [isActive, setIsActive] = useState(false)
+
+  const handleShow = () => {
+    setIsActive(!isActive)
+  }
   return (
     <div id="ImageBox">
       <img
@@ -16,7 +22,10 @@ const ImageBox: React.FC<ImageBoxProps> = ({ imgsrc, heading, content }) => {
         <h3>{heading}</h3>
       </div>
       <div className="icon-box-divider" />
-      <div className="icon-box-content">{content}</div>
+      <div className={`icon-box-content ${isActive ? "active" : ""}`}>{content}</div>
+      <div className="handleShowButton" onClick={handleShow}>
+        {isActive ? "Zwiń" : "Rozwiń"}
+      </div>
     </div>
   );
 };
