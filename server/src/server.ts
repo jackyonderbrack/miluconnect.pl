@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/rest/contact-form", sendEmailRoute);
 
 // Healthcheck
-app.get("/rest/ping", (_req, res) => res.status(200).json({ message: "pong" }));
+app.get("/rest/ping", (_req, res) => res.status(200).json({ message: `pong dla miluconnect.pl na porcie ${_PORT}` }));
 
 // Server listen
 app.listen(_PORT, () => Logging.info(`Serwer działa na porcie ${_PORT}`));

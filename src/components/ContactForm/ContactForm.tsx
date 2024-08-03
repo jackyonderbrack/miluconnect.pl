@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
-import { useNavigate } from "react-router-dom";
 import { useContactFormik } from "../../utils/useFormikConfig";
-import { useAccess } from "../../contexts/AccessContext";
 
 const ContactForm: React.FC = () => {
   const [submitErrorStatus, setSubmitErrorStatus] = useState("");
   const [submitSuccessStatus, setSubmitSuccessStatus] = useState("");
-  const navigate = useNavigate()
-  const { grantAccess } = useAccess()
   const formik = useContactFormik(async (formData) => {
     try {
       const response = await fetch(`https://miluconnect.pl/rest/contact-form/send-email`, {
@@ -18,16 +14,12 @@ const ContactForm: React.FC = () => {
         },
         body: JSON.stringify(formData),
       });
-
       if (response.ok) {
         const responseData = await response.text();
         console.log(responseData);
-
         formik.resetForm();
         setSubmitErrorStatus("");
         setSubmitSuccessStatus("Poszło! Do usłyszenia.");
-        grantAccess();
-        navigate("/wyslano")
       } else {
         console.error("Błąd serwera:", response.status);
         setSubmitErrorStatus("Błąd serwera, spróbuj ponownie");
