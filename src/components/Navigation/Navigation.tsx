@@ -65,6 +65,11 @@ const Navigation: React.FC = () => {
             Rozwiązania
           </Link>
           <Link
+            to="/nowosci"
+            onClick={toggleMobileNav}>
+            Nowości
+          </Link>
+          <Link
             to="/kontakt"
             onClick={toggleMobileNav}>
             Kontakt

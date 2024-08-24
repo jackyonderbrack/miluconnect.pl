@@ -16,6 +16,7 @@ import { AccessProvider } from "./contexts/AccessContext";
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
+import NewsPage from "./pages/NewsPage/NewsPage";
 
 function Layout() {
   const location = useLocation();
@@ -50,6 +51,7 @@ const router = createBrowserRouter([
       { path: "wyslano", element: <ContactPageSent /> },
       { path: "*", element: <NotFoundPage /> },
       { path: "polityka-prywatnosci", element: <PrivacyPolicyPage /> },
+      { path: "nowosci", element: <NewsPage />}
     ],
   },
 ]);
