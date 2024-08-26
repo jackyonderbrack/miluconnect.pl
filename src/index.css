@@ -26,8 +26,8 @@
   --dark-color: rgb(56, 59, 58);
   --white: #ffffff;
   --black: #000000;
+  --radius-md: 1rem;
 
-  max-width: 1440px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -36,6 +36,7 @@
 body {
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+  margin: 0;
 }
 
 .text-gradient {

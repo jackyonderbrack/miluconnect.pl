@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import SolutionsPage from "./pages/SolutionsPage/SolutionsPage";
 import { ScrollToTop } from "./utils/ScrollToTop";
-// import AniTransition from "./utils/AniTransition/AniTransition";
 import TrackPageView from "./components/GoogleAnalytics/TrackPageView";
 import CustomCookieConsent from "./components/CustomCookieConsent/CustomCookieConsent";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
@@ -17,6 +16,12 @@ import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
 import NewsPage from "./pages/NewsPage/NewsPage";
+import Sidenav from "./admin/components/Sidenav/Sidenav";
+import Dashboard from "./admin/pages/dashboard/Dashboard";
+import Posts from "./admin/pages/posts/Posts";
+import Users from "./admin/pages/users/Users";
+import Settings from "./admin/pages/settings/Settings";
+import Reports from "./admin/pages/reports/Reports";
 
 function Layout() {
   const location = useLocation();
@@ -26,34 +31,58 @@ function Layout() {
   }, [location]);
 
   return (
-    <>
-      
+    <main id="Application">
       <Navigation />
       {/* <AniTransition> */}
       <ScrollToTop />
-        <Outlet />
+      <Outlet />
       {/* </AniTransition> */}
       <Footer />
       <TrackPageView />
       <CustomCookieConsent />
-    </>
+    </main>
   );
 }
+
+
+function AdminLayout() {
+  return (
+    <main id="Admin">
+      <Sidenav />
+      <div className="admin-outlet">
+        <Outlet />
+      </div>
+    </main>
+  );
+}
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <Layout />, // Główny layout aplikacji
     children: [
       { index: true, element: <HomePage /> },
       { path: "rozwiazania", element: <SolutionsPage /> },
       { path: "kontakt", element: <ContactPage /> },
       { path: "wyslano", element: <ContactPageSent /> },
-      { path: "*", element: <NotFoundPage /> },
       { path: "polityka-prywatnosci", element: <PrivacyPolicyPage /> },
-      { path: "nowosci", element: <NewsPage />}
+      { path: "nowosci", element: <NewsPage />},
     ],
   },
+  {
+    path: "/admin-panel",
+    element: <AdminLayout />, // Nowy layout dla sekcji admina
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "posts", element: <Posts />},
+      { path: "users", element: <Users />},
+      { path: "reports", element: <Reports />},
+      { path: "settings", element: <Settings />},
+      // Dodaj więcej stron admina tutaj, np. zarządzanie użytkownikami, raporty itd.
+    ],
+  },
+  { path: "*", element: <NotFoundPage /> }, // Dla nieznanych ścieżek
 ]);
 
 function App() {

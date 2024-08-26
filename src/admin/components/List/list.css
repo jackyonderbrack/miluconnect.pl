@@ -1,0 +1,37 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .list-item {
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: var(--primary-dark-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .post-title {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .post-meta {
+    margin-top: 0.2rem;
+    font-size: 0.875rem;
+    color: var(--alternative-color);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .post-content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Ogranicza tekst do 2 linii */
+    overflow: hidden;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--alternative-color);
+    line-height: 1.5;
+  }
+  

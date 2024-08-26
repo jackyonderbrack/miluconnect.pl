@@ -1,4 +1,15 @@
-#App {
-  /* navigation padding */
+#Application {
   padding-top: 8rem;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+#Admin {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-outlet {
+  width: 100%;
+  padding: 1rem 1.5rem
 }
