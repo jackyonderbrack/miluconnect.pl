@@ -9,8 +9,13 @@ form {
         display: inline-block;
         min-width: 8rem;
     }
-    div {
-        padding-top: 1rem;
+}
+
+.form-inputs {
+    display: block;
+    width: 100%;
+    input, textarea, select {
+        width: 100%;
     }
 }
 

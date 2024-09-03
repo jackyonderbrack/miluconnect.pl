@@ -4,6 +4,7 @@ import Logging from "./library/Logging";
 import dotenv from "dotenv";
 import cors from "cors";
 import sendEmailRoute from "./routes/email.route";
+import path from 'path';
 import { sequelize } from "./config/database.config";
 import { userRouter } from "./routes/user.route";
 
@@ -26,22 +27,25 @@ const StartServer = () => {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
 
-    app.use(cors({
-        origin: 'https://miluconnectballerstest.pl',
-        methods: 'GET,POST,PUT,DELETE',
-        allowedHeaders: 'Content-Type,Authorization'
-    }));
+    // app.use(cors({
+    //     origin: 'https://miluconnectballerstest.pl',
+    //     methods: 'GET,POST,PUT,DELETE',
+    //     allowedHeaders: 'Content-Type,Authorization'
+    // }));
 
-    // Rules of API
-    app.use((req, res, next) => {
-        res.header('Access-Control-Allow-Origin', '*');
-        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-        if (req.method === 'OPTIONS') {
-            res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
-            return res.status(200).json({});
-        }
-        next();
-    });
+    // // Rules of API
+    // app.use((req, res, next) => {
+    //     res.header('Access-Control-Allow-Origin', '*');
+    //     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    //     if (req.method === 'OPTIONS') {
+    //         res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+    //         return res.status(200).json({});
+    //     }
+    //     next();
+    // });
+
+    // Serwowanie plików statycznych React
+    app.use(express.static(path.join(__dirname, '../../client/dist')));
 
     // Healthcheck with /rest prefix
     app.get('/ping', (req, res) => res.status(200).json({ message: `pong na miluconnect.pl na porcie ${PORT}` }));
@@ -55,6 +59,11 @@ const StartServer = () => {
         const error = new Error('Not found anything');
         Logging.error(error.message);
         return res.status(404).json({ message: error.message });
+    });
+
+    // Dla każdej innej ścieżki, zwróć index.html (dla React Router)
+    app.get('**', (req, res) => {
+        res.sendFile(path.join(__dirname, '../../client/dist', 'index.html'));
     });
 
     // Uruchomienie serwera

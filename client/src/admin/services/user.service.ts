@@ -1,24 +1,33 @@
 import axios, { AxiosResponse } from 'axios';
 
 export interface User {
+  id?: string;
   name: string;
   email: string;
   password: string;
-  role: string;
+  role?: string;
 }
 
-class UserService {
-  private apiUrl = 'https://miluconnect.pl/api/users'; 
-
-  async addUser(user: User): Promise<AxiosResponse<User>> {
-    try {
-      const response = await axios.post<User>(this.apiUrl, user);
-      return response;
-    } catch (error) {
-      console.error('Error adding user:', error);
-      throw error;
-    }
+// Funkcja do dodawania użytkownika
+export const addUser = async (user: User): Promise<AxiosResponse<User>> => {
+  const apiUrl = 'http://localhost:42204/api/user';
+  try {
+    const response = await axios.post<User>(apiUrl, user);
+    return response;
+  } catch (error) {
+    console.error('Error adding user:', error);
+    throw error;
   }
-}
+};
 
-export const userService = new UserService();
+// Funkcja do pobierania użytkowników
+export const getUsers = async (): Promise<AxiosResponse<User[]>> => {
+  let apiUrl = 'http://localhost:42204/api/users';
+  try {
+    const response = await axios.get<User[]>(apiUrl);
+    return response;
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    throw error;
+  }
+};
