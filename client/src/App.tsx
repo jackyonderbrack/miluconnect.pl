@@ -25,85 +25,87 @@ import Reports from './admin/pages/reports/Reports';
 import New from './admin/pages/new/New';
 import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
 import Login from './admin/pages/login/Login';
+import Account from './admin/pages/account/Account';
 
 function Layout() {
-  const location = useLocation();
+	const location = useLocation();
 
-  useEffect(() => {
-    ReactGA.send({
-      hitType: 'pageview',
-      page: location.pathname + location.search,
-    });
-  }, [location]);
+	useEffect(() => {
+		ReactGA.send({
+			hitType: 'pageview',
+			page: location.pathname + location.search,
+		});
+	}, [location]);
 
-  return (
-    <main id='Application'>
-      <Navigation />
-      <ScrollToTop />
-      <Outlet />
-      <Footer />
-      <TrackPageView />
-      <CustomCookieConsent />
-    </main>
-  );
+	return (
+		<main id='Application'>
+			<Navigation />
+			<ScrollToTop />
+			<Outlet />
+			<Footer />
+			<TrackPageView />
+			<CustomCookieConsent />
+		</main>
+	);
 }
 
 function AdminLayout() {
-  return (
-    <main id='Admin'>
-      <Sidenav />
-      <div className='admin-outlet'>
-        <Outlet />
-      </div>
-    </main>
-  );
+	return (
+		<main id='Admin'>
+			<Sidenav />
+			<div className='admin-outlet'>
+				<Outlet />
+			</div>
+		</main>
+	);
 }
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />, // Główny layout aplikacji
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: 'rozwiazania', element: <SolutionsPage /> },
-      { path: 'kontakt', element: <ContactPage /> },
-      { path: 'wyslano', element: <ContactPageSent /> },
-      { path: 'polityka-prywatnosci', element: <PrivacyPolicyPage /> },
-      { path: 'nowosci', element: <NewsPage /> },
-    ],
-  },
-  {
-    path: '/admin-login',
-    element: <Login />,
-  },
-  {
-    path: '/admin-panel',
-    element: <PrivateRoute />,
-    children: [
-      {
-        element: <AdminLayout />,
-        children: [
-          { index: true, element: <Dashboard /> },
-          { path: 'posts', element: <Posts /> },
-          { path: 'users', element: <Users /> },
-          { path: 'reports', element: <Reports /> },
-          { path: 'settings', element: <Settings /> },
-          { path: ':type/new', element: <New /> },
-        ],
-      },
-    ],
-  },
-  { path: '*', element: <NotFoundPage /> }, // Dla nieznanych ścieżek
+	{
+		path: '/',
+		element: <Layout />, // Główny layout aplikacji
+		children: [
+			{ index: true, element: <HomePage /> },
+			{ path: 'rozwiazania', element: <SolutionsPage /> },
+			{ path: 'kontakt', element: <ContactPage /> },
+			{ path: 'wyslano', element: <ContactPageSent /> },
+			{ path: 'polityka-prywatnosci', element: <PrivacyPolicyPage /> },
+			{ path: 'nowosci', element: <NewsPage /> },
+		],
+	},
+	{
+		path: '/admin-login',
+		element: <Login />,
+	},
+	{
+		path: '/admin-panel',
+		element: <PrivateRoute />,
+		children: [
+			{
+				element: <AdminLayout />,
+				children: [
+					{ index: true, element: <Dashboard /> },
+					{ path: 'posts', element: <Posts /> },
+					{ path: 'users', element: <Users /> },
+					{ path: 'reports', element: <Reports /> },
+					{ path: 'settings', element: <Settings /> },
+					{ path: 'account', element: <Account /> },
+					{ path: ':type/new', element: <New /> },
+				],
+			},
+		],
+	},
+	{ path: '*', element: <NotFoundPage /> }, // Dla nieznanych ścieżek
 ]);
 
 function App() {
-  return (
-    <div id='App'>
-      <AccessProvider>
-        <RouterProvider router={router} />
-      </AccessProvider>
-    </div>
-  );
+	return (
+		<div id='App'>
+			<AccessProvider>
+				<RouterProvider router={router} />
+			</AccessProvider>
+		</div>
+	);
 }
 
 export default App;

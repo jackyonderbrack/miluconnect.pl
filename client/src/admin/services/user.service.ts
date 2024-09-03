@@ -1,33 +1,31 @@
 import axios, { AxiosResponse } from 'axios';
 
 export interface User {
-  id?: string;
-  name: string;
-  email: string;
-  password: string;
-  role?: string;
+	id?: string;
+	name: string;
+	email: string;
+	password: string;
+	role?: string;
 }
 
-// Funkcja do dodawania użytkownika
 export const addUser = async (user: User): Promise<AxiosResponse<User>> => {
-  const apiUrl = 'http://localhost:42204/api/user';
-  try {
-    const response = await axios.post<User>(apiUrl, user);
-    return response;
-  } catch (error) {
-    console.error('Error adding user:', error);
-    throw error;
-  }
+	const apiUrl = 'http://localhost:42204/api/user';
+	try {
+		const response = await axios.post<User>(apiUrl, user);
+		return response;
+	} catch (error) {
+		console.error('Error adding user:', error);
+		throw error;
+	}
 };
 
-// Funkcja do pobierania użytkowników
 export const getUsers = async (): Promise<AxiosResponse<User[]>> => {
-  let apiUrl = 'http://localhost:42204/api/users';
-  try {
-    const response = await axios.get<User[]>(apiUrl);
-    return response;
-  } catch (error) {
-    console.error('Error fetching users:', error);
-    throw error;
-  }
+	let apiUrl = 'http://localhost:42204/api/users';
+	try {
+		const response = await axios.get<User[]>(apiUrl);
+		return response;
+	} catch (error) {
+		console.error('Error fetching users:', error);
+		throw error;
+	}
 };
