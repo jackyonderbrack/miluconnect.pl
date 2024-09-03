@@ -3,8 +3,9 @@ import http from 'http';
 import Logging from "./library/Logging";
 import dotenv from "dotenv";
 import cors from "cors";
-import sendEmailRoute from "./routes/sendEmailRoute";
+import sendEmailRoute from "./routes/email.route";
 import { sequelize } from "./config/database.config";
+import { userRouter } from "./routes/user.route";
 
 dotenv.config();
 const app = express();
@@ -43,10 +44,11 @@ const StartServer = () => {
     });
 
     // Healthcheck with /rest prefix
-    app.get('/rest/ping', (req, res) => res.status(200).json({ message: `pong na miluconnectballerstest.pl na porcie ${PORT}` }));
+    app.get('/ping', (req, res) => res.status(200).json({ message: `pong na miluconnect.pl na porcie ${PORT}` }));
 
     // Dodanie tras
     app.use('/api', sendEmailRoute);
+    app.use('/api', userRouter)
 
     // Obsługa błędów dla nieznanych tras /rest
     app.use('/api', (req, res, next) => {

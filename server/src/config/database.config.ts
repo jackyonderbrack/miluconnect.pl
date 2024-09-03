@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
+import { initUserModel } from '../models/user.model';
 
 
 dotenv.config();
@@ -15,10 +16,6 @@ const sequelize = new Sequelize(
     }
 );
 
-sequelize.sync().then(() => {
-    console.log('Baza danych i tabele zostały utworzone!');
-}).catch(error => {
-    console.error('Błąd synchronizacji bazy danych:', error);
-});
+const User = initUserModel(sequelize)
 
-export { sequelize };
+export { sequelize, User };

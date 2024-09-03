@@ -1,4 +1,6 @@
 import { Model, DataTypes, Sequelize } from 'sequelize';
+import { uuid } from '../utils/uuid.util';
+import { hashPassword } from '../utils/bcryptjs.util';
 
 export class User extends Model {
     public id!: number;
@@ -12,6 +14,7 @@ export function initUserModel(sequelize: Sequelize): typeof User {
     User.init({
         id: {
             type: DataTypes.INTEGER,
+            defaultValue: () => uuid(7),
             autoIncrement: true,
             primaryKey: true
         },
@@ -19,22 +22,36 @@ export function initUserModel(sequelize: Sequelize): typeof User {
             type: DataTypes.STRING,
             allowNull: false
         },
-        logo: {
+        email: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false,
+            unique: true,
         },
-        description: {
-            type: DataTypes.TEXT,
-            allowNull: true
-        },
-        country: {
+        password: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false
+        },
+        role: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: 'admin'
         },
     }, {
         tableName: 'users',
         sequelize,
-        timestamps: false
+        timestamps: false,
+        hooks: {
+            beforeCreate: async (user: User) => {
+                if (user.password) {
+                    user.password = await hashPassword(user.password)
+                }
+            },
+            beforeUpdate: async (user: User) => {
+                if (user.password && user.changed('password')) {
+                    user.password = await hashPassword(user.password)
+                }
+            }
+        }
     });
     return User
 }

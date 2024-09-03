@@ -7,7 +7,7 @@ const ContactForm: React.FC = () => {
   const [submitSuccessStatus, setSubmitSuccessStatus] = useState("");
   const formik = useContactFormik(async (formData) => {
     try {
-      const response = await fetch(`https://miluconnect.pl/rest/contact-form/send-email`, {
+      const response = await fetch(`https://miluconnect.pl/api/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
