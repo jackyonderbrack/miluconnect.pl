@@ -1,4 +1,4 @@
-import Button from '../../components/Button/Button';
+import Button from '../../../components/Button/Button';
 import Header from '../../components/Header/Header';
 import List from '../../components/List/List';
 import jsonPosts from './posts.json';

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Button from '../../components/Button/Button';
 import Header from '../../components/Header/Header';
 import List from '../../components/List/List';
 import { getUsers, User } from '../../services/user.service';
+import Button from '../../../components/Button/Button';
 // import List from "../../components/List/List"
 
 const Users = () => {

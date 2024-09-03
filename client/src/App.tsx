@@ -40,11 +40,13 @@ function Layout() {
 	return (
 		<main id='Application'>
 			<Navigation />
-			<ScrollToTop />
-			<Outlet />
-			<Footer />
-			<TrackPageView />
-			<CustomCookieConsent />
+			<div className='client-outlet'>
+				<ScrollToTop />
+				<Outlet />
+				<Footer />
+				<TrackPageView />
+				<CustomCookieConsent />
+			</div>
 		</main>
 	);
 }
