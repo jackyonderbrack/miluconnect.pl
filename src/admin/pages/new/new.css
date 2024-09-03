@@ -1,0 +1,16 @@
+form {
+    align-items: start;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: var(--primary-dark-color);
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+    label {
+        display: inline-block;
+        min-width: 8rem;
+    }
+    div {
+        padding-top: 1rem;
+    }
+}
+

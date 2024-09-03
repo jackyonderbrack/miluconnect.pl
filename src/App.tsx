@@ -22,6 +22,7 @@ import Posts from "./admin/pages/posts/Posts";
 import Users from "./admin/pages/users/Users";
 import Settings from "./admin/pages/settings/Settings";
 import Reports from "./admin/pages/reports/Reports";
+import New from "./admin/pages/new/New";
 
 function Layout() {
   const location = useLocation();
@@ -79,6 +80,7 @@ const router = createBrowserRouter([
       { path: "users", element: <Users />},
       { path: "reports", element: <Reports />},
       { path: "settings", element: <Settings />},
+      { path: ":type/new", element: <New />}
       // Dodaj więcej stron admina tutaj, np. zarządzanie użytkownikami, raporty itd.
     ],
   },

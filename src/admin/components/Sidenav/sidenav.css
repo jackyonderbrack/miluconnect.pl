@@ -1,8 +1,9 @@
-
-
 .sidenav {
     min-width: 250px;
-    background-color: rgba(218, 218, 218, 0.068); /* Kolor tła */
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: var(--primary-dark-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
   }
@@ -32,7 +33,7 @@
   .sidenav-link {
     border-radius: 1rem;
     display: block;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     color: var(--primary-light-color);
     text-decoration: none;
     transition: background-color 0.16s;

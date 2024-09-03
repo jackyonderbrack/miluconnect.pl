@@ -1,30 +1,13 @@
 {
   "compilerOptions": {
-    "target": "esnext", // Skompilowany kod będzie odpowiadał najnowszemu standardowi ECMAScript.
-    "module": "CommonJS", // Użyj dynamicznego importu modułów ES.
-    "moduleResolution": "node", // Określa strategię rozwiązywania modułów.
-    "lib": ["esnext"], // Włącz funkcje biblioteki dla najnowszej wersji ECMAScript.
-    "outDir": "./build", // Skompilowany JavaScript będzie umieszczony w katalogu dist.
-    "rootDir": "./src", // Główny katalog z plikami źródłowymi TypeScript.
-    "esModuleInterop": true, // Umożliwia domyślny import modułów bez default export.
-    "forceConsistentCasingInFileNames": true, // Wymusza spójną wielkość liter w nazwach plików.
-    "strict": true, // Włącza ścisłe opcje sprawdzania typów.
-    "skipLibCheck": true, // Pomija sprawdzanie typów w deklaracjach plików .d.ts.
-    "resolveJsonModule": true, // Umożliwia importowanie plików JSON.
-    "isolatedModules": true, // Wszystkie pliki są oddzielnie transpilowane jakby były modułami ES.
-    "noEmitOnError": true, // Nie generuj plików wyjściowych, jeśli wystąpi błąd kompilacji.
-    "baseUrl": "./", // Ustaw bazowy URL dla rozwiązywania modułów.
-    "paths": {
-      // Ustawia aliasy ścieżek dla importów.
-      "*": ["node_modules/*", "src/types/*"]
-    },
-    "allowSyntheticDefaultImports": true, // Pozwala na default importy z modułów bez default export.
-    "strictNullChecks": true, // Wymaga sprawdzania null i undefined.
-    "noImplicitAny": true, // Nie pozwala na niejawną inferencję typu `any`.
-    "noUnusedLocals": true, // Ostrzega o lokalnych zmiennych, które nie są używane.
-    "noUnusedParameters": true, // Ostrzega o parametrach funkcji, które nie są używane.
-    "removeComments": false // Ustaw na true, jeśli chcesz usunąć komentarze w czasie kompilacji.
+      "target": "es2016",
+      "module": "CommonJS",
+      "outDir": "./build",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true,
+      "resolveJsonModule": true,
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build"] // Wyklucza katalogi z procesu kompilacji.
+  "include": ["src/**/*", "src/server.ts"]
 }

@@ -8,7 +8,7 @@ const Posts = () => {
     <div className="posts-page flex flex-col gap-2">
       <Header title="Wpisy" />
       <div className="button-wrapper">
-        <Button linkTo={""} buttonText={"+ Nowy wpis"} theme={"btn-primary"} />
+        <Button linkTo={"/admin-panel/post/new"} buttonText={"+ Nowy wpis"} theme={"btn-primary"} />
       </div>
       <List
         items={jsonPosts}
