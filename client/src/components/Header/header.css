@@ -1,28 +1,28 @@
 @keyframes slide-up {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 #Header {
-  position: relative;
-  min-height: 40vh;
-  display: flex;
-  align-items: center;
+	position: relative;
+	min-height: 50vh;
+	display: flex;
+	align-items: center;
 }
 
 .headerContent {
-  margin-left: 6dvw;
+	margin-left: calc(2rem + 1dvw);
 }
 
 .headerPicture {
-  position: absolute;
-  animation: slide-up 3.5s forwards;
-  top: -4rem;
-  right: 0;
-  z-index: -1;
-  width: 60dvw;
+	position: absolute;
+	animation: slide-up 3.5s forwards;
+	top: -4rem;
+	right: 0;
+	z-index: -1;
+	width: 60dvw;
 }
