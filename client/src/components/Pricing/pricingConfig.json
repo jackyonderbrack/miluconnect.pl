@@ -1,0 +1,358 @@
+{
+	"sections": [
+		{
+			"id": "product",
+			"label": "Wybierz produkt:",
+			"type": "select",
+			"options": [
+				{
+					"value": "page",
+					"label": "Strona internetowa",
+					"price": 299,
+					"time": 10
+				},
+				{
+					"value": "shop",
+					"label": "Sklep e-commerce",
+					"price": 499,
+					"time": 20
+				}
+			]
+		},
+		{
+			"id": "design",
+			"label": "Wybierz design:",
+			"type": "select",
+			"options": [
+				{
+					"value": "Mam projekt",
+					"label": "Mam projekt",
+					"price": 400,
+					"time": 12
+				},
+				{
+					"value": "Gotowy szablon",
+					"label": "Gotowy szablon",
+					"price": 0,
+					"time": 6
+				},
+				{
+					"value": "Projekt w cenie",
+					"label": "Projekt w cenie",
+					"price": 1500,
+					"time": 24
+				}
+			]
+		},
+		{
+			"id": "details",
+			"label": "Wybierz szczegóły produktu:",
+			"type": "select",
+			"dependsOn": "product",
+			"optionsByCondition": {
+				"page": [
+					{
+						"value": "spa",
+						"title": "Signe Page App",
+						"label": ["Jedna strona", "Główna", "O nas", "Kontakt", "Inne"],
+						"price": 1100,
+						"time": 12
+					},
+					{
+						"value": "mini",
+						"title": "Mini",
+						"label": ["Główna", "O nas", "Kontakt", "+ do 3 innych"],
+						"price": 800,
+						"time": 9
+					},
+					{
+						"value": "standard",
+						"title": "Standard",
+						"label": [
+							"Główna",
+							"O nas",
+							"Kontakt",
+							"Blog",
+							"Portfolio",
+							"Katalog produków",
+							"+ do 3 innych"
+						],
+						"price": 1800,
+						"time": 14
+					},
+					{
+						"value": "full",
+						"title": "Full",
+						"label": [
+							"Główna",
+							"O nas",
+							"Kontakt",
+							"Blog",
+							"Portfolio",
+							"Katalog produktów",
+							"+ inne"
+						],
+						"price": 2400,
+						"time": 20
+					},
+					{
+						"value": "dedicated",
+						"title": "Dedykowane",
+						"label": [
+							"Dedykowany projekt",
+							"Nieszablonowe rozwiązania",
+							"Interaktywność",
+							"Sprzedaż skupiona",
+							"Konfiguratory"
+						],
+						"price": 2900,
+						"time": 30
+					},
+					{
+						"value": "moderate",
+						"title": "Modyfikacja istniejącej",
+						"label": [
+							"Modyfikacja istniejącej strony,",
+							"Naprawa istniejącej strony,",
+							"W proszę załączyć swoją dotychczasową witrynę w formularzu kontaktowym,",
+							"Wycena będzie uaktualniana"
+						],
+						"price": 400,
+						"time": 12
+					}
+				],
+				"shop": [
+					{
+						"value": "spa",
+						"title": "Signe Page App",
+						"label": [
+							"Jedna strona głowna",
+							"Promocja produktu",
+							"Skupienie na marce",
+							"Cennik",
+							"Kampania",
+							"Kontakt",
+							"Płatności"
+						],
+						"price": 1100,
+						"time": 12
+					},
+					{
+						"value": "mini",
+						"title": "Mini",
+						"label": [
+							"Główna",
+							"Sklep (do 50 produktów)",
+							"Analityka",
+							"O nas",
+							"Blog",
+							"Kontakt",
+							"Płatności"
+						],
+						"price": 900,
+						"time": 9
+					},
+					{
+						"value": "standard",
+						"title": "Standard",
+						"label": [
+							"Pakie Mini +",
+							"ponad 50 produktów",
+							"Kampanie",
+							"Newsletter",
+							"Strefy klienckie",
+							"Portfolio",
+							"Przygotowanie do DropS."
+						],
+						"price": 1800,
+						"time": 14
+					},
+					{
+						"value": "full",
+						"title": "Full",
+						"label": [
+							"Pakiet Standard +",
+							"Modyfikacja CMS",
+							"Modyfikacja systemu",
+							"Rozwiązania premium",
+							"Przygotowanie pod SEO",
+							"Optymalizacja i szybkość"
+						],
+						"price": 2400,
+						"time": 20
+					},
+					{
+						"value": "dedicated",
+						"title": "Dedykowane",
+						"label": [
+							"Dedykowany projekt",
+							"Nieszablonowe rozwiązania",
+							"Interaktywność",
+							"Sprzedaż skupiona",
+							"Konfiguratory",
+							"Co przyniesie wyobraźnia..."
+						],
+						"price": 2900,
+						"time": 30
+					},
+					{
+						"value": "moderate",
+						"title": "Modyfikacja istniejącej",
+						"label": [
+							"Modyfikacja istniejącej strony,",
+							"Naprawa istniejącej strony,",
+							"W proszę załączyć swoją dotychczasową witrynę w formularzu kontaktowym,",
+							"Wycena będzie uaktualniana"
+						],
+						"price": 400,
+						"time": 12
+					}
+				]
+			}
+		},
+		{
+			"id": "extras",
+			"label": "Dodatkowe opcje:",
+			"type": "checkbox",
+			"dependsOn": "product",
+			"multiple": true,
+			"optionsByCondition": {
+				"page": [
+					{
+						"value": "Mały-sklep",
+						"label": "+ Mały sklep",
+						"price": 400,
+						"time": 8
+					},
+					{ "value": "Blog", "label": "+ Blog", "price": 300, "time": 10 },
+					{
+						"value": "Wstępne-SEO",
+						"label": "+ Wstępne SEO",
+						"price": 200,
+						"time": 6
+					},
+					{
+						"value": "W-formie-gry",
+						"label": "+ W formie gry",
+						"price": 300,
+						"time": 12
+					},
+					{
+						"value": "Wirtualny-spacer",
+						"label": "+ Wirtualny spacer",
+						"price": 300,
+						"time": 12
+					},
+					{
+						"value": "Social Media",
+						"label": "+ Social Media",
+						"price": 300,
+						"time": 3
+					},
+					{
+						"value": "contents",
+						"label": "+ Tworzenie treści",
+						"time": 8
+					},
+					{
+						"value": "domain",
+						"label": "+ Domena",
+						"price": 60,
+						"time": 2
+					},
+					{
+						"value": "hopsting",
+						"label": "+ Hosting",
+						"price": 150,
+						"time": 2
+					},
+					{
+						"value": "doradztwo",
+						"label": "+ Doradzwto techniczne",
+						"time": 2
+					},
+					{
+						"value": "scripts",
+						"label": "+ Dodatkowe programowanie",
+						"time": 2
+					},
+					{
+						"value": "future",
+						"label": "+ Wsparcie w przyszłości",
+						"time": 2
+					}
+				],
+				"shop": [
+					{
+						"value": "pixelize",
+						"label": "+ Pixelizacja i Sitemapa",
+						"price": 100,
+						"time": 2
+					},
+					{
+						"value": "more-products",
+						"label": "+ Ponad 1000 produktów",
+						"price": 600,
+						"time": 24
+					},
+					{
+						"value": "baselinker",
+						"label": "+ BaseLinker",
+						"price": 200,
+						"time": 6
+					},
+					{
+						"value": "allegro",
+						"label": "+ Allegro",
+						"price": 300,
+						"time": 8
+					},
+					{
+						"value": "dropshipping",
+						"label": "+ Dropshipping",
+						"price": 300,
+						"time": 2
+					},
+					{
+						"value": "kampanie",
+						"label": "+ Kampanie, konwersje i Ads",
+						"price": 800,
+						"time": 2
+					},
+					{
+						"value": "contents",
+						"label": "+ Tworzenie treści",
+						"time": 8
+					},
+					{
+						"value": "domain",
+						"label": "+ Domena",
+						"price": 60,
+						"time": 2
+					},
+					{
+						"value": "hopsting",
+						"label": "+ Hosting",
+						"price": 150,
+						"time": 2
+					},
+					{
+						"value": "doradztwo",
+						"label": "+ Doradzwto techniczne",
+						"time": 2
+					},
+					{
+						"value": "scripts",
+						"label": "+ Dodatkowe programowanie",
+						"time": 2
+					},
+					{
+						"value": "future",
+						"label": "+ Wsparcie w przyszłości",
+						"time": 2
+					}
+				]
+			}
+		}
+	]
+}

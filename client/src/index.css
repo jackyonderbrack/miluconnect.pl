@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 :root {
+	font-family: 'DM Sans', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 	color: rgba(255, 255, 255, 0.87);
@@ -20,17 +21,20 @@
 	--alternative-color: #bfb5b2;
 	--success-color: #55d49b;
 	--danger-color: #dc3545;
-	--radius-md: 1rem;
+	--color-accent-background: #f5b64207;
+	--color-secondary-background: #f5b6421d;
+	--radius-md: 1.5rem;
 	--ff: 'DM Sans', sans-serif;
 	/* --h1: bold 54px/64px var(--ff); */
-	--h1: bold max(36px, 2vw) / max(48px, 2vw) var(--ff);
-	--h2: bold max(24px, 2vw) / max(36px, 2vw) var(--ff);
-	--h3: bold 24px/30px var(--ff);
-	--links: 18px/18px var(--ff);
-	--p: 18px/30px var(--ff);
-	--btn: bold 18px/30px var(--ff);
+	--h1: bold max(48px, 3vw) / max(52px, 3vw) var(--ff);
+	--h2: bold max(36px, 2vw) / max(36px, 2vw) var(--ff);
+	--h3: bold 28px/30px var(--ff);
+	--links: 24px/30px var(--ff);
+	--p: 24px/30px var(--ff);
+	--btn: bold 24px/30px var(--ff);
 	--subtext: 12px/20px var(-ff);
-	--transition: 0.16s ease-in-out;
+	--transition: 0.16s ease-in-out, background-color 0.16s, color 0.16s,
+		font-weight 0.2s, transform 2s;
 	--shadow: #00000030 0px 0px 10px 0px;
 	--shadowdark: #00000030 15px 10px 30px 2px;
 	--blur: filter: blur(--radius-md);
@@ -40,7 +44,7 @@
 }
 
 html {
-	scroll-snap-type: y mandatory;
+	/* scroll-snap-type: y mandatory; */
 }
 
 body {
@@ -116,7 +120,31 @@ section {
 
 .col > * {
 	flex: 1;
-	min-width: 320px;
+	min-width: 260px;
+	border-radius: var(--radius-md);
+}
+.col-4 {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	> * {
+		flex: 1;
+		min-width: 24dvw;
+		border-radius: var(--radius-md);
+	}
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 2rem;
+	margin-bottom: 4rem;
 }
 
 .text-gradient {
@@ -489,9 +517,8 @@ section {
 .rounded-2xl {
 	border-radius: 1rem;
 }
-
 .container {
-	width: clamp(300px, 50%, 1200px);
+	width: clamp(300px, 86%, 1280px);
 }
 
 @media only screen and (max-width: 1024px) {

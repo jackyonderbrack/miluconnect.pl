@@ -35,6 +35,7 @@ import MetaTags from '../../components/MetaTags/MetaTags';
 import Button from '../../components/Button/Button';
 import ImageText from '../../components/ImageText/ImageText';
 import Slider from '../../components/Slider/Slider';
+import Pricing from '../../components/Pricing/Pricing';
 
 const HomePage = () => {
 	const _portfolio_items = [
@@ -104,16 +105,16 @@ const HomePage = () => {
 		{
 			imgsrc: IconDedidcatedSolutions,
 			heading: 'Dedykowane rozwiązania',
-			url: 'dedykowane-rozwiazania',
+			url: 'rozwiazania',
 			content:
 				'Strony internetowe, sklepy oraz wszystko co związane z siecią. Mamy doświadczenie w tworzeniu systemów zarządzania produkcją, zasobami, ale również interaktywnych gier, programów i sieci. Nasze rozwiązania są dostosowane do specyficznych potrzeb klienta, zapewniając elastyczność, skalowalność i integrację z istniejącymi systemami.',
 		},
 		{
 			imgsrc: IconMobileApps,
-			heading: 'Aplikacje mobilne',
-			url: 'aplikacje-mobilne',
+			heading: 'Responsywność',
+			url: 'responsywnosc',
 			content:
-				'Projektujemy zaawansowane aplikacje mobilne dla systemów iOS i Android. Zapewniamy intuicyjny interfejs użytkownika, niezawodny i bezpieczny kod, a także stabilną działalność. Nasze aplikacje są zoptymalizowane pod kątem wydajności i bezpieczeństwa, co gwarantuje doskonałe wrażenia użytkownika.',
+				'Projektujemy zaawansowane aplikacje mobilne dla systemów iOS i Android. Zapewniamy intuicyjny interfejs użytkownika, niezawodny i bezpieczny kod, a także stabilną działalność. Nasze aplikacje są zoptymalizowane pod kątem wydajności i bezpieczeństwa, co gwarantuje doskonałe wrażenia użytkownika i responsywność każdego systemu.',
 		},
 		{
 			imgsrc: IconPartnership,
@@ -139,14 +140,13 @@ const HomePage = () => {
 			/>
 			<Header
 				content={
-					<section>
+					<>
 						<div className='home-page-header-text'>
 							<h1>
-								szybki e-commerce
-								<br />+ stylowa{' '}
-								<span className='text-gradient'>strona internetowa</span>
+								&gt; szybki e-commerce
 								<br />
-								pozyska klientów dla ciebie
+								&gt; stylowa <span className='text-gradient'>strona internetowa</span>
+								<br />
 							</h1>
 						</div>
 						<div className='home-page-header-cta'>
@@ -159,7 +159,7 @@ const HomePage = () => {
 								offset={125}
 							/>
 						</div>
-					</section>
+					</>
 				}
 				imgUrl={EarthImg}
 			/>
@@ -180,17 +180,16 @@ const HomePage = () => {
 					</h2>
 					<p className='text-align-center container'>
 						Wszystkie nasze realizacje są <strong>realnymi</strong> projektami,
-						którymi klienci się cieszą, zarządzają i wykorzystują w swoim biznesie,
-						chwaląc sie zaś swoim potencjalnym klientom. Mimo tego, że każdy projekt
-						zakładał inny scenariusz, wszystkie są
+						którymi klienci się cieszą, zarządzają i wykorzystują w swoim biznesie.
+						Mimo tego, że każdy projekt zakładał inny scenariusz, wszystkie są
 						<strong> responsywne i dostosowane</strong> do warunków dzisiejszego
 						Web-view.
 					</p>
-					<h3>Wybierz i zobacz nasze projekty na żywo</h3>
+					<p>Wybierz i zobacz nasze projekty na żywo</p>
 				</div>
 				<Slider items={_portfolio_items} />
 			</section>
-
+			<Pricing />
 			<section className='col background-top pt-2 pb-6'>
 				<div className='flex flex-col align-items-center pb-6'>
 					<Title
@@ -198,7 +197,7 @@ const HomePage = () => {
 						leadHeader={null}
 						leadParagraph={
 							<div>
-								<h2>Dołącz i ciesz się rozwijającym się biznesem</h2>
+								<h3>Dołącz i ciesz się rozwijającym się biznesem</h3>
 								<p>Zaufali nam m.in:</p>
 							</div>
 						}

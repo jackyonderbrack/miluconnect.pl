@@ -16,13 +16,16 @@
 
 .headerContent {
 	margin-left: calc(2rem + 1dvw);
+	margin-top: -1rem;
 }
 
 .headerPicture {
+	filter: grayscale(1);
+	filter: sepia(0.3);
+	filter: opacity(0.81);
 	position: absolute;
 	animation: slide-up 3.5s forwards;
-	top: -4rem;
 	right: 0;
 	z-index: -1;
-	width: 60dvw;
+	width: 80%;
 }

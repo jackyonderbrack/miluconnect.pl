@@ -1,0 +1,96 @@
+/* Ukrywamy domyślny radio button */
+.radio-button input[type='radio'] {
+	display: none;
+}
+
+/* Stylizujemy etykietę jako przycisk */
+.radio-button {
+	padding: 0.8rem 1.5rem;
+	border: 1px solid var(--color-accent-primary);
+	background-color: transparent;
+	color: var(--color-primary);
+	cursor: pointer;
+	display: inline-block;
+}
+
+/* Styl dla aktywnego przycisku (gdy radio jest zaznaczone) */
+.radio-button.active {
+	background-color: var(--color-accent-primary);
+	color: var(--color-secondary);
+	transition: (--transition);
+}
+
+/* Efekt hover */
+.radio-button:hover {
+	scale: 1.02;
+	background-color: var(--color-accent-primary);
+	color: var(--color-secondary);
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+	display: inline-block;
+	transition: (--transition);
+}
+
+/* Stylizacja dla sekcji details */
+.details-section .radio-button {
+	background-color: var(--color-accent-background);
+	border-color: var(--color-accent-background);
+	color: var(--color-primary);
+	cursor: pointer;
+	margin: 10px;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+	display: inline-block;
+	transition: (--transition);
+	height: 14rem;
+}
+
+/* Styl dla aktywnego przycisku w sekcji details */
+.details-section .radio-button.active {
+	background-color: var(--color-accent-primary);
+	color: var(--color-secondary);
+}
+
+/* Efekt hover dla sekcji details */
+.details-section .radio-button:hover {
+	scale: 1.02; /* Większe powiększenie przy hover */
+	background-color: var(--color-accent-primary);
+	color: var(--color-secondary);
+}
+
+.checkbox-button.active:hover {
+	opacity: 0.6;
+}
+.checkbox-button.active.linked:hover {
+	text-decoration: line-through;
+}
+
+.checkbox-button input[type='checkbox'] {
+	display: none;
+}
+
+.checkbox-button {
+	background-color: transparent;
+	color: var(--color-primary);
+	cursor: pointer;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+	display: inline-block;
+	font-weight: bold;
+	border: 1px solid var(--color-secondary-background);
+	padding: 0.7rem 1.5rem;
+}
+
+/* Styl dla aktywnego przycisku */
+.checkbox-button.active {
+	color: var(--color-accent-primary);
+}
+
+/* Efekt hover */
+.checkbox-button:hover {
+	scale: 1.02;
+	color: var(--color-accent-primary);
+}
