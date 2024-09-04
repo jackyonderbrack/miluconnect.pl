@@ -41,12 +41,14 @@ const PricingForm = () => {
 	const [showCalculateButton, setShowCalculateButton] = useState<boolean>(false);
 	const [linkedExtras, setLinkedExtras] = useState<string[]>([]);
 
-	const resetTotalResultPrice = () => {
+	// Resetowanie wyniku po zmianie
+	const resetTotal = () => {
 		setTotalPrice(0);
 		setTotalTime(0);
 		setTotalPriceMessage(null);
 	};
 
+	// Monitorowanie, czy wszystkie trzy sekcje są wypełnione, aby pokazać przycisk
 	useEffect(() => {
 		if (selectedProduct && selectedDesign && selectedDetails) {
 			setShowCalculateButton(true);
@@ -60,19 +62,19 @@ const PricingForm = () => {
 		setSelectedDesign(null);
 		setSelectedDetails(null);
 		setSelectedExtras([]);
-		resetTotalResultPrice();
+		resetTotal(); // Resetowanie wyniku po zmianie w sekcji
 	};
 
 	const handleDesignChange = (value: string) => {
 		setSelectedDesign(value);
 		setSelectedDetails(null);
 		setSelectedExtras([]);
-		resetTotalResultPrice();
+		resetTotal(); // Resetowanie wyniku po zmianie w sekcji
 	};
 
 	const handleDetailsChange = (value: string) => {
 		setSelectedDetails(value);
-		resetTotalResultPrice();
+		resetTotal(); // Resetowanie wyniku po zmianie w sekcji
 	};
 
 	const handleExtrasChange = (value: string) => {
@@ -81,11 +83,16 @@ const PricingForm = () => {
 				? prevSelectedExtras.filter((extra) => extra !== value)
 				: [...prevSelectedExtras, value]
 		);
-		resetTotalResultPrice();
+		resetTotal();
+
+		if (linkedExtras.includes(value)) {
+			setLinkedExtras(linkedExtras.filter((extra) => extra !== value));
+		}
 	};
 
-	const handleMouseLeaveToAddClass = (value: string) => {
-		if (!linkedExtras.includes(value)) {
+	const handleMouseLeave = (value: string) => {
+		// Dodaj klasę "linked" tylko, jeśli element jest aktywny
+		if (selectedExtras.includes(value) && !linkedExtras.includes(value)) {
 			setLinkedExtras([...linkedExtras, value]);
 		}
 	};
@@ -295,7 +302,7 @@ const PricingForm = () => {
 											${selectedExtras.includes(option.value) ? 'active' : ''}
 											${linkedExtras.includes(option.value) ? 'linked' : ''}`}
 												onClick={() => handleExtrasChange(option.value)}
-												onMouseLeave={() => handleMouseLeaveToAddClass(option.value)}
+												onMouseLeave={() => handleMouseLeave(option.value)}
 											>
 												<input
 													type='checkbox'
