@@ -1,4 +1,11 @@
 /* Ukrywamy domyślny radio button */
+#PricingForm {
+	.total-price,
+	.total-time {
+		color: white;
+		font-weight: bold;
+	}
+}
 .radio-button input[type='radio'] {
 	display: none;
 }

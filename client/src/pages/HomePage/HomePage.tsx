@@ -150,13 +150,19 @@ const HomePage = () => {
 							</h1>
 						</div>
 						<div className='home-page-header-cta'>
-							<Button linkTo='/cennik' buttonText='Cennik' theme='btn-primary' />
+							<Button
+								linkTo='#cennik'
+								buttonText='Cennik'
+								theme='btn-primary'
+								targetId='PricingForm'
+								offset={140}
+							/>
 							<Button
 								linkTo='#'
 								buttonText='Realizacje'
 								theme='btn-underline'
 								targetId='realizacje'
-								offset={125}
+								offset={140}
 							/>
 						</div>
 					</>

@@ -174,8 +174,11 @@ const PricingForm = () => {
 	};
 
 	return (
-		<section className='container'>
-			<h1>Pricing Form</h1>
+		<section id='PricingForm' className='container'>
+			<h2>Konfigurator</h2>
+			<p>
+				Wybierz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
+			</p>
 
 			{/* Sekcja "product" */}
 			<div>
@@ -336,10 +339,15 @@ const PricingForm = () => {
 			{totalPrice > 0 && (
 				<div className='result'>
 					<p>
-						Szacowana cena: {totalPrice} PLN brutto{' '}
-						{totalPriceMessage && totalPriceMessage}
+						Szacowana cena:{' '}
+						<span className='total-price'>
+							{totalPrice} PLN brutto {totalPriceMessage && totalPriceMessage}
+						</span>
 					</p>
-					<p>Szacowany czas realizacji: {Math.ceil(totalTime / 15)} tygodni</p>
+					<p>
+						Szacowany czas realizacji:{' '}
+						<span className='total-time'>{Math.ceil(totalTime / 15)} tygodni</span>
+					</p>
 				</div>
 			)}
 		</section>

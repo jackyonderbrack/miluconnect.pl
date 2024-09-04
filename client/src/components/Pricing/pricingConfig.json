@@ -2,7 +2,7 @@
 	"sections": [
 		{
 			"id": "product",
-			"label": "Wybierz produkt:",
+			"label": "Czego szukasz?",
 			"type": "select",
 			"options": [
 				{
@@ -257,7 +257,7 @@
 					{
 						"value": "domain",
 						"label": "+ Domena",
-						"price": 60,
+						"price": 50,
 						"time": 2
 					},
 					{
