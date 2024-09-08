@@ -174,8 +174,8 @@ const PricingForm = () => {
 	};
 
 	return (
-		<section id='PricingForm' className='container'>
-			<h2>Konfigurator</h2>
+		<section id='PricingForm' className='container background-top py-2 px-4'>
+			<h2>Konfigurator projektu</h2>
 			<p>
 				Wybierz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
 			</p>

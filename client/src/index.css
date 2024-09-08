@@ -42,11 +42,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
-html {
-	/* scroll-snap-type: y mandatory; */
-}
-
 body {
 	padding-bottom: env(safe-area-inset-bottom);
 	margin: 0 auto;
@@ -56,6 +51,11 @@ body {
 
 body::-webkit-scrollbar {
 	display: none;
+}
+
+.client-outlet {
+	margin: 0 auto;
+	max-width: 1680px;
 }
 
 h1 {
@@ -101,10 +101,8 @@ button:hover:not(.btn-underline) {
 }
 
 section {
-	margin: 4rem auto 0 auto;
 	scroll-snap-align: start;
 	scroll-margin-top: 8rem;
-	max-width: 1280px;
 }
 
 .col {
@@ -516,9 +514,6 @@ section {
 }
 .rounded-2xl {
 	border-radius: 1rem;
-}
-.container {
-	width: clamp(300px, 86%, 1280px);
 }
 
 @media only screen and (max-width: 1024px) {

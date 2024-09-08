@@ -133,7 +133,7 @@ const HomePage = () => {
 	];
 
 	return (
-		<div>
+		<>
 			<MetaTags
 				title='MILU Connect'
 				description='Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu. Katowice, Rybnik, Żory, Mikołów, Śląsk'
@@ -169,6 +169,7 @@ const HomePage = () => {
 				}
 				imgUrl={EarthImg}
 			/>
+			<Pricing />
 			{_homeContents_ImageBox.map((item, index) => (
 				<ImageText
 					key={index}
@@ -179,6 +180,7 @@ const HomePage = () => {
 					url={item.url}
 				/>
 			))}
+
 			<section className='background-top my-3 py-4' id='realizacje'>
 				<div className='flex flex-col align-items-center py-4'>
 					<h2>
@@ -195,7 +197,7 @@ const HomePage = () => {
 				</div>
 				<Slider items={_portfolio_items} />
 			</section>
-			<Pricing />
+
 			<section className='col background-top pt-2 pb-6'>
 				<div className='flex flex-col align-items-center pb-6'>
 					<Title
@@ -222,7 +224,7 @@ const HomePage = () => {
 					/>
 				</div>
 			</section>
-		</div>
+		</>
 	);
 };
 

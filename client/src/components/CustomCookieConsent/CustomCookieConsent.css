@@ -1,0 +1,7 @@
+.privacy-policy-link {
+	font-weight: bold;
+}
+
+.cookie-consent-options {
+	transition: var(--transition);
+}

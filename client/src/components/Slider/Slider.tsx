@@ -16,20 +16,41 @@ interface SliderProps {
 
 const Slider: FC<SliderProps> = ({ items }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const visibleItemsCount = 3; // Ilość widocznych elementów na raz
+	const visibleItemsCount = 4;
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setCurrentIndex(
-				(prevIndex) => (prevIndex + 1) % (items.length - visibleItemsCount + 1)
-			);
-		}, 5500); // Zmiana co 2 sekundy
+			nextSlide();
+		}, 5500);
 
-		return () => clearInterval(interval); // Wyczyść interval po unmount
-	}, [items.length]);
+		return () => clearInterval(interval);
+	}, [currentIndex, items.length]);
+
+	const nextSlide = () => {
+		setCurrentIndex((prevIndex) =>
+			prevIndex === items.length - visibleItemsCount ? 0 : prevIndex + 1
+		);
+	};
+
+	const prevSlide = () => {
+		setCurrentIndex((prevIndex) =>
+			prevIndex === 0 ? items.length - visibleItemsCount : prevIndex - 1
+		);
+	};
+
+	const handleScroll = (e: React.WheelEvent<HTMLDivElement>) => {
+		if (e.deltaY < 0) {
+			prevSlide();
+		} else {
+			nextSlide();
+		}
+	};
 
 	return (
-		<div className='slider'>
+		<div className='slider' onWheel={handleScroll}>
+			<button className='slider-btn prev' onClick={prevSlide}>
+				←
+			</button>
 			<div
 				className='slider-track'
 				style={{
@@ -59,6 +80,9 @@ const Slider: FC<SliderProps> = ({ items }) => {
 					</a>
 				))}
 			</div>
+			<button className='slider-btn next' onClick={nextSlide}>
+				→
+			</button>
 		</div>
 	);
 };

@@ -38,7 +38,7 @@ function Layout() {
 	}, [location]);
 
 	return (
-		<main id='Application'>
+		<div id='Application'>
 			<Navigation />
 			<div className='client-outlet'>
 				<ScrollToTop />
@@ -47,7 +47,7 @@ function Layout() {
 				<TrackPageView />
 				<CustomCookieConsent />
 			</div>
-		</main>
+		</div>
 	);
 }
 
