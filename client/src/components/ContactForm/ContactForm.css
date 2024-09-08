@@ -1,84 +1,118 @@
-:root {
-	--primary-dark-color: var(--primary-dark-color);
-	--text-color: white;
-	--border-radius: 1rem;
-	--padding: 0.5rem 1rem;
-}
-
+/* Główne style formularza */
 form {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	background-color: var(--color-secondary-background);
+	color: var(--color-primary);
+	font-family: var(--ff);
+
+	> * {
+		margin: 0 auto;
+	}
 }
 
-form .submitArea {
-	display: flex;
-	justify-content: center;
-}
-
+/* Styl pola input i textarea */
 form input,
 form textarea {
-	border: 1px solid transparent;
-	background-color: transparent;
-	color: var(--text-color);
-	border-bottom: 1px solid var(--primary-light-color);
-	text-align: left;
-	padding: var(--padding);
-	margin-bottom: 2rem;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+	border: 1px solid var(--color-accent-secondary);
+	border-radius: var(--radius-md);
+	padding: 1rem 1.5rem; /* Dostosowanie paddingu */
+	font-size: 1rem;
+	transition:
+		border-color var(--transition),
+		box-shadow var(--transition);
 }
 
+form input::placeholder,
+form textarea::placeholder {
+	color: var(--color-accent-secondary);
+}
+
+/* Focus efekt na inputach */
 form input:focus,
 form textarea:focus {
 	outline: none;
-	border-color: #5c5c5c;
+	border-color: var(--color-accent-primary);
+	box-shadow: 0 0 5px var(--color-accent-primary);
 }
 
-form ::placeholder {
-	color: var(--primary-text-color);
-	opacity: 0.7;
-}
-
-.input-field {
-	position: relative;
-	input,
-	textarea {
-		width: clamp(200px, 50vw, 300px);
-		font-family: inherit;
-		font-size: 1rem;
-	}
-	textarea {
-		border: 1px solid rgba(255, 255, 255, 0.123);
-		border-bottom: rgba(255, 255, 255, 0.815) solid 1px;
-	}
-}
-
-.error-message {
-	color: var(--warning-color);
-	position: absolute;
-	top: -0.5rem;
-	margin: 0 auto;
-	font-size: 0.5rem;
-}
-
-.submitArea {
-	position: relative;
-	display: flex;
+/* Styl textarea */
+form textarea {
+	resize: vertical;
+	min-height: 100px;
 	width: 100%;
 }
 
+/* Styl przycisku */
+form button {
+	background-color: var(--color-accent-primary);
+	color: var(--color-secondary);
+	border: none;
+	border-radius: var(--radius-md);
+	padding: var(--padding);
+	font-size: 1.1rem;
+	cursor: pointer;
+	width: 100%;
+	transition:
+		background-color var(--transition),
+		color var(--transition);
+}
+
+/* Hover efekt na przycisku */
+form button:hover {
+	color: var(--color-secondary);
+}
+
+/* Styl komunikatu o błędzie */
+.error-message {
+	color: var(--danger-color);
+	font-size: 0.9rem;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+/* Styl komunikatu o sukcesie */
+.submit-success-status,
+.submit-error-status {
+	font-size: 1rem;
+	text-align: center;
+}
+
 .submit-success-status {
-	position: absolute;
-	top: -1.5rem;
-	margin: 0 auto;
-	font-size: 0.8rem;
 	color: var(--success-color);
 }
 
 .submit-error-status {
-	position: absolute;
-	top: -1.5rem;
-	margin: 0 auto;
-	font-size: 0.8rem;
 	color: var(--danger-color);
+}
+
+/* Stylizacja obszaru submit */
+.submitArea {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+/* Zarezerwowanie miejsca na komunikaty błędów */
+.input-field {
+	min-height: 5.2rem;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+	form {
+		padding: 1.5rem;
+	}
+
+	form button {
+		width: 100%;
+		padding: 1rem;
+	}
 }

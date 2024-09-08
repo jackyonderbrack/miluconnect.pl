@@ -118,7 +118,7 @@ section {
 
 .col > * {
 	flex: 1;
-	min-width: 260px;
+	min-width: 360px;
 	border-radius: var(--radius-md);
 }
 .col-4 {
