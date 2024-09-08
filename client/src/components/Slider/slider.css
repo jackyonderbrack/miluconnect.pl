@@ -1,13 +1,50 @@
+/* Globalne ustawienia dla slidera */
 .slider {
 	position: relative;
 	overflow: hidden;
+	width: 100%;
 }
 
+/* Przyciski nawigacyjne slidera */
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: var(--color-accent-primary);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	transition: background-color 0.3s ease;
+}
+
+/* Przyciski nawigacyjne: hover */
+.slider-btn:hover {
+	background-color: var(--color-accent-primary-dark);
+}
+
+/* Przyciski nawigacyjne: umiejscowienie */
+.slider-btn.prev {
+	left: 10px;
+}
+
+.slider-btn.next {
+	right: 10px;
+}
+
+/* Tor slidera (ścieżka) */
 .slider-track {
 	display: flex;
 	transition: transform 0.5s ease-in-out;
 }
 
+/* Każdy element slidera */
 .slider-item {
 	min-width: 25%;
 	flex-shrink: 0;
@@ -16,25 +53,32 @@
 	align-items: center;
 	box-sizing: border-box;
 	flex-direction: column;
+	padding: 0 10px; /* Odstępy pomiędzy elementami */
 }
 
+/* Karty slidera */
 .slider-card {
-	width: 300px;
-	transition: 0.3s;
+	width: 100%;
+	max-width: 300px;
+	transition: box-shadow 0.3s ease;
 	overflow: hidden;
 	border-radius: 1rem;
 }
 
+/* Efekt hover na karcie */
 .slider-card:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
+/* Obraz w karcie */
 .slider-card-image-wrapper {
 	position: relative;
 	width: 100%;
 	height: 180px;
+	overflow: hidden;
 }
 
+/* Stylizacja obrazu */
 .slider-card-image {
 	width: 100%;
 	height: 100%;
@@ -43,6 +87,7 @@
 	transition: transform 0.3s ease-in-out;
 }
 
+/* Overlay na obraz w karcie */
 .slider-card-image-wrapper::after {
 	content: '';
 	position: absolute;
@@ -50,35 +95,106 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(84, 77, 59, 0.2); /* Ciemny overlay */
+	background: rgba(84, 77, 59, 0.2);
 	opacity: 0;
 	transform: scale(1.05);
 	transition: opacity 0.3s ease-in-out;
-	pointer-events: none; /* Upewnia się, że overlay nie będzie blokował kliknięcia w link */
+	pointer-events: none;
 }
 
+/* Efekt hover na obrazie */
 .slider-card:hover .slider-card-image {
-	transform: scale(1.05); /* Lekki zoom */
+	transform: scale(1.05);
 }
 
 .slider-card:hover .slider-card-image-wrapper::after {
-	opacity: 1; /* Pokazuje overlay */
+	opacity: 1;
 }
 
+/* Zawartość tekstowa karty */
 .slider-card-content {
 	padding: 1rem 0.5rem;
-	padding-bottom: 0.3rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: relative; /* Pozycjonuje content nad overlayem */
 }
 
+/* Tytuł w karcie */
 .slider-card-title {
 	font-size: 1.25rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
 }
 
+/* Opis w karcie */
 .slider-card-description {
 	font-size: 1rem;
+	text-align: center;
+}
+
+/* ================== */
+/* Dodana responsywność */
+/* ================== */
+
+@media (max-width: 1024px) {
+	/* Zmniejszenie liczby widocznych elementów dla tabletów */
+	.slider-item {
+		min-width: 33.33%; /* 3 elementy widoczne */
+	}
+
+	.slider-card {
+		max-width: 250px; /* Mniejsza karta na mniejszych ekranach */
+	}
+
+	.slider-card-title {
+		font-size: 1.1rem;
+	}
+
+	.slider-card-description {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 768px) {
+	/* Zmniejszenie liczby widocznych elementów dla mniejszych tabletów */
+	.slider-item {
+		min-width: 50%; /* 2 elementy widoczne */
+	}
+
+	.slider-card {
+		max-width: 200px; /* Dostosowanie wielkości kart */
+	}
+
+	.slider-card-title {
+		font-size: 1rem;
+	}
+
+	.slider-card-description {
+		font-size: 0.85rem;
+	}
+}
+
+@media (max-width: 480px) {
+	/* Slider na smartfony */
+	.slider-item {
+		min-width: 100%; /* 1 element na pełną szerokość */
+	}
+
+	.slider-btn {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.slider-card {
+		max-width: 300px; /* Pełna szerokość dla kart */
+	}
+
+	.slider-card-title {
+		font-size: 0.95rem;
+	}
+
+	.slider-card-description {
+		font-size: 0.8rem;
+	}
 }

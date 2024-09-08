@@ -1,4 +1,4 @@
-import { useState, useEffect, FC } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import './slider.css';
 
 // Interfejs dla pojedynczego elementu slidera
@@ -15,9 +15,40 @@ interface SliderProps {
 }
 
 const Slider: FC<SliderProps> = ({ items }) => {
+	// Domyślnie ustawiamy 4 elementy widoczne
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const visibleItemsCount = 4;
+	const [visibleItemsCount, setVisibleItemsCount] = useState(4);
 
+	let touchStartX: number = 0;
+	let touchEndX: number = 0;
+
+	// Funkcja do dynamicznego ustawiania liczby widocznych elementów w zależności od szerokości ekranu
+	const updateVisibleItemsCount = () => {
+		const screenWidth = window.innerWidth;
+
+		if (screenWidth < 480) {
+			setVisibleItemsCount(1); // 1 element na bardzo małych ekranach
+		} else if (screenWidth < 768) {
+			setVisibleItemsCount(2); // 2 elementy na małych ekranach
+		} else if (screenWidth < 1024) {
+			setVisibleItemsCount(3); // 3 elementy na tabletach
+		} else {
+			setVisibleItemsCount(4); // 4 elementy na dużych ekranach
+		}
+	};
+
+	// Obsługa zmiany rozmiaru okna
+	useEffect(() => {
+		// Aktualizacja widocznych elementów przy montowaniu komponentu
+		updateVisibleItemsCount();
+		// Dodaj event listener do aktualizowania widocznych elementów przy zmianie rozmiaru okna
+		window.addEventListener('resize', updateVisibleItemsCount);
+
+		// Sprzątanie event listenera przy demontażu komponentu
+		return () => window.removeEventListener('resize', updateVisibleItemsCount);
+	}, []);
+
+	// Automatyczne przewijanie co 5.5 sekundy
 	useEffect(() => {
 		const interval = setInterval(() => {
 			nextSlide();
@@ -38,16 +69,29 @@ const Slider: FC<SliderProps> = ({ items }) => {
 		);
 	};
 
-	const handleScroll = (e: React.WheelEvent<HTMLDivElement>) => {
-		if (e.deltaY < 0) {
-			prevSlide();
-		} else {
+	// Obsługa dotyku:
+	const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+		touchStartX = e.touches[0].clientX;
+	};
+	const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+		touchEndX = e.touches[0].clientX;
+	};
+	const handleTouchEnd = () => {
+		if (touchStartX - touchEndX > 50) {
 			nextSlide();
+		}
+		if (touchStartX - touchEndX < -50) {
+			prevSlide();
 		}
 	};
 
 	return (
-		<div className='slider' onWheel={handleScroll}>
+		<div
+			className='slider'
+			onTouchStart={handleTouchStart}
+			onTouchEnd={handleTouchEnd}
+			onTouchMove={handleTouchMove}
+		>
 			<button className='slider-btn prev' onClick={prevSlide}>
 				←
 			</button>
