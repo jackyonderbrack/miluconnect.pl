@@ -187,19 +187,21 @@ const HomePage = () => {
 				/>
 			))}
 
-			<section className='background-top my-3 py-4' id='realizacje'>
-				<div className='flex flex-col align-items-center py-4'>
+			<section
+				className='background-top my-3 py-4 text-align-center'
+				id='realizacje'
+			>
+				<div className='flex align-items-center py-4 px-2 gap-4'>
 					<h2>
 						Sprawdź niektóre nasze <span className='text-gradient'>realizacje</span>
 					</h2>
-					<p className='text-align-center container'>
+					<p className='text-align-left container max-width-61 px-4'>
 						Wszystkie nasze realizacje są <strong>realnymi</strong> projektami,
 						którymi klienci się cieszą, zarządzają i wykorzystują w swoim biznesie.
 						Mimo tego, że każdy projekt zakładał inny scenariusz, wszystkie są
 						<strong> responsywne i dostosowane</strong> do warunków dzisiejszego
 						Web-view.
 					</p>
-					<p>Wybierz i zobacz nasze projekty na żywo</p>
 				</div>
 				<Slider items={_portfolio_items} />
 			</section>

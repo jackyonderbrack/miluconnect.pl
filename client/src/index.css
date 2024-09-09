@@ -147,7 +147,9 @@ section {
 	margin-top: 2rem;
 	margin-bottom: 4rem;
 }
-
+.max-width-61 {
+	max-width: 61%;
+}
 .text-gradient {
 	background: linear-gradient(
 		120deg,
