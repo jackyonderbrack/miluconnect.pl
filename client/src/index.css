@@ -19,18 +19,18 @@
 	--gradient-light-color-mid: #dbc499;
 	--secondary-dark-color: #5e6b6d;
 	--alternative-color: #bfb5b2;
-	--success-color: #55d49b;
+	--color-success: #55d49b;
 	--danger-color: #dc3545;
 	--color-accent-background: #f5b64207;
 	--color-secondary-background: #f5b6421d;
 	--radius-md: 1.5rem;
 	--ff: 'DM Sans', sans-serif;
 	/* --h1: bold 54px/64px var(--ff); */
-	--h1: bold max(48px, 3vw) / max(52px, 3vw) var(--ff);
-	--h2: bold max(36px, 2vw) / max(36px, 2vw) var(--ff);
+	--h1: bold max(42px, 3vw) / max(48px, 3vw) var(--ff);
+	--h2: bold max(32px, 2vw) / max(32px, 2vw) var(--ff);
 	--h3: bold 28px/30px var(--ff);
-	--links: 24px/30px var(--ff);
-	--p: 24px/30px var(--ff);
+	--links: 18px/24px var(--ff);
+	--p: 18px/24px var(--ff);
 	--btn: bold 24px/30px var(--ff);
 	--subtext: 12px/20px var(-ff);
 	--transition: 0.16s ease-in-out, background-color 0.16s, color 0.16s,
@@ -66,6 +66,23 @@ h1 {
 h2 {
 	font: var(--h2);
 	margin-top: 8px;
+	position: relative; /* Aby pseudo-element był względem h2 */
+	padding-bottom: 5px; /* Trochę odstępu nad linią */
+}
+
+h2::after {
+	content: '';
+	position: absolute;
+	bottom: -1rem;
+	left: 0;
+	width: 0;
+	height: 0.3rem; /* Grubość linii */
+	background-color: var(--color-accent-primary);
+	transition: width 1s ease-in-out; /* Płynne rozszerzanie */
+}
+
+h2.active::after {
+	width: 200px;
 }
 
 h3 {

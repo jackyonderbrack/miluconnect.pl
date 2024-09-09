@@ -1,0 +1,30 @@
+h2 {
+	font: var(--h2);
+	margin-top: 8px;
+	position: relative;
+	padding-bottom: 5px;
+}
+
+h2::after {
+	content: '';
+	position: absolute;
+	bottom: -1rem;
+	left: 0;
+	width: 0;
+	height: 0.3rem; /* Grubość linii */
+	background-color: var(--color-accent-primary);
+	border-top-right-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+}
+
+h2.active::after {
+	width: 200px; /* Maksymalna długość border */
+}
+
+h2.primary::after {
+	background-color: var(--color-accent-primary);
+}
+
+h2.secondary::after {
+	background-color: var(--color-accent-secondary);
+}

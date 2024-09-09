@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import pricingData from './pricingConfig.json';
 import './Pricing.css';
+import H2 from '../H2/H2';
 
 // Definiujemy interfejsy dla danych
 
@@ -174,8 +175,8 @@ const PricingForm = () => {
 	};
 
 	return (
-		<section id='PricingForm' className='container background-top py-2 px-4'>
-			<h2>Konfigurator projektu</h2>
+		<section id='PricingForm' className='container py-2 px-4'>
+			<H2 styleType='primary'>Konfigurator projektu</H2>
 			<p>
 				Wybierz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
 			</p>
