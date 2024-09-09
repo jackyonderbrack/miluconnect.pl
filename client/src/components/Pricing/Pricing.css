@@ -10,14 +10,16 @@
 	display: none;
 }
 
-/* Stylizujemy etykietę jako przycisk */
 .radio-button {
-	padding: 0.8rem 1.2rem;
+	padding: 0.8rem 1rem;
 	border: 1px solid var(--color-accent-primary);
 	background-color: transparent;
 	color: var(--color-primary);
 	cursor: pointer;
 	display: inline-block;
+	display: flex;
+	min-width: 200px;
+	justify-content: center;
 }
 
 /* Styl dla aktywnego przycisku (gdy radio jest zaznaczone) */
@@ -35,7 +37,6 @@
 	transition:
 		background-color 0.3s,
 		color 0.3s;
-	display: inline-block;
 	transition: (--transition);
 }
 
@@ -50,7 +51,11 @@
 		color 0.3s;
 	display: inline-block;
 	transition: (--transition);
-	height: 14rem;
+	min-height: 14rem;
+	> span {
+		font-weight: bold;
+		font-size: 120%;
+	}
 }
 
 /* Styl dla aktywnego przycisku w sekcji details */
