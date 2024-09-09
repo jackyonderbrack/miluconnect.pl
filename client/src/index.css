@@ -31,7 +31,7 @@
 	--h3: bold 28px/30px var(--ff);
 	--links: 18px/24px var(--ff);
 	--p: 18px/24px var(--ff);
-	--btn: bold 24px/30px var(--ff);
+	--btn: bold 18px/24px var(--ff);
 	--subtext: 12px/20px var(-ff);
 	--transition: 0.16s ease-in-out, background-color 0.16s, color 0.16s,
 		font-weight 0.2s, transform 2s;
@@ -135,21 +135,7 @@ section {
 
 .col > * {
 	flex: 1;
-	min-width: 360px;
 	border-radius: var(--radius-md);
-}
-.col-4 {
-	display: flex;
-	gap: 1rem;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-	> * {
-		flex: 1;
-		min-width: 24dvw;
-		border-radius: var(--radius-md);
-	}
 }
 
 .row {
@@ -218,6 +204,12 @@ section {
 }
 .text-align-justify {
 	text-align: justify;
+}
+.text-align-left {
+	text-align: left;
+}
+.text-align-right {
+	text-align: right;
 }
 /* Padding */
 .p-1 {
@@ -337,9 +329,6 @@ section {
 }
 .items-center {
 	align-items: center;
-}
-.justify-center {
-	justify-content: center;
 }
 .flex-col {
 	flex-direction: column;

@@ -40,6 +40,7 @@ const ContactPageSent = () => {
 					</div>
 				}
 				imgUrl={ContactImg}
+				align='start'
 			/>
 		</>
 	);

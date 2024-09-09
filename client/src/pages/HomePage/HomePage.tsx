@@ -36,6 +36,7 @@ import Button from '../../components/Button/Button';
 import ImageText from '../../components/ImageText/ImageText';
 import Slider from '../../components/Slider/Slider';
 import Pricing from '../../components/Pricing/Pricing';
+import H2 from '../../components/H2/H2';
 
 const HomePage = () => {
 	const _portfolio_items = [
@@ -168,8 +169,13 @@ const HomePage = () => {
 					</>
 				}
 				imgUrl={EarthImg}
+				align='start'
 			/>
 			<Pricing />
+			<Header
+				content={<H2 styleType='secondary'>Na czym się znamy</H2>}
+				align='center'
+			/>
 			{_homeContents_ImageBox.map((item, index) => (
 				<ImageText
 					key={index}
