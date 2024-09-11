@@ -25,7 +25,6 @@
 	--color-secondary-background: #f5b6421d;
 	--radius-md: 1.5rem;
 	--ff: 'DM Sans', sans-serif;
-	/* --h1: bold 54px/64px var(--ff); */
 	--h1: bold max(42px, 3vw) / max(48px, 3vw) var(--ff);
 	--h2: bold max(32px, 2vw) / max(32px, 2vw) var(--ff);
 	--h3: bold 28px/30px var(--ff);
@@ -75,9 +74,9 @@ h2::after {
 	bottom: -1rem;
 	left: 0;
 	width: 0;
-	height: 0.3rem; /* Grubość linii */
+	height: 0.3rem;
 	background-color: var(--color-accent-primary);
-	transition: width 1s ease-in-out; /* Płynne rozszerzanie */
+	transition: width 1s ease-in-out;
 }
 
 h2.active::after {
