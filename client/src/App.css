@@ -1,4 +1,5 @@
 #Admin {
+	padding-top: 0;
 	display: flex;
 	min-height: 100vh;
 }

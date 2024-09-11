@@ -46,7 +46,6 @@ body {
 	padding-bottom: env(safe-area-inset-bottom);
 	margin: 0 auto;
 	min-height: 100vh;
-	margin-top: 8rem;
 }
 
 body::-webkit-scrollbar {
@@ -54,7 +53,7 @@ body::-webkit-scrollbar {
 }
 
 .client-outlet {
-	margin: 0 auto;
+	margin: 8rem auto 0;
 	max-width: 1680px;
 }
 
@@ -66,8 +65,8 @@ h1 {
 h2 {
 	font: var(--h2);
 	margin-top: 8px;
-	position: relative; /* Aby pseudo-element był względem h2 */
-	padding-bottom: 5px; /* Trochę odstępu nad linią */
+	position: relative;
+	padding-bottom: 5px;
 }
 
 h2::after {
