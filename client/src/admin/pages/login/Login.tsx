@@ -1,48 +1,93 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import './login.css';
-import { useNavigate } from 'react-router-dom';
 import { getToken } from '../../services/login.service';
+import { useLoginFormik } from '../../../utils/useFormikConfig';
+import { useState } from 'react';
 
 const Login = () => {
-	const [email, setEmail] = useState<string>('');
-	const [password, setPassword] = useState<string>('');
-	const [error, setError] = useState<string | null>(null);
 	const navigate = useNavigate();
+	const [submitErrorStatus, setSubmitErrorStatus] = useState<string>('');
+	const [submitSuccessStatus, setSubmitSuccessStatus] = useState<string>('');
 
-	const handleLogin = async (e: React.FormEvent) => {
-		e.preventDefault();
+	const formik = useLoginFormik(async (values) => {
 		try {
-			getToken({ email, password });
+			await getToken({
+				email: values.loginFormEmail,
+				password: values.loginFormPassword,
+			});
+			setSubmitSuccessStatus('Zalogowano pomyślnie!');
+			setSubmitErrorStatus('');
 			navigate('/admin-panel');
-		} catch (err) {
-			setError('Nieprawidłowy email lub hasło');
-			console.error('Błąd logowania: ', error);
+		} catch (err: any) {
+			if (err.response && err.response.status === 401) {
+				setSubmitErrorStatus('Nieprawidłowy email lub hasło');
+			} else {
+				setSubmitErrorStatus('Błąd serwera. Spróbuj ponownie później.');
+			}
+			setSubmitSuccessStatus('');
+			console.error('Błąd logowania: ', err);
 		}
-	};
+	});
 	return (
-		<div>
-			<Header title='Login' />
-			<form onSubmit={handleLogin}>
+		<div id='LoginForm'>
+			<Header title='Admin Panel' />
+			<p>Zaloguj się do panelu administracyjnego</p>
+			<form onSubmit={formik.handleSubmit}>
 				<div className='form-group login-form'>
-					<label htmlFor='email'>Email:</label>
+					<label htmlFor='loginFormEmail'>Email:</label>
 					<input
 						type='email'
-						id='email'
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
+						id='loginFormEmail'
+						name='loginFormEmail'
+						value={formik.values.loginFormEmail}
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
+						className={
+							formik.touched.loginFormEmail && formik.errors.loginFormEmail
+								? 'input-error'
+								: ''
+						}
 					/>
-					<label htmlFor='password'>Hasło:</label>
+					{formik.touched.loginFormEmail && formik.errors.loginFormEmail ? (
+						<p className='error-message'>{formik.errors.loginFormEmail}</p>
+					) : (
+						<p className='error-message'></p>
+					)}
+
+					<label htmlFor='loginFormPassword'>Hasło:</label>
 					<input
 						type='password'
-						id='password'
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
+						id='loginFormPassword'
+						name='loginFormPassword'
+						value={formik.values.loginFormPassword}
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
+						className={
+							formik.touched.loginFormPassword && formik.errors.loginFormPassword
+								? 'input-error'
+								: ''
+						}
 					/>
+					{formik.touched.loginFormPassword && formik.errors.loginFormPassword ? (
+						<p className='error-message'>{formik.errors.loginFormPassword}</p>
+					) : (
+						<p className='error-message'></p>
+					)}
 				</div>
-				<button type='submit'>Zaloguj się</button>
-				{error && <p className='login-error'>Błąd: {error}</p>}
+
+				<button type='submit' className='btn-outline'>
+					Zaloguj się
+				</button>
 			</form>
+			{submitErrorStatus ? (
+				<p className='login-error'>Błąd: {submitErrorStatus}</p>
+			) : (
+				<p className='login-error'></p>
+			)}
+			{submitSuccessStatus && (
+				<p className='login-success'>{submitSuccessStatus}</p>
+			)}
 		</div>
 	);
 };
