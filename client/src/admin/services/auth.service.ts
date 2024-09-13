@@ -1,10 +1,12 @@
 export const authService = {
 	getToken: () => {
-		return localStorage.getItem('TOKEN');
+		const token = localStorage.getItem('TOKEN');
+		return token;
 	},
 
 	getAuthHeader: () => {
 		const token = authService.getToken();
-		return token ? { Authorization: `Bearer ${token}` } : {};
+		const headers = token ? { Authorization: `Bearer ${token}` } : {};
+		return headers;
 	},
 };
