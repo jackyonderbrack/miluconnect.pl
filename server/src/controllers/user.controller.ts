@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { User } from "../models/user.model";
 import Logging from "../library/Logging";
-import { Op } from "sequelize";
+import sequelize from "sequelize";
 
 export const createUser = async (req: Request, res: Response) => {
 	try {
@@ -75,10 +75,25 @@ export const getUsers = async (req: Request, res: Response) => {
 		const users = await User.findAll({
 			attributes: { exclude: ["password", "token", "fcm_token"] },
 		});
-
 		res.status(200).json(users);
 	} catch (error) {
 		console.error("Błąd przy pobieraniu użytkowników:", error);
 		res.status(500).json({ message: "Błąd serwera" });
+	}
+};
+
+export const deleteUser = async (req: Request, res: Response) => {
+	try {
+		let userId = req.userId;
+		const userToDelete = await User.findByPk(userId);
+		if (userToDelete) {
+			await userToDelete.destroy();
+			res.status(200).json({ message: "Użytkownik został usunięty e" });
+		} else {
+			res.status(404).json({ message: "Nie znaleziono użytkownika" });
+		}
+	} catch (error) {
+		console.error("Błąd przy usuwaniu użytkownika", error);
+		res.status(500).json({ message: "Błąd przy usuwaniu użytkownika" });
 	}
 };
