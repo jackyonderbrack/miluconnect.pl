@@ -4,7 +4,7 @@ import './form.css';
 import React, { useState } from 'react';
 import { addUser } from '../../services/user.service';
 import { addPost } from '../../services/post.service';
-import { User } from '../../models/user.model';
+import { NewUser } from '../../models/user.model';
 import { Post } from '../../models/post.model';
 
 interface Field {
@@ -54,7 +54,7 @@ const Form: React.FC = () => {
 		e.preventDefault();
 		try {
 			if (type === 'user') {
-				await addUser(formData as unknown as User);
+				await addUser(formData as unknown as NewUser);
 				navigate('/admin-panel/users');
 			}
 			if (type === 'post') {

@@ -84,7 +84,7 @@ export const getUsers = async (req: Request, res: Response) => {
 
 export const deleteUser = async (req: Request, res: Response) => {
 	try {
-		let userId = req.userId;
+		let userId = req.params.id;
 		const userToDelete = await User.findByPk(userId);
 		if (userToDelete) {
 			await userToDelete.destroy();

@@ -10,12 +10,16 @@ interface ListProps<T extends ListItem> {
 	items: T[];
 	itemsPerPage: number;
 	renderItem: (item: T) => ReactNode;
+	onUpdate: (itemId: string) => void;
+	onDelete: (itemId: string) => void;
 }
 
 function List<T extends ListItem>({
 	items,
 	renderItem,
 	itemsPerPage,
+	onUpdate,
+	onDelete,
 }: ListProps<T>) {
 	const [currentPage, setCurrentPage] = useState(1);
 
@@ -36,8 +40,12 @@ function List<T extends ListItem>({
 					<div key={item.id} className='list-item'>
 						<div className='list-item-content'>{renderItem(item)}</div>
 						<div className='list-item-icons'>
-							<HiPencilAlt size={32} />
-							<HiOutlineTrash size={32} color='var(--color-danger)' />
+							<HiPencilAlt size={32} onClick={() => onUpdate(item.id)} />
+							<HiOutlineTrash
+								size={32}
+								color='var(--color-danger)'
+								onClick={() => onDelete(item.id)}
+							/>
 						</div>
 					</div>
 				))
