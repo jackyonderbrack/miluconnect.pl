@@ -6,7 +6,7 @@ const API_URL = import.meta.env.BASE_URL;
 export const getData = async <T>(
 	endpoint: string
 ): Promise<AxiosResponse<T>> => {
-	const apiUrl = `${API_URL}/api/${endpoint}`;
+	const apiUrl = `${API_URL}api/${endpoint}`;
 	try {
 		const headers = authService.getAuthHeader();
 		const response = await axios.get<T>(apiUrl, { headers });
@@ -36,7 +36,7 @@ export const putData = async <T>(
 	endpoint: string,
 	data: T
 ): Promise<AxiosResponse<T>> => {
-	const apiUrl = `${API_URL}/api/${endpoint}`;
+	const apiUrl = `${API_URL}api/${endpoint}`;
 	try {
 		const headers = authService.getAuthHeader();
 		const response = await axios.put<T>(apiUrl, data, { headers });
@@ -50,7 +50,7 @@ export const putData = async <T>(
 export const deleteData = async (
 	endpoint: string
 ): Promise<AxiosResponse<string>> => {
-	const apiUrl = `${API_URL}/api/${endpoint}`;
+	const apiUrl = `${API_URL}api/${endpoint}`;
 	try {
 		const headers = authService.getAuthHeader();
 		const response = await axios.delete<string>(apiUrl, { headers });

@@ -23,18 +23,17 @@ function List<T extends ListItem>({
 		setCurrentPage(page);
 	};
 
-	const currentItems = items.slice(
-		(currentPage - 1) * itemsPerPage,
-		currentPage * itemsPerPage
-	);
+	const currentItems = Array.isArray(items)
+		? items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+		: [];
 
 	return (
 		<div className='list-container'>
-			{items.length === 0 ? ( // Sprawdzenie, czy lista jest pusta
-				<div className='list-item loading-item'></div> // Dodanie elementu z klasą `loading-item`
+			{items.length === 0 ? (
+				<div className='list-item loading-item'></div>
 			) : (
-				currentItems.map((item, index) => (
-					<div key={index} className='list-item'>
+				currentItems.map((item) => (
+					<div key={item.id} className='list-item'>
 						<div className='list-item-content'>{renderItem(item)}</div>
 						<div className='list-item-icons'>
 							<HiCog size={32} color='var(--color-accent-primary)' />
