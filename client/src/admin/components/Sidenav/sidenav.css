@@ -1,11 +1,12 @@
 .sidenav {
-	min-width: 250px;
+	width: 250px;
 	padding: 1.5rem;
 	border-radius: 2rem 0 0 2rem;
 	background-color: var(--color-accent-background);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	display: flex;
 	flex-direction: column;
+	transition: width 0.3 ease;
 }
 
 .sidenav-header {
@@ -46,4 +47,33 @@
 
 .sidenav-link.active {
 	color: var(--color-accent-primary);
+}
+
+.sidenav-toggle {
+	display: none;
+	padding: 0.2rem;
+	width: 32px;
+	height: 32px;
+	background-color: var(--color-accent-primary);
+	border-radius: 100%;
+	color: black;
+}
+
+@media (max-width: 600px) {
+	.sidenav {
+		display: none;
+	}
+
+	.sidenav-active {
+		display: block;
+		width: 250px;
+	}
+
+	.sidenav-toggle {
+		display: block;
+		position: fixed;
+		top: 1.4rem;
+		left: 1rem;
+		z-index: 99;
+	}
 }

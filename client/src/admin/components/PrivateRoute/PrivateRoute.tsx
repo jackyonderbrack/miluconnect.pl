@@ -4,6 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 const PrivateRoute: React.FC = () => {
 	const token = localStorage.getItem('TOKEN');
 	return token ? <Outlet /> : <Navigate to='/admin-login' />;
+	// return <Outlet />;
 };
 
 export default PrivateRoute;

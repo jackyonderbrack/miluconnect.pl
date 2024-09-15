@@ -574,3 +574,21 @@ section {
 	background: linear-gradient(90deg, var(--color-secondary), transparent);
 	border-radius: 2rem 0 0 2rem;
 }
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideOut {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
