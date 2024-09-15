@@ -22,10 +22,10 @@ import Posts from './admin/pages/posts/Posts';
 import Users from './admin/pages/users/Users';
 import Settings from './admin/pages/settings/Settings';
 import Reports from './admin/pages/reports/Reports';
-import New from './admin/pages/new/New';
+import Form from './admin/components/Form/Form';
 import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
-import Login from './admin/pages/login/Login';
 import Account from './admin/pages/account/Account';
+import Login from './admin/pages/login/Login';
 
 function Layout() {
 	const location = useLocation();
@@ -92,7 +92,7 @@ const router = createBrowserRouter([
 					{ path: 'reports', element: <Reports /> },
 					{ path: 'settings', element: <Settings /> },
 					{ path: 'account', element: <Account /> },
-					{ path: ':type/new', element: <New /> },
+					{ path: ':type/new', element: <Form /> },
 				],
 			},
 		],

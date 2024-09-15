@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import Header from '../../components/Header/Header';
-import './new.css';
+import Header from '../Header/Header';
+import './form.css';
 import React, { useState } from 'react';
 import { addUser } from '../../services/user.service';
 import { addPost } from '../../services/post.service';
@@ -36,7 +36,7 @@ const fieldConfigurations: FieldConfigurations = {
 	],
 };
 
-const New: React.FC = () => {
+const Form: React.FC = () => {
 	const { type } = useParams<{ type: string }>();
 	const fields = type ? fieldConfigurations[type] || [] : [];
 	const navigate = useNavigate();
@@ -98,4 +98,4 @@ const New: React.FC = () => {
 	);
 };
 
-export default New;
+export default Form;

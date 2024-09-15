@@ -37,6 +37,7 @@
 	--shadow: #00000030 0px 0px 10px 0px;
 	--shadowdark: #00000030 15px 10px 30px 2px;
 	--blur: filter: blur(--radius-md);
+	--padding: 1rem 1.5rem;
 	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;

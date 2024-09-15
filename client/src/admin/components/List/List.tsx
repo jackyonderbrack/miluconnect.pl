@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 import './list.css'; // Dodaj stylizację
 import Pagination from '../Pagination/Pagination';
-import { HiCog, HiOutlineTrash } from 'react-icons/hi';
+import { HiCog, HiPencilAlt } from 'react-icons/hi';
 
 interface ListItem {
 	id: string;
@@ -37,7 +37,7 @@ function List<T extends ListItem>({
 						<div className='list-item-content'>{renderItem(item)}</div>
 						<div className='list-item-icons'>
 							<HiCog size={32} color='var(--color-accent-primary)' />
-							<HiOutlineTrash size={32} color='var(--color-danger)' />
+							<HiPencilAlt size={32} color='var(--color-danger)' />
 						</div>
 					</div>
 				))
