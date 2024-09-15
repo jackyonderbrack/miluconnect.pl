@@ -30,15 +30,19 @@ function List<T extends ListItem>({
 
 	return (
 		<div className='list-container'>
-			{currentItems.map((item, index) => (
-				<div key={index} className='list-item'>
-					<div className='list-item-content'>{renderItem(item)}</div>
-					<div className='list-item-icons'>
-						<HiCog size={32} color='var(--color-accent-primary)' />
-						<HiOutlineTrash size={32} color='var(--color-danger)' />
+			{items.length === 0 ? ( // Sprawdzenie, czy lista jest pusta
+				<div className='list-item loading-item'></div> // Dodanie elementu z klasą `loading-item`
+			) : (
+				currentItems.map((item, index) => (
+					<div key={index} className='list-item'>
+						<div className='list-item-content'>{renderItem(item)}</div>
+						<div className='list-item-icons'>
+							<HiCog size={32} color='var(--color-accent-primary)' />
+							<HiOutlineTrash size={32} color='var(--color-danger)' />
+						</div>
 					</div>
-				</div>
-			))}
+				))
+			)}
 			<Pagination
 				currentPage={currentPage}
 				totalItems={items.length}
