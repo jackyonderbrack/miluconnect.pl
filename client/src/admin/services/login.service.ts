@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { Login } from '../models/login.model';
 
+const API_URL = import.meta.env.BASE_URL;
+
 export const getToken = async ({ email, password }: Login) => {
-	const response = await axios.post('http://localhost:42204/api/login', {
+	const response = await axios.post(`${API_URL}/api/login`, {
 		email,
 		password,
 	});
