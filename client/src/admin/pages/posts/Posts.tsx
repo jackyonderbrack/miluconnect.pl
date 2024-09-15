@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import Button from '../../../components/Button/Button';
 import Header from '../../components/Header/Header';
 import List from '../../components/List/List';
-import jsonPosts from './posts.json';
+import { Post } from '../../models/post.model';
 
 const Posts = () => {
+	const [
+		postsData,
+		// setPostsData
+	] = useState<Post[]>([]);
 	return (
 		<div className='posts-page flex flex-col gap-2'>
 			<Header title='Wpisy' />
@@ -15,7 +20,7 @@ const Posts = () => {
 				/>
 			</div>
 			<List
-				items={jsonPosts}
+				items={postsData}
 				itemsPerPage={3}
 				renderItem={(item) => (
 					<>

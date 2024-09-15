@@ -1,19 +1,9 @@
-import axios, { AxiosResponse } from 'axios';
+// post.service.ts
+import { Post } from '../models/post.model';
+import { getData, postData, deleteData } from './http.service';
 
-export interface Post {
-	category: string;
-	title: string;
-	description: string;
-	author: string;
-}
+export const getPosts = () => getData<Post[]>('posts');
 
-export const addPost = async (post: Post): Promise<AxiosResponse<Post>> => {
-	let apiUrl = 'http://localhost:42204/api/post';
-	try {
-		const response = await axios.post<Post>(apiUrl, post);
-		return response;
-	} catch (error) {
-		console.error('Error adding user:', error);
-		throw error;
-	}
-};
+export const addPost = (post: Post) => postData<Post>('post', post);
+
+export const deletePost = (postId: string) => deleteData(`post/${postId}`);

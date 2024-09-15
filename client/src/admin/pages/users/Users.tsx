@@ -1,23 +1,26 @@
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header/Header';
 import List from '../../components/List/List';
-import { getUsers, User } from '../../services/user.service';
+import { getUsers } from '../../services/user.service';
 import Button from '../../../components/Button/Button';
-// import List from "../../components/List/List"
+import { User } from '../../models/user.model';
 
 const Users = () => {
 	const [usersData, setUsersData] = useState<User[]>([]);
+
 	useEffect(() => {
 		const fetchUsers = async () => {
 			try {
 				const response = await getUsers();
 				setUsersData(response.data);
+				console.log('Pobrano liste użytkowników:', response);
 			} catch (error) {
-				console.error('Nie udało się pobrać użytkowników: ', error);
+				console.error('Nie udało się pobrać użytkowników:', error);
 			}
 		};
 		fetchUsers();
 	}, []);
+
 	return (
 		<div className='users-page flex flex-col gap-2'>
 			<Header title='Użytkownicy' />
