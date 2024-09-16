@@ -11,16 +11,14 @@ const Sidenav = () => {
 		const navigation = navigationRef.current;
 		if (navigation) {
 			if (isMenuOpen) {
-				setTimeout(() => {
-					navigation.classList.add('sidenav-active');
-					navigation.classList.remove('sidenav-hidden');
-				});
+				navigation.classList.add('sidenav-active');
+				navigation.classList.remove('sidenav-hidden');
 			} else {
 				navigation.classList.add('sidenav-hidden');
 				setTimeout(() => {
 					navigation.classList.remove('sidenav-active');
 					navigation.classList.remove('sidenav-hidden');
-				});
+				}, 300);
 			}
 		}
 	}, [isMenuOpen]);
@@ -37,6 +35,7 @@ const Sidenav = () => {
 			<div className='sidenav-toggle' onClick={toggleMobileNav}>
 				{!isMenuOpen ? <HiMenu size={32} /> : <HiX size={32} />}
 			</div>
+			<div className={`overlay ${isMenuOpen ? 'active' : ''}`}></div>
 			<div className='sidenav' ref={navigationRef}>
 				<div className='sidenav-header'>Admin Panel</div>
 				<ul className='sidenav-menu' onClick={toggleMobileNav}>

@@ -575,6 +575,22 @@ section {
 	border-radius: 2rem 0 0 2rem;
 }
 
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.618);
+	pointer-events: none;
+	z-index: 25;
+}
+
+.overlay.active {
+	display: block;
+}
+
 @keyframes slideIn {
 	from {
 		transform: translateX(-100%);

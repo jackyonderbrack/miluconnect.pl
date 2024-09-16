@@ -1,22 +1,24 @@
 .sidenav {
 	width: 250px;
 	padding: 1.5rem;
-	border-radius: 2rem 0 0 2rem;
-	background-color: var(--color-accent-background);
+	background-color: var(--color-secondary);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	display: flex;
 	flex-direction: column;
 	transition: width 0.3 ease;
+	z-index: 100;
+	height: 100dvh;
 }
 
 .sidenav-header {
 	display: block;
 	align-content: center;
-	height: 6rem;
+	height: 2rem;
 	font-size: 1.5rem;
 	font-weight: bold;
 	text-align: center;
 	color: var(--white);
+	margin-bottom: 2rem;
 }
 
 .sidenav-menu {
@@ -62,6 +64,8 @@
 @media (max-width: 600px) {
 	.sidenav {
 		display: none;
+		position: fixed;
+		animation: slideIn 300ms forwards;
 	}
 
 	.sidenav-active {
@@ -74,6 +78,11 @@
 		position: fixed;
 		top: 1.4rem;
 		left: 1rem;
-		z-index: 99;
+		z-index: 101;
+	}
+
+	.sidenav-hidden {
+		animation: slideOut 0.3s forwards;
+		transform: translateX(-100%);
 	}
 }
