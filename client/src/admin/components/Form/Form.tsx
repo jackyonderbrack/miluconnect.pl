@@ -28,6 +28,7 @@ const fieldConfigurations: FieldConfigurations = {
 		{ name: 'name', label: 'Imię i nazwisko', type: 'text' },
 		{ name: 'email', label: 'Email', type: 'email' },
 		{ name: 'password', label: 'Hasło', type: 'password' },
+		{ name: 'passwordConfirm', label: 'Potwierdź hasło', type: 'password' }, // Dodane pole
 	],
 	report: [
 		{ name: 'title', label: 'Title', type: 'text' },
@@ -52,6 +53,12 @@ const Form: React.FC = () => {
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
+		// Dodatkowa walidacja, aby sprawdzić zgodność hasła i potwierdzenia hasła
+		if (type === 'user' && formData.password !== formData.passwordConfirm) {
+			setError('Hasła muszą być takie same');
+			return;
+		}
+
 		try {
 			if (type === 'user') {
 				await addUser(formData as unknown as NewUser);
