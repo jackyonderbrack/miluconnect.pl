@@ -72,6 +72,7 @@ const CustomCookieConsent: React.FC = () => {
 
 	return (
 		<CookieConsent
+			contentClasses='cookie-consent-main-wrapper'
 			location='bottom'
 			buttonText='Akceptuj'
 			buttonClasses='btn-primary'

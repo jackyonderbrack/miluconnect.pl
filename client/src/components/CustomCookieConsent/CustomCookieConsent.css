@@ -5,3 +5,7 @@
 .cookie-consent-options {
 	transition: var(--transition);
 }
+.cookie-consent-main-wrapper {
+	margin: 8px !important;
+	margin-bottom: -1rem !important;
+}
