@@ -190,11 +190,11 @@ const HomePage = () => {
 				className='background-top my-3 py-4 text-align-center'
 				id='realizacje'
 			>
-				<div className='col align-items-center py-4 px-2'>
+				<div className='align-items-center py-4 px-2'>
 					<h2>
 						Sprawdź niektóre nasze <span className='text-gradient'>realizacje</span>
 					</h2>
-					<p className='text-align-left container px-4'>
+					<p className='text-align-center container px-4'>
 						Wszystkie nasze realizacje są <strong>realnymi</strong> projektami,
 						którymi klienci się cieszą, zarządzają i wykorzystują w swoim biznesie.
 						Mimo tego, że każdy projekt zakładał inny scenariusz, wszystkie są

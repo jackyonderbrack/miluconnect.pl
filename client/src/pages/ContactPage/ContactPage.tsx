@@ -8,7 +8,7 @@ import MetaTags from '../../components/MetaTags/MetaTags';
 
 const ContactPage = () => {
 	return (
-		<>
+		<div id='ContactPage'>
 			<MetaTags
 				title='MILU Connect - Szybka i darmowa wycena'
 				description='Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu. Katowice, Rybnik, Żory, Mikołów, Śląsk'
@@ -29,7 +29,7 @@ const ContactPage = () => {
 				<div>
 					<ContactForm />
 				</div>
-				<div className='flex flex-col '>
+				<div className='flex flex-col additional-info'>
 					<h3>INFORMACJE DODATKOWE</h3>
 					<p>
 						Jeśli masz jakiekolwiek pytania zawsze możesz napisać do mnie zwykły
@@ -57,7 +57,7 @@ const ContactPage = () => {
 					</section>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

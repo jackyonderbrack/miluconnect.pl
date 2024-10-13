@@ -28,7 +28,6 @@ import TechnologyNodejs from '../../assets/technologies/solutions-nodejs-light-m
 import TechnologyReactjs from '../../assets/technologies/solutions-react-miluconnect.webp';
 import TechnologySharepoint from '../../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
 import MetaTags from '../../components/MetaTags/MetaTags';
-import Gallery from '../../components/Gallery/Gallery';
 import ImageText from '../../components/ImageText/ImageText';
 
 const SolutionsPage = () => {

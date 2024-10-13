@@ -1,12 +1,23 @@
-.contact-cta {
-    display: flex;
-    flex-direction: column;
-    img {
-        width: 1.5rem;
-    }
-    .contact-cta-child {
+#ContactPage {
+    .contact-cta {
         display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
+        flex-direction: column;
+        img {
+            width: 1.5rem;
+        }
+        .contact-cta-child {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .additional-info {
+        padding: 0 0.8rem;
+        @media (max-width: 480px) {
+            padding: 0 1.2rem;
+        }
+        @media (max-width: 800px) {
+            padding: 0 2rem;
+        }
     }
 }

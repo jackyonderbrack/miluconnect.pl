@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
 
 	return (
 		<>
-			<form onSubmit={formik.handleSubmit}>
+			<form onSubmit={formik.handleSubmit} id='ContactForm'>
 				<div className='input-field'>
 					<input
 						type='text'
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
 						<p className='error-message'>{formik.errors.contactFormClientEmail}</p>
 					) : null}
 				</div>
-				<div className='input-field'>
+				<div className='textarea-field'>
 					<textarea
 						name='contactFormMessage'
 						onChange={formik.handleChange}

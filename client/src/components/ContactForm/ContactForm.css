@@ -1,0 +1,17 @@
+#ContactForm {
+    gap: 0;
+    .input-field {
+        display: block;
+        margin-bottom: 0;
+    }
+    .error-message {
+        height: inherit;
+    }
+    input, textarea {
+        border: 1px solid var(--secondary-dark-color);
+        border-radius: 0.8rem;
+    }
+    input::placeholder, textarea::placeholder {
+        color: var(--alternative-color);
+    }
+}

@@ -9,9 +9,12 @@
 
 #Header {
 	position: relative;
-	min-height: 50vh;
+	min-height: 28vh;
 	display: flex;
 	align-items: center;
+	@media (max-width: 480px) {
+		min-height: 36vh;
+	}
 }
 
 .headerContent {
