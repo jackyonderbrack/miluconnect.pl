@@ -1,0 +1,4 @@
+.post-meta {
+	display: flex;
+	flex-direction: column;
+}

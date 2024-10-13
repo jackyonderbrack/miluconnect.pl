@@ -1,12 +1,7 @@
-import Header from "../../components/Header/Header"
+import Header from '../../components/Header/Header';
 
 const Dashboard = () => {
-  return (
-    <div>
-      <Header title="Dashboard" />
-      
-    </div>
-  )
-}
+	return <Header title='Dashboard' />;
+};
 
-export default Dashboard
+export default Dashboard;

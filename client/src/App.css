@@ -1,9 +1,5 @@
-#Application {
-	max-width: 1920px;
-	margin: 0 auto;
-}
-
 #Admin {
+	padding-top: 0;
 	display: flex;
 	min-height: 100vh;
 }

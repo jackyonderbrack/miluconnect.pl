@@ -2,7 +2,7 @@
 	"sections": [
 		{
 			"id": "product",
-			"label": "Czego szukasz?",
+			"label": "Wybierz produkt:",
 			"type": "select",
 			"options": [
 				{

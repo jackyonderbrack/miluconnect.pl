@@ -3,8 +3,8 @@
 		padding: 1rem 1.5rem;
 		text-align: center;
 		img {
-			width: 45%;
-			padding: 4rem;
+			width: 200px;
+			padding: 1rem;
 			box-shadow: var(--shadowdark);
 			backdrop-filter: blur(2px);
 			border-radius: var(--radius-md);
@@ -14,9 +14,6 @@
 			rotate: 2deg;
 			transition: var(--transition);
 		}
-	}
-	.reverse {
-		margin-right: -2rem;
 	}
 	.content-wrapper {
 		display: block;

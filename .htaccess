@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Przekierowanie wszystkich żądań do lokalnego serwera backendu na porcie 42204
+  RewriteCond %{REQUEST_URI} ^/
+  RewriteRule ^(.*)$ http://localhost:42204/$1 [P,L]
+
+  # Upewniamy się, że Apache obsługuje przekazywanie żądań (proxy)
+  ProxyPassReverse / http://localhost:42204/
+
+  # Przekierowanie wszystkich innych żądań do index.html dla SPA (Single Page Application)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ /client/index.html [L]
+</IfModule>

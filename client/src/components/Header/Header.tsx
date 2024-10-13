@@ -2,10 +2,11 @@ import { useRef, useEffect } from 'react';
 import './header.css';
 type HeaderProps = {
 	content: React.ReactNode;
-	imgUrl: string;
+	imgUrl?: string;
+	align: 'start' | 'center' | 'end';
 };
 
-const Header: React.FC<HeaderProps> = ({ imgUrl, content }) => {
+const Header: React.FC<HeaderProps> = ({ imgUrl, content, align = 'left' }) => {
 	const parallaxRef = useRef<HTMLImageElement>(null);
 
 	useEffect(() => {
@@ -26,14 +27,19 @@ const Header: React.FC<HeaderProps> = ({ imgUrl, content }) => {
 	}, []);
 
 	return (
-		<section id='Header'>
+		<section
+			id='Header'
+			className={`header-section ${imgUrl ? '' : 'without-image'} justify-content-${align}`}
+		>
 			<div className='headerContent'>{content}</div>
-			<img
-				src={imgUrl}
-				alt='MILU Connect Zdjęcie główne'
-				ref={parallaxRef}
-				className='headerPicture'
-			/>
+			{imgUrl && (
+				<img
+					src={imgUrl}
+					alt='MILU Connect Zdjęcie główne'
+					ref={parallaxRef}
+					className='headerPicture'
+				/>
+			)}
 		</section>
 	);
 };

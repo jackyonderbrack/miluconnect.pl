@@ -18,7 +18,6 @@ import Partner7 from '../../assets/partners/partner-natarasie-miluconnect.png';
 import Partner8 from '../../assets/partners/partner-vending4all-miluconnect.png';
 // Components
 import Title from '../../components/Title/Title';
-import ImagesRow from '../../components/ImageRow/ImageRow';
 import Header from '../../components/Header/Header';
 // Images
 import PortfolioSkinsnImg from '../../assets/portfolio/07_miluconnect-skinsn-plock-rybnik-strony.png';
@@ -36,6 +35,8 @@ import Button from '../../components/Button/Button';
 import ImageText from '../../components/ImageText/ImageText';
 import Slider from '../../components/Slider/Slider';
 import Pricing from '../../components/Pricing/Pricing';
+import H2 from '../../components/H2/H2';
+import Gallery from '../../components/Gallery/Gallery';
 
 const HomePage = () => {
 	const _portfolio_items = [
@@ -133,7 +134,7 @@ const HomePage = () => {
 	];
 
 	return (
-		<div>
+		<>
 			<MetaTags
 				title='MILU Connect'
 				description='Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu. Katowice, Rybnik, Żory, Mikołów, Śląsk'
@@ -168,6 +169,12 @@ const HomePage = () => {
 					</>
 				}
 				imgUrl={EarthImg}
+				align='start'
+			/>
+			<Pricing />
+			<Header
+				content={<H2 styleType='secondary'>Na czym się znamy</H2>}
+				align='center'
 			/>
 			{_homeContents_ImageBox.map((item, index) => (
 				<ImageText
@@ -176,26 +183,28 @@ const HomePage = () => {
 					imgsrc={item.imgsrc}
 					content={item.content}
 					reverse={index % 2 !== 0}
-					url={item.url}
 				/>
 			))}
-			<section className='background-top my-3 py-4' id='realizacje'>
-				<div className='flex flex-col align-items-center py-4'>
+
+			<section
+				className='background-top my-3 py-4 text-align-center'
+				id='realizacje'
+			>
+				<div className='col align-items-center py-4 px-2'>
 					<h2>
 						Sprawdź niektóre nasze <span className='text-gradient'>realizacje</span>
 					</h2>
-					<p className='text-align-center container'>
+					<p className='text-align-left container px-4'>
 						Wszystkie nasze realizacje są <strong>realnymi</strong> projektami,
 						którymi klienci się cieszą, zarządzają i wykorzystują w swoim biznesie.
 						Mimo tego, że każdy projekt zakładał inny scenariusz, wszystkie są
 						<strong> responsywne i dostosowane</strong> do warunków dzisiejszego
 						Web-view.
 					</p>
-					<p>Wybierz i zobacz nasze projekty na żywo</p>
 				</div>
 				<Slider items={_portfolio_items} />
 			</section>
-			<Pricing />
+
 			<section className='col background-top pt-2 pb-6'>
 				<div className='flex flex-col align-items-center pb-6'>
 					<Title
@@ -208,7 +217,7 @@ const HomePage = () => {
 							</div>
 						}
 					/>
-					<ImagesRow
+					<Gallery
 						imageUrls={[
 							Partner1,
 							Partner2,
@@ -222,7 +231,7 @@ const HomePage = () => {
 					/>
 				</div>
 			</section>
-		</div>
+		</>
 	);
 };
 

@@ -29,3 +29,7 @@
 	z-index: -1;
 	width: 80%;
 }
+
+.header-section.without-image {
+	min-height: 100px !important;
+}
