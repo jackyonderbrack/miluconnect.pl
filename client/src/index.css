@@ -524,6 +524,12 @@ section {
 	border-radius: 1rem;
 }
 
+.cards {
+	display: flex;
+	flex: 1;
+	gap: 1rem;
+}
+
 @media only screen and (max-width: 1024px) {
 	.grid-cols-8 {
 		grid-template-columns: repeat(4, minmax(0, 1fr));

@@ -18,7 +18,6 @@ import Partner7 from '../../assets/partners/partner-natarasie-miluconnect.png';
 import Partner8 from '../../assets/partners/partner-vending4all-miluconnect.png';
 // Components
 import Title from '../../components/Title/Title';
-import ImagesRow from '../../components/ImageRow/ImageRow';
 import Header from '../../components/Header/Header';
 // Images
 import PortfolioSkinsnImg from '../../assets/portfolio/07_miluconnect-skinsn-plock-rybnik-strony.png';
@@ -37,6 +36,7 @@ import ImageText from '../../components/ImageText/ImageText';
 import Slider from '../../components/Slider/Slider';
 import Pricing from '../../components/Pricing/Pricing';
 import H2 from '../../components/H2/H2';
+import Gallery from '../../components/Gallery/Gallery';
 
 const HomePage = () => {
 	const _portfolio_items = [
@@ -183,7 +183,6 @@ const HomePage = () => {
 					imgsrc={item.imgsrc}
 					content={item.content}
 					reverse={index % 2 !== 0}
-					url={item.url}
 				/>
 			))}
 
@@ -218,7 +217,7 @@ const HomePage = () => {
 							</div>
 						}
 					/>
-					<ImagesRow
+					<Gallery
 						imageUrls={[
 							Partner1,
 							Partner2,

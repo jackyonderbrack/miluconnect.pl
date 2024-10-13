@@ -1,6 +1,5 @@
 import Header from '../../components/Header/Header';
 import PuzzlesImg from '../../assets/background-puzzles-01-miluconnect.webp';
-import ImageBox from '../../components/ImageBox/ImageBox';
 
 import './SolutionsPage.css';
 
@@ -29,6 +28,8 @@ import TechnologyNodejs from '../../assets/technologies/solutions-nodejs-light-m
 import TechnologyReactjs from '../../assets/technologies/solutions-react-miluconnect.webp';
 import TechnologySharepoint from '../../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
 import MetaTags from '../../components/MetaTags/MetaTags';
+import Gallery from '../../components/Gallery/Gallery';
+import ImageText from '../../components/ImageText/ImageText';
 
 const SolutionsPage = () => {
 	const _integrationsContents = [
@@ -162,103 +163,18 @@ const SolutionsPage = () => {
 									okazuje się bardziej opłacalne, ponieważ dokładnie odpowiada potrzebom
 									firmy i może być efektywniej wykorzystane.
 								</p>
-								<h3>Aktualne trendy w programowaniu i tworzeniu stron internetowych</h3>
-								<p>
-									<strong>AI-augmented Development</strong>: <br />
-									Sztuczna inteligencja (AI) staje się coraz bardziej integralną częścią
-									procesu programowania, przyspieszając tworzenie kodu, tłumaczenie kodu
-									z języków legacy oraz optymalizację kodu.
-								</p>
-								<p>
-									<strong>Cybersecurity</strong>: <br />
-									Cyberbezpieczeństwo pozostaje priorytetem w 2024 roku, z rosnącym
-									znaczeniem strategii takich jak wykrywanie zagrożeń oparte na AI/ML,
-									architektura zero-trust oraz siatka bezpieczeństwa (cybersecurity
-									mesh).
-								</p>
-								<p>
-									<strong>Low-code/No-code Development</strong>: <br />
-									Platformy low-code i no-code zyskują na popularności, umożliwiając
-									tworzenie aplikacji bez tradycyjnych umiejętności kodowania.
-								</p>
-								<p>
-									<strong>Industry Cloud Platforms</strong>: <br />
-									Specjalizowane platformy chmurowe stają się coraz bardziej popularne,
-									oferując rozwiązania dostosowane do specyficznych potrzeb branżowych.
-								</p>
-								<p>
-									<strong>Platform Engineering</strong>: <br />
-									Inżynieria platform to podejście polegające na tworzeniu wewnętrznych
-									platform deweloperskich, które ułatwiają pracę programistom poprzez
-									zapewnienie zestawu narzędzi i procesów wspierających.
-								</p>
-								<p>
-									<strong>AR/VR and Mixed Reality</strong>: <br />
-									Technologie rzeczywistości rozszerzonej (AR) i wirtualnej (VR) zyskują
-									na znaczeniu, przekształcając interakcje cyfrowe w różnych sektorach.
-								</p>
-								<p>
-									<strong>Serverless Architecture</strong>: <br />
-									Architektura bezserwerowa umożliwia programistom skupienie się na
-									kodzie bez zarządzania infrastrukturą, co pozwala na skalowanie
-									aplikacji w zależności od zapotrzebowania i optymalizację kosztów.
-								</p>
-								<p>
-									<strong>React Native</strong>: <br />
-									React Native pozostaje popularnym wyborem do tworzenia aplikacji
-									mobilnych dzięki możliwości ponownego wykorzystania kodu i tworzeniu
-									natywnych komponentów UI, co poprawia wydajność i doświadczenie
-									użytkownika.
-								</p>
 							</div>
 						</div>
 						<div>
 							<div id='CategoryBoxes' className='grid grid-cols-1 gap-1'>
 								{_solutionsContents_ImageBox.map((item, index) => (
-									<ImageBox
+									<ImageText
 										key={index}
 										heading={item.heading}
 										imgsrc={item.imgsrc}
 										content={item.content}
 									/>
 								))}
-							</div>
-							<div className='pt-4'>
-								<h3>Aktualne trendy w technologii</h3>
-								<ul className='list-disc pl-5'>
-									<li>
-										<strong>AI-augmented Development</strong>: Wykorzystanie AI do
-										przyspieszenia tworzenia i optymalizacji kodu.
-									</li>
-									<li>
-										<strong>Cybersecurity</strong>: Zaawansowane strategie bezpieczeństwa,
-										takie jak AI/ML wykrywanie zagrożeń i architektura zero-trust.
-									</li>
-									<li>
-										<strong>Low-code/No-code Development</strong>: Platformy umożliwiające
-										tworzenie aplikacji bez tradycyjnych umiejętności kodowania.
-									</li>
-									<li>
-										<strong>Industry Cloud Platforms</strong>: Specjalizowane platformy
-										chmurowe dostosowane do potrzeb branżowych.
-									</li>
-									<li>
-										<strong>Platform Engineering</strong>: Tworzenie wewnętrznych platform
-										deweloperskich, które wspierają pracę programistów.
-									</li>
-									<li>
-										<strong>AR/VR and Mixed Reality</strong>: Wzrost popularności
-										technologii AR i VR w różnych sektorach.
-									</li>
-									<li>
-										<strong>Serverless Architecture</strong>: Architektura bezserwerowa,
-										która pozwala na skalowanie aplikacji i optymalizację kosztów.
-									</li>
-									<li>
-										<strong>React Native</strong>: Popularność React Native w tworzeniu
-										aplikacji mobilnych dzięki możliwości ponownego wykorzystania kodu.
-									</li>
-								</ul>
 							</div>
 						</div>
 					</div>
@@ -290,6 +206,56 @@ const SolutionsPage = () => {
 							/>
 						))}
 					</div>
+				</div>
+			</section>
+			<section className='background-top content actual-trends'>
+				<h3>Aktualne trendy w programowaniu i tworzeniu stron internetowych</h3>
+				<div className='actual-trends-container'>
+					<p>
+						<strong>AI-augmented Development</strong>: <br />
+						Sztuczna inteligencja (AI) staje się coraz bardziej integralną częścią
+						procesu programowania, przyspieszając tworzenie kodu, tłumaczenie kodu z
+						języków legacy oraz optymalizację kodu.
+					</p>
+					<p>
+						<strong>Cybersecurity</strong>: <br />
+						Cyberbezpieczeństwo pozostaje priorytetem w 2024 roku, z rosnącym
+						znaczeniem strategii takich jak wykrywanie zagrożeń oparte na AI/ML,
+						architektura zero-trust oraz siatka bezpieczeństwa (cybersecurity mesh).
+					</p>
+					<p>
+						<strong>Low-code/No-code Development</strong>: <br />
+						Platformy low-code i no-code zyskują na popularności, umożliwiając
+						tworzenie aplikacji bez tradycyjnych umiejętności kodowania.
+					</p>
+					<p>
+						<strong>Industry Cloud Platforms</strong>: <br />
+						Specjalizowane platformy chmurowe stają się coraz bardziej popularne,
+						oferując rozwiązania dostosowane do specyficznych potrzeb branżowych.
+					</p>
+					<p>
+						<strong>Platform Engineering</strong>: <br />
+						Inżynieria platform to podejście polegające na tworzeniu wewnętrznych
+						platform deweloperskich, które ułatwiają pracę programistom poprzez
+						zapewnienie zestawu narzędzi i procesów wspierających.
+					</p>
+					<p>
+						<strong>AR/VR and Mixed Reality</strong>: <br />
+						Technologie rzeczywistości rozszerzonej (AR) i wirtualnej (VR) zyskują na
+						znaczeniu, przekształcając interakcje cyfrowe w różnych sektorach.
+					</p>
+					<p>
+						<strong>Serverless Architecture</strong>: <br />
+						Architektura bezserwerowa umożliwia programistom skupienie się na kodzie
+						bez zarządzania infrastrukturą, co pozwala na skalowanie aplikacji w
+						zależności od zapotrzebowania i optymalizację kosztów.
+					</p>
+					<p>
+						<strong>React Native</strong>: <br />
+						React Native pozostaje popularnym wyborem do tworzenia aplikacji mobilnych
+						dzięki możliwości ponownego wykorzystania kodu i tworzeniu natywnych
+						komponentów UI, co poprawia wydajność i doświadczenie użytkownika.
+					</p>
 				</div>
 			</section>
 		</>
