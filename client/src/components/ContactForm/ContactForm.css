@@ -1,4 +1,5 @@
 #ContactForm {
+    box-shadow: none;
     gap: 0;
     .input-field {
         display: block;
