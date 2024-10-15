@@ -110,7 +110,7 @@ const HomePage = () => {
 			content: (
 				<div className='text-align-justify'>
 					<p>
-						Jesteśmy gronem programistów, grafików, wizjonerów i chcemy rozwinąć Twój
+						Jesteśmy małym gronem programistów, grafików, wizjonerów i chcemy rozwinąć Twój
 						biznes.
 					</p>
 					<p>
@@ -186,9 +186,7 @@ const HomePage = () => {
 			/>
 			<Pricing />
 			<div className='container'>
-				<div>
-					<H2 styleType='secondary'>Na czym się znamy</H2>
-				</div>
+				<H2 styleType='secondary'>Na czym się znamy</H2>
 				{_homeContents_ImageBox. map((item, index) => (
 					<ImageText
 					key={index}

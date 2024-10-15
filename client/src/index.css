@@ -121,8 +121,6 @@ section {
 	scroll-snap-align: start;
 	scroll-margin-top: 8rem;
 	margin-bottom: 4rem;
-	border-top: 1px solid var(--color-accent-background);
-	border-bottom: 1px solid var(--color-accent-background);
 	border-radius: 2rem;
 }
 
