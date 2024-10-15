@@ -3,7 +3,7 @@
 	display: inline-block;
 	color: var(--color-secondary);
 	background-color: var(--color-accent-primary);
-	padding: 0.3rem 2rem;
+	padding: 0.8rem 2rem;
 	border: 1px solid transparent;
 	border-radius: 0.5rem;
 	min-width: 6rem;

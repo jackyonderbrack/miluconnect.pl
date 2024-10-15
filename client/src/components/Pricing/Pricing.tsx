@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import pricingData from './pricingConfig.json';
 import './Pricing.css';
 import H2 from '../H2/H2';
+import Button from '../Button/Button';
+import { HiOutlineCalculator } from 'react-icons/hi';
 
 // Definiujemy interfejsy dla danych
 
@@ -330,9 +332,15 @@ const PricingForm = () => {
 
 			{/* Przycisk "Oblicz" */}
 			{showCalculateButton && (
-				<button onClick={calculateTotal} className='btn-outline'>
-					Oblicz cenę i czas
-				</button>
+				<div className='flex justify-content-center align-items-center align-content-center align-center'>
+					<button
+						onClick={calculateTotal}
+						className='btn-primary my-4 flex justify-content-center align-items-center'
+					>
+						<HiOutlineCalculator size={36} />
+						Oblicz cenę i czas
+					</button>
+				</div>
 			)}
 
 			{/* Wynik */}
@@ -348,6 +356,18 @@ const PricingForm = () => {
 						Szacowany czas realizacji:{' '}
 						<span className='total-time'>{Math.ceil(totalTime / 15)} tygodni</span>
 					</p>
+					<div className='grid grid-cols-2 gap-2'>
+						<Button
+							linkTo='/kontakt'
+							buttonText='Poproś o ofertę'
+							theme='btn-outline'
+						/>
+						<Button
+							linkTo='/rozwiazania'
+							buttonText='Więcej o nas'
+							theme='btn-primary'
+						/>
+					</div>
 				</div>
 			)}
 		</section>
