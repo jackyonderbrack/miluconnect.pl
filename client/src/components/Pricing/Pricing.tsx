@@ -175,24 +175,23 @@ const PricingForm = () => {
 	};
 
 	return (
-		<section id='PricingForm' className='container py-2 px-4'>
+		<section id='PricingForm' className='background-primary py-4 px-4 mx-4 my-4'>
 			<H2 styleType='primary'>Konfigurator projektu</H2>
 			<p>
 				Wybierz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
 			</p>
 
-			{/* Sekcja "product" */}
 			<div>
 				{pricingConfig.sections
 					.filter((section) => section.id === 'product')
 					.map((section) => (
-						<div key={section.id} className='row'>
+						<div key={section.id}>
 							<h3>{section.label}</h3>
-							<div className='col'>
+							<div className='grid grid-cols-4 gap-2 my-2'>
 								{section.options?.map((option) => (
 									<label
 										key={option.value}
-										className={`radio-button ${selectedProduct === option.value ? 'active' : ''}`}
+										className={`border-radius  radio-button ${selectedProduct === option.value ? 'active' : ''}`}
 									>
 										<input
 											type='radio'
@@ -215,13 +214,13 @@ const PricingForm = () => {
 					{pricingConfig.sections
 						.filter((section) => section.id === 'design')
 						.map((section) => (
-							<div key={section.id} className='row'>
+							<div key={section.id}>
 								<h3>{section.label}</h3>
-								<div className='col'>
+								<div className='grid grid-cols-4 gap-2 my-2'>
 									{section.options?.map((option) => (
 										<label
 											key={option.value}
-											className={`radio-button ${selectedDesign === option.value ? 'active' : ''}`}
+											className={` border-radius radio-button ${selectedDesign === option.value ? 'active' : ''}`}
 										>
 											<input
 												type='radio'
@@ -252,13 +251,13 @@ const PricingForm = () => {
 							}
 
 							return (
-								<div key={section.id} className='row details-section'>
+								<div key={section.id} className='details-section'>
 									<h3>{section.label}</h3>
-									<div className='col'>
+									<div className='grid grid-cols-3 gap-2 my-2'>
 										{optionsByCondition.map((option) => (
 											<label
 												key={option.value}
-												className={`radio-button ${selectedDetails === option.value ? 'active' : ''}`}
+												className={`border-radius radio-button ${selectedDetails === option.value ? 'active' : ''}`}
 											>
 												<input
 													type='radio'
@@ -296,9 +295,9 @@ const PricingForm = () => {
 							}
 
 							return (
-								<div key={section.id} className='row'>
+								<div key={section.id}>
 									<h3>{section.label}</h3>
-									<div className='col'>
+									<div className='grid grid-cols-4 gap-2'>
 										{optionsByCondition.map((option) => (
 											<label
 												key={option.value}
