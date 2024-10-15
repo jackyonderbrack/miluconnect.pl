@@ -7,22 +7,3 @@
   margin-top: 1rem;
   gap: 1rem;
 }
-.actual-trends-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  grid-auto-rows: 1fr;
-  p {
-    border: 1px solid var(--color-secondary-background);
-    border-radius: 0.8rem;
-    padding: 1rem;
-    box-shadow: var(--shadow);
-  }
-  @media (width >= 40em) {
-      grid-template-columns: repeat(2, 1fr);
-  }
-
-    @media (width >= 60em) {
-      grid-template-columns: repeat(4, 1fr);
-  }
-}

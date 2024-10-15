@@ -28,8 +28,7 @@ const Header: React.FC<HeaderProps> = ({ imgUrl, content, align = 'left' }) => {
 
 	return (
 		<section
-			id='Header'
-			className={`header-section ${imgUrl ? '' : 'without-image'} justify-content-${align}`}
+			className={`header ${imgUrl ? '' : 'without-image'} justify-content-${align}`}
 		>
 			<div className='headerContent'>{content}</div>
 			{imgUrl && (

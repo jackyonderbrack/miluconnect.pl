@@ -14,9 +14,9 @@ const H2: React.FC<React.PropsWithChildren<H2Props>> = ({
 	const isVisible = useIntersectionObserver(h2Ref, { threshold: 0.1 });
 
 	return (
-		<h2 ref={h2Ref} className={`${isVisible ? 'active' : ''} ${styleType}`}>
-			{children}
-		</h2>
+			<h2 ref={h2Ref} className={`header2 ${isVisible ? 'active' : ''} ${styleType}`}>
+				{children}
+			</h2>
 	);
 };
 

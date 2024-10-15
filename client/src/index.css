@@ -28,7 +28,7 @@
 	--h1: bold max(42px, 3vw) / max(48px, 3vw) var(--ff);
 	--h2: bold max(32px, 2vw) / max(32px, 2vw) var(--ff);
 	--h3: bold 28px/30px var(--ff);
-	--links: 18px/24px var(--ff);
+	--links: bold 18px/24px var(--ff);
 	--p: 18px/24px var(--ff);
 	--btn: bold 18px/24px var(--ff);
 	--subtext: 12px/20px var(-ff);
@@ -120,6 +120,10 @@ button:hover:not(.btn-underline) {
 section {
 	scroll-snap-align: start;
 	scroll-margin-top: 8rem;
+	margin-bottom: 4rem;
+	border-top: 1px solid var(--color-accent-background);
+	border-bottom: 1px solid var(--color-accent-background);
+	border-radius: 2rem;
 }
 
 .col {
@@ -162,8 +166,8 @@ section {
 	background-clip: text;
 }
 
-.content {
-	padding: 1rem 4rem;
+.container {
+	padding: 1rem;
 }
 
 .background-primary {
@@ -171,6 +175,13 @@ section {
 	border-radius: 2rem;
 	background: linear-gradient(120deg, var(--color-accent-background), var(--color-secondary-background));
 	transition: (--transition);
+}
+
+.background-border-shadow > * {
+	border: 1px solid var(--color-secondary-background);
+	border-radius: 0.8rem;
+	padding: 1rem;
+	box-shadow: var(--shadow);
 }
 
 .fibo-1 {
@@ -521,6 +532,9 @@ section {
 }
 
 @media (width >= 40em) {
+	.container {
+		padding: 1.5rem;
+	}
 	.grid-cols-8 {
 		grid-template-columns: repeat(4, 1fr);
 	}
@@ -545,8 +559,8 @@ section {
 	.grid-cols-2 {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	.content {
-		padding: 1rem 0.2rem;
+	.container {
+		padding: 2.5rem;
 	}
 }
 

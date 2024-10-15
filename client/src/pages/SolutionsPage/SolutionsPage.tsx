@@ -111,75 +111,71 @@ const SolutionsPage = () => {
 				imgUrl={PuzzlesImg}
 				align='start'
 			/>
-			<section className='content background-top'>
-				<div className='content'>
-					<div className='grid grid-cols-2 gap-4'>
-						<div>
-							<h2>CZYM SIE ZAJMUJEMY?</h2>
-							<p>
-								Jesteśmy w czołówce firm programistycznych w Polsce, specjalizujących
-								się w tworzeniu stron i sklepów internetowych, które są nie tylko
-								estetyczne, ale również niezwykle przyjazne dla użytkowników. Nasze
-								projekty są zaprojektowane w taki sposób, aby zapewnić łatwą nawigację,
-								intuicyjne interakcje i doskonałe wrażenia użytkownika.
-							</p>
-							<div className='my-4'>
-								<h3>Czym są dedykowane rozwiązania?</h3>
-								<p>
-									<strong>Indywidualne dopasowanie do potrzeb</strong>: <br />
-									Dedykowane rozwiązania to oprogramowanie stworzone specjalnie pod kątem
-									konkretnych wymagań i potrzeb klienta. W przeciwieństwie do gotowych
-									produktów, są one projektowane tak, aby idealnie pasowały do specyfiki
-									działalności klienta.
-								</p>
-								<p>
-									<strong>Elastyczność i skalowalność</strong>: <br />
-									Oprogramowanie może być rozwijane i dostosowywane w miarę zmian w
-									biznesie klienta. Oznacza to, że system będzie rósł wraz z firmą, co
-									jest dużym atutem.
-								</p>
-								<p>
-									<strong>Integracja z istniejącymi systemami</strong>: <br />
-									Mogą być łatwo zintegrowane z już używanymi przez klienta narzędziami i
-									systemami, co zapewnia płynność pracy i optymalizację procesów.
-								</p>
-								<p>
-									<strong>Bezpieczeństwo i niezawodność</strong>:<br />
-									Zwróćmy uwagę na aspekty bezpieczeństwa, podkreślając, że dedykowane
-									oprogramowanie może być dostosowane do specyficznych wymagań
-									bezpieczeństwa i prywatności klienta.
-								</p>
-								<p>
-									<strong>Wsparcie i rozwój</strong>: <br />
-									Wraz z dedykowanym rozwiązaniem klient otrzymuje również dostosowane
-									wsparcie techniczne oraz możliwość ciągłego rozwijania oprogramowania
-									zgodnie z ewoluującymi potrzebami.
-								</p>
-								<p>
-									<strong>Koszty i inwestycja długoterminowa</strong>:<br />
-									Choć początkowy koszt może być wyższy niż w przypadku gotowych
-									rozwiązań, w dłuższej perspektywie dedykowane oprogramowanie często
-									okazuje się bardziej opłacalne, ponieważ dokładnie odpowiada potrzebom
-									firmy i może być efektywniej wykorzystane.
-								</p>
-							</div>
-						</div>
-						<div>
-							<div id='CategoryBoxes' className='grid grid-cols-1 gap-1'>
-								{_solutionsContents_ImageBox.map((item, index) => (
-									<ImageText
-										key={index}
-										heading={item.heading}
-										imgsrc={item.imgsrc}
-										content={item.content}
-									/>
-								))}
-							</div>
-						</div>
+			<section className='background-top container'>
+				<div>
+					<h2>CZYM SIE ZAJMUJEMY?</h2>
+					<p>
+						Jesteśmy w czołówce firm programistycznych w Polsce, specjalizujących się
+						w tworzeniu stron i sklepów internetowych, które są nie tylko estetyczne,
+						ale również niezwykle przyjazne dla użytkowników. Nasze projekty są
+						zaprojektowane w taki sposób, aby zapewnić łatwą nawigację, intuicyjne
+						interakcje i doskonałe wrażenia użytkownika.
+					</p>
+					<div className='my-4'>
+						<h3>Czym są dedykowane rozwiązania?</h3>
+						<p>
+							<strong>Indywidualne dopasowanie do potrzeb</strong>: <br />
+							Dedykowane rozwiązania to oprogramowanie stworzone specjalnie pod kątem
+							konkretnych wymagań i potrzeb klienta. W przeciwieństwie do gotowych
+							produktów, są one projektowane tak, aby idealnie pasowały do specyfiki
+							działalności klienta.
+						</p>
+						<p>
+							<strong>Elastyczność i skalowalność</strong>: <br />
+							Oprogramowanie może być rozwijane i dostosowywane w miarę zmian w
+							biznesie klienta. Oznacza to, że system będzie rósł wraz z firmą, co jest
+							dużym atutem.
+						</p>
+						<p>
+							<strong>Integracja z istniejącymi systemami</strong>: <br />
+							Mogą być łatwo zintegrowane z już używanymi przez klienta narzędziami i
+							systemami, co zapewnia płynność pracy i optymalizację procesów.
+						</p>
+						<p>
+							<strong>Bezpieczeństwo i niezawodność</strong>:<br />
+							Zwróćmy uwagę na aspekty bezpieczeństwa, podkreślając, że dedykowane
+							oprogramowanie może być dostosowane do specyficznych wymagań
+							bezpieczeństwa i prywatności klienta.
+						</p>
+						<p>
+							<strong>Wsparcie i rozwój</strong>: <br />
+							Wraz z dedykowanym rozwiązaniem klient otrzymuje również dostosowane
+							wsparcie techniczne oraz możliwość ciągłego rozwijania oprogramowania
+							zgodnie z ewoluującymi potrzebami.
+						</p>
+						<p>
+							<strong>Koszty i inwestycja długoterminowa</strong>:<br />
+							Choć początkowy koszt może być wyższy niż w przypadku gotowych rozwiązań,
+							w dłuższej perspektywie dedykowane oprogramowanie często okazuje się
+							bardziej opłacalne, ponieważ dokładnie odpowiada potrzebom firmy i może
+							być efektywniej wykorzystane.
+						</p>
 					</div>
 				</div>
 			</section>
-			<section className='background-top content py-4 grid grid-cols-2 justify-content-evenly gap-2'>
+
+			<div id='CategoryBoxes' className='grid grid-cols-1 gap-1'>
+				{_solutionsContents_ImageBox.map((item, index) => (
+					<ImageText
+						key={index}
+						heading={item.heading}
+						imgsrc={item.imgsrc}
+						content={item.content}
+					/>
+				))}
+			</div>
+
+			<section className=' background-primary content py-4 grid grid-cols-2 justify-content-evenly gap-2'>
 				<div className='flex flex-col align-items-center'>
 					<h3>Tworzymy integracje do:</h3>
 					<div className='imageRows integrations flex flex-wrap justify-content-center'>
@@ -207,9 +203,12 @@ const SolutionsPage = () => {
 					</div>
 				</div>
 			</section>
-			<section className='background-top content actual-trends'>
-				<h3>Aktualne trendy w programowaniu i tworzeniu stron internetowych</h3>
-				<div className='actual-trends-container'>
+			<section className='container'>
+				<div className='text-align-center'>
+					<h3>Na czym się obecnie można się oprzeć?</h3>
+				</div>
+				{/* <div className='actual-trends-container'> */}
+				<div className='grid grid-cols-4 gap-2 background-border-shadow '>
 					<p>
 						<strong>AI-augmented Development</strong>: <br />
 						Sztuczna inteligencja (AI) staje się coraz bardziej integralną częścią

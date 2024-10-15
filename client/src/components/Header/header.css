@@ -7,14 +7,25 @@
 	}
 }
 
-#Header {
+section.header {
 	position: relative;
-	min-height: 28vh;
+	min-height: 12vh;
 	display: flex;
 	align-items: center;
-	@media (max-width: 480px) {
-		min-height: 36vh;
+}
+@media (min-width: 40em) {
+	section.header {
+		min-height: 18vh;
 	}
+}
+@media (min-width: 60em) {
+	section.header {
+		min-height: 24vh;
+	}
+}
+
+.header2 {
+ 	margin-bottom: 4rem;
 }
 
 .headerContent {

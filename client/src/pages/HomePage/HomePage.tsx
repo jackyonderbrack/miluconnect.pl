@@ -107,8 +107,21 @@ const HomePage = () => {
 			imgsrc: IconDedidcatedSolutions,
 			heading: 'Dedykowane rozwiązania',
 			url: 'rozwiazania',
-			content:
-				'Strony internetowe, sklepy oraz wszystko co związane z siecią. Mamy doświadczenie w tworzeniu systemów zarządzania produkcją, zasobami, ale również interaktywnych gier, programów i sieci. Nasze rozwiązania są dostosowane do specyficznych potrzeb klienta, zapewniając elastyczność, skalowalność i integrację z istniejącymi systemami.',
+			content: (
+				<div className='text-align-justify'>
+					<p>
+						Jesteśmy gronem programistów, grafików, wizjonerów i chcemy rozwinąć Twój
+						biznes.
+					</p>
+					<p>
+						Projektujemy Strony internetowe, sklepy oraz wszystko co związane z
+						siecią. Nasze <a href='#realizacje'>realizacje</a> to tworzenie systemów zarządzania
+						produkcją, zasobami, ale również interaktywnych gier, programów i sieci.
+						Dostosowujemy się do specyficznych potrzeb klienta, zapewniając
+						elastyczność, skalowalność i integrację z istniejącymi systemami.
+					</p>
+				</div>
+			),
 		},
 		{
 			imgsrc: IconMobileApps,
@@ -172,19 +185,20 @@ const HomePage = () => {
 				align='start'
 			/>
 			<Pricing />
-			<Header
-				content={<H2 styleType='secondary'>Na czym się znamy</H2>}
-				align='center'
-			/>
-			{_homeContents_ImageBox.map((item, index) => (
-				<ImageText
+			<div className='container'>
+				<div>
+					<H2 styleType='secondary'>Na czym się znamy</H2>
+				</div>
+				{_homeContents_ImageBox. map((item, index) => (
+					<ImageText
 					key={index}
 					heading={item.heading}
 					imgsrc={item.imgsrc}
 					content={item.content}
 					reverse={index % 2 !== 0}
-				/>
-			))}
+					/>
+				))}
+			</div>
 
 			<section
 				className='background-top my-3 py-4 text-align-center'
