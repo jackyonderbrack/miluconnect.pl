@@ -7,6 +7,7 @@ import { sequelize } from "./config/database.config";
 import sendEmailRoute from "./routes/email.route";
 import { userRouter } from "./routes/user.route";
 import { loginRouter } from "./routes/login.route";
+import cors from "cors"
 
 dotenv.config();
 const app = express();
@@ -29,6 +30,7 @@ const StartServer = () => {
 
 	app.use(express.urlencoded({ extended: true }));
 	app.use(express.json());
+	app.use(cors())
 
 	// Serwowanie plików statycznych React
 	app.use(express.static(path.join(__dirname, "../../client/dist")));
