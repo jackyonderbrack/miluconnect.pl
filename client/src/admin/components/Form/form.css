@@ -9,6 +9,7 @@ form {
 	font-family: var(--ff);
 	> * {
 		margin: 0 auto;
+		width: 100%;
 	}
 	label {
 		display: inline-block;
@@ -59,7 +60,7 @@ form textarea {
 	width: 100%;
 }
 
-form button {
+form .btn-outline {
 	background-color: var(--color-accent-primary);
 	color: var(--color-secondary);
 	border: none;
@@ -73,7 +74,7 @@ form button {
 		color var(--transition);
 }
 
-form button:hover {
+form .btn-outline:hover {
 	color: var(--color-secondary);
 }
 
@@ -119,12 +120,10 @@ form button:hover {
 
 form {
 	text-align: left;
-	max-width: 300px;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	justify-content: center;
-	margin: 0 auto;
 }
 
 button[type='submit'] {

@@ -1,10 +1,17 @@
-#Admin {
-	padding-top: 0;
+#AdminPanel {
 	display: flex;
-	min-height: 100vh;
+	height: 100dvh;
+	scroll-margin-block-start: 20rem;
+
+	.admin-outlet {
+		width: 100%;
+		padding: 1rem 1.5rem;
+	}
 }
 
-.admin-outlet {
-	width: 100%;
-	padding: 1rem 1.5rem;
+#Client {
+	.client-outlet {
+		margin: 8rem auto 0;
+		max-width: 1680px;
+	}
 }

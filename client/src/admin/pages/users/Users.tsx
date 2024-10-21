@@ -59,7 +59,7 @@ const Users = () => {
 				itemsPerPage={6}
 				renderItem={(user) => (
 					<>
-						<h3 className='user-name'>{user.name}</h3>
+						<p className='user-name'>{user.name}</p>
 						<div className='post-meta'>
 							<span>Id: {user.id}</span>
 							<span>

@@ -1,11 +1,17 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../Header/Header';
 import './form.css';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { addUser } from '../../services/user.service';
 import { addPost } from '../../services/post.service';
 import { NewUser } from '../../models/user.model';
 import { Post } from '../../models/post.model';
+import Editor from '../Editor/Editor';
+import Quill from 'quill';
+import '../Editor/Editor.css'
+
+const Delta = Quill.import('delta');
+
 
 interface Field {
 	name: string;
@@ -23,12 +29,13 @@ const fieldConfigurations: FieldConfigurations = {
 		{ name: 'description', label: 'Krótki opis', type: 'text' },
 		{ name: 'category', label: 'Kategoria', type: 'text' },
 		{ name: 'author', label: 'Autor', type: 'text' },
+		{ name: 'content', label: "Treść", type: 'textarea'}
 	],
 	user: [
 		{ name: 'name', label: 'Imię i nazwisko', type: 'text' },
 		{ name: 'email', label: 'Email', type: 'email' },
 		{ name: 'password', label: 'Hasło', type: 'password' },
-		{ name: 'passwordConfirm', label: 'Potwierdź hasło', type: 'password' }, // Dodane pole
+		{ name: 'passwordConfirm', label: 'Potwierdź hasło', type: 'password' },
 	],
 	report: [
 		{ name: 'title', label: 'Title', type: 'text' },
@@ -38,6 +45,9 @@ const fieldConfigurations: FieldConfigurations = {
 };
 
 const Form: React.FC = () => {
+	const [range, setRange] = useState();
+	const [lastChange, setLastChange] = useState();
+	const [readOnly, setReadOnly] = useState(false);
 	const { type } = useParams<{ type: string }>();
 	const fields = type ? fieldConfigurations[type] || [] : [];
 	const navigate = useNavigate();
@@ -45,15 +55,20 @@ const Form: React.FC = () => {
 	const [formData, setFormData] = useState<Record<string, string>>({});
 	const [error, setError] = useState<string | null>(null);
 
+	const quillRef = useRef<Quill | null>(null);
+
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
+	const handleEditorChange = (content: string) => {
+		setFormData({ ...formData, content });
+	};
+
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		// Dodatkowa walidacja, aby sprawdzić zgodność hasła i potwierdzenia hasła
 		if (type === 'user' && formData.password !== formData.passwordConfirm) {
 			setError('Hasła muszą być takie same');
 			return;
@@ -86,7 +101,13 @@ const Form: React.FC = () => {
 						<label htmlFor={field.name}>{field.label}</label>
 						<div className='form-inputs'>
 							{field.type === 'textarea' ? (
-								<textarea id={field.name} name={field.name} onChange={handleChange} />
+								<Editor
+									ref={quillRef}
+									readOnly={readOnly}
+								defaultValue={new Delta().insert('Usuń i wpisz tresć')}
+								onSelectionChange={setRange}
+								onTextChange={setLastChange}
+							/>
 							) : (
 								<input
 									type={field.type}

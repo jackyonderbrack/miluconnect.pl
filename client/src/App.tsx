@@ -38,7 +38,7 @@ function Layout() {
 	}, [location]);
 
 	return (
-		<div id='Application'>
+		<div id='Client'>
 			<Navigation />
 			<div className='client-outlet'>
 				<ScrollToTop />
@@ -53,12 +53,12 @@ function Layout() {
 
 function AdminLayout() {
 	return (
-		<main id='Admin'>
+		<div id='AdminPanel'>
 			<Sidenav />
 			<div className='admin-outlet'>
 				<Outlet />
 			</div>
-		</main>
+		</div>
 	);
 }
 

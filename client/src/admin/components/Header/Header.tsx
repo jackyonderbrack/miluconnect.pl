@@ -2,7 +2,7 @@ import './header.css'
 
 const Header = ( {title}: {title: string} ) => {
   return (
-    <div className="admin-header">{title}</div>
+    <div className="header">{title}</div>
   )
 }
 
