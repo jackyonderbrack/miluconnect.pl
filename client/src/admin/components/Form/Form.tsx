@@ -45,9 +45,9 @@ const fieldConfigurations: FieldConfigurations = {
 };
 
 const Form: React.FC = () => {
-	const [range, setRange] = useState();
-	const [lastChange, setLastChange] = useState();
-	const [readOnly, setReadOnly] = useState(false);
+	const [setRange] = useState();
+	const [setLastChange] = useState();
+	const [readOnly] = useState(false);
 	const { type } = useParams<{ type: string }>();
 	const fields = type ? fieldConfigurations[type] || [] : [];
 	const navigate = useNavigate();
@@ -63,9 +63,9 @@ const Form: React.FC = () => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
-	const handleEditorChange = (content: string) => {
-		setFormData({ ...formData, content });
-	};
+	// const handleEditorChange = (content: string) => {
+	// 	setFormData({ ...formData, content });
+	// };
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
