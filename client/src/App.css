@@ -11,7 +11,7 @@
 
 #Client {
 	.client-outlet {
-		margin: 8rem auto 0;
+		margin: 12rem auto 0;
 		max-width: 1680px;
 	}
 }
