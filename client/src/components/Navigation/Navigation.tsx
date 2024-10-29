@@ -7,10 +7,10 @@ import { useEffect, useRef, useState } from 'react';
 
 const Navigation: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const navigationRef = useRef<null | HTMLDivElement>(null);
+	const naviRef = useRef<null | HTMLDivElement>(null);
 
 	useEffect(() => {
-		const navigation = navigationRef.current;
+		const navigation = naviRef.current;
 		if (navigation) {
 			if (isMenuOpen) {
 				navigation.classList.add('navigation-active');
@@ -31,9 +31,9 @@ const Navigation: React.FC = () => {
 
 	return (
 		<>
-			<div className={`overlay ${isMenuOpen ? 'active' : ''}`}></div>
-			<div id='Navigation'>
-				<div id='NavigationHeader'>
+			<div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`}></div>
+			<div className='navigation'>
+				<div className='navigation-header'>
 					<Link to='/#' className='mainLogoContainer'>
 						<img src={Logo} alt='Logo miluConnect' className='mainLogoImg' />
 						<div className='mainLogoText'>
@@ -45,7 +45,7 @@ const Navigation: React.FC = () => {
 						</div>
 					</Link>
 				</div>
-				<div ref={navigationRef} className='main-navigation-links'>
+				<div ref={naviRef} className='main-navigation-links'>
 					<Link to='/' onClick={toggleMobileNav}>
 						Strona główna
 					</Link>

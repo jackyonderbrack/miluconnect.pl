@@ -9,18 +9,18 @@
 
 section.header {
 	position: relative;
-	min-height: 12vh;
+	min-height: 24vh;
 	display: flex;
 	align-items: center;
 }
 @media (min-width: 40em) {
 	section.header {
-		min-height: 18vh;
+		min-height: 28vh;
 	}
 }
 @media (min-width: 60em) {
 	section.header {
-		min-height: 24vh;
+		min-height: 32vh;
 	}
 }
 

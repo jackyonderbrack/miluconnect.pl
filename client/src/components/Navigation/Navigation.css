@@ -1,4 +1,4 @@
-#Navigation {
+.navigation {
 	background-color: #242424;
 	z-index: 100;
 	position: fixed;
@@ -7,7 +7,7 @@
 	width: 100%;
 }
 
-#NavigationHeader {
+.navigation-header {
 	display: flex;
 	justify-content: center;
 }
@@ -48,11 +48,17 @@ nav {
 }
 
 .mainLogoContainer {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	padding: 0.8rem;
 	gap: 0.3rem;
+	p {
+		margin-block-start: -0.5rem;
+        margin-block-end: -0.5rem;
+        margin-inline-start: 0;
+        margin-inline-end: 0
+	}
 }
 
 .main-navigation-links {
@@ -69,7 +75,7 @@ nav {
 	display: none;
 }
 
-@media (max-width: 480px) {
+@media (width < 40em) {
 	.nav-mobile-icon {
 		display: block;
 		position: absolute;
