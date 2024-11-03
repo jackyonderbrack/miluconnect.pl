@@ -26,6 +26,7 @@ import Form from './admin/components/Form/Form';
 import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
 import Account from './admin/pages/account/Account';
 import Login from './admin/pages/login/Login';
+import BlogPage from './pages/BlogPage/BlogPage';
 
 function Layout() {
 	const location = useLocation();
@@ -73,6 +74,7 @@ const router = createBrowserRouter([
 			{ path: 'wyslano', element: <ContactPageSent /> },
 			{ path: 'polityka-prywatnosci', element: <PrivacyPolicyPage /> },
 			{ path: 'nowosci', element: <NewsPage /> },
+			{ path: 'blog', element: <BlogPage />}
 		],
 	},
 	{

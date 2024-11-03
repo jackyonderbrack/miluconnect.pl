@@ -1,0 +1,23 @@
+.layout_component {
+  /* Podstawowy styl dla Layout */
+}
+
+.layout_sidenav_left {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout_sidenav_right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.layout_top_nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout_full_width {
+  width: 100%;
+  /* Inne style pełnej szerokości */
+}
