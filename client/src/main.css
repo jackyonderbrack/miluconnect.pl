@@ -25,7 +25,7 @@
 	--color-secondary-background: #f5b64207;
 	--radius-md: 0.8rem;
 	--ff: 'DM Sans', sans-serif;
-	--h1: bold max(42px, 3vw) / max(48px, 3vw) var(--ff);
+	--h1: bold 2.5rem / 2rem var(--ff);
 	--h2: bold max(32px, 2vw) / max(32px, 2vw) var(--ff);
 	--h3: bold 28px/30px var(--ff);
 	--links: bold 18px/24px var(--ff);

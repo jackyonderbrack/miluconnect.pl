@@ -22,7 +22,7 @@ const ImageText: React.FC<ImageTextProps> = ({
 			<div className='content-wrapper'>
 				<h2>{heading}</h2>
 				<div className='icon-box-divider' />
-				<p className='icon-box-content'>{content}</p>
+				<div className='icon-box-content'>{content}</div>
 			</div>
 		</section>
 	);

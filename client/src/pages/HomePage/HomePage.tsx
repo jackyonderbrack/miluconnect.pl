@@ -113,19 +113,19 @@ const HomePage = () => {
 	const _homeContents_ImageBox = [
 		{
 			imgsrc: IconDedidcatedSolutions,
-			heading: 'Dedykowane rozwiązania',
+			heading: 'Wordpress WooCommerce',
 			url: 'rozwiazania',
 			content: (
-				<div className='text-align-justify'>
+				<div className='text-align-left'>
 					<p>
-						Jesteśmy małym gronem programistów, grafików, wizjonerów i chcemy rozwinąć Twój
+						Jesteśmy małym gronem programistów, grafików, wizjonerów <br />i chcemy rozwinąć Twój
 						biznes.
 					</p>
 					<p>
 						Projektujemy Strony internetowe, sklepy oraz wszystko co związane z
 						siecią. Nasze <a href='#realizacje'>realizacje</a> to tworzenie systemów zarządzania
-						produkcją, zasobami, ale również interaktywnych gier, programów i sieci.
-						Dostosowujemy się do specyficznych potrzeb klienta, zapewniając
+						produkcją, zasobami, ale również interaktywnych gier, programów <br />i sieci.
+						Dostosowujemy się do specyficznych potrzeb klienta, zapewniając przy tym
 						elastyczność, skalowalność i integrację z istniejącymi systemami.
 					</p>
 				</div>
@@ -195,7 +195,7 @@ const HomePage = () => {
 			<Pricing />
 			<div className='container'>
 				<H2 styleType='secondary'>Na czym się znamy</H2>
-				{_homeContents_ImageBox. map((item, index) => (
+				{_homeContents_ImageBox.map((item, index) => (
 					<ImageText
 					key={index}
 					heading={item.heading}
