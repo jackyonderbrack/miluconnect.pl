@@ -30,6 +30,8 @@ import PortfolioArtmageddonImg from '../../assets/portfolio/01_miluconnect-atrma
 import PortfolioHolisticSpaImg from '../../assets/portfolio/08_miluconnect-holisticspa-spaslask-strony-rybnik-czerwionka-salon.png';
 import PortfolioGentlemanshopImg from '../../assets/portfolio/02_miluconnect-gentlemanshop-strony-rybnik.png';
 import PortfolioStolarniaprecyzjaImg from '../../assets/portfolio/09_miluconnect-stolarniaprecyzja-spaslask-strony-rybnik-czerwionka-biznes.png';
+import PortfolioCentrumBagsImg from '../../assets/portfolio/11_miluconnect-centrumbags-strony-rybnik-zory.png';
+// Components
 import MetaTags from '../../components/MetaTags/MetaTags';
 import Button from '../../components/Button/Button';
 import ImageText from '../../components/ImageText/ImageText';
@@ -40,6 +42,12 @@ import Gallery from '../../components/Gallery/Gallery';
 
 const HomePage = () => {
 	const _portfolio_items = [
+		{
+			title: 'Centrum Bags - Bytom',
+			description: 'SKLEP INTERNETOWY',
+			imageUrl: PortfolioCentrumBagsImg,
+			buttonLink: 'https://centrumbags.pl',
+		},
 		{
 			title: 'SKIN Simply Nutrition',
 			description: 'SKLEP I KOSMETOLOGIA',
