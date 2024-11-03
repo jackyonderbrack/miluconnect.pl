@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import Header from '../PanelHeader/PanelHeader';
+import PanelHeader from '../PanelHeader/PanelHeader';
 import './form.css';
 import React, { useRef, useState } from 'react';
 import { addUser } from '../../services/user.service';
@@ -11,7 +11,6 @@ import Quill from 'quill';
 import '../Editor/Editor.css'
 
 const Delta = Quill.import('delta');
-
 
 interface Field {
 	name: string;
@@ -28,7 +27,6 @@ const fieldConfigurations: FieldConfigurations = {
 		{ name: 'title', label: 'Tytuł', type: 'text' },
 		{ name: 'description', label: 'Krótki opis', type: 'text' },
 		{ name: 'category', label: 'Kategoria', type: 'text' },
-		{ name: 'author', label: 'Autor', type: 'text' },
 		{ name: 'content', label: "Treść", type: 'textarea'}
 	],
 	user: [
