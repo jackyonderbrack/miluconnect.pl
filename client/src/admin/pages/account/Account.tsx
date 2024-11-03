@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Header from '../../components/Header/Header';
+import PanelHeader from '../../components/PanelHeader/PanelHeader';
 import { useNavigate } from 'react-router-dom';
 
 const Account = () => {
@@ -16,7 +16,7 @@ const Account = () => {
 	};
 	return (
 		<div id='logout-page'>
-			<Header title='Konto' />
+			<PanelHeader title='Konto' />
 			<button onClick={handleLogout}>Wyloguj się</button>
 			{error && <p className='logout-error'>Błąd przy wylogowaniu</p>}
 		</div>

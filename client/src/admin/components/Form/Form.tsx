@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import Header from '../Header/Header';
+import Header from '../PanelHeader/PanelHeader';
 import './form.css';
 import React, { useRef, useState } from 'react';
 import { addUser } from '../../services/user.service';
@@ -91,9 +91,9 @@ const Form: React.FC = () => {
 
 	return (
 		<div>
-			{type === 'user' && <Header title='Nowy użytkownik' />}
-			{type === 'post' && <Header title='Nowy wpis' />}
-			{type === 'report' && <Header title='Nowy raport' />}
+			{type === 'user' && <PanelHeader title='Nowy użytkownik' />}
+			{type === 'post' && <PanelHeader title='Nowy wpis' />}
+			{type === 'report' && <PanelHeader title='Nowy raport' />}
 
 			<form onSubmit={handleSubmit}>
 				{fields.map((field: Field) => (

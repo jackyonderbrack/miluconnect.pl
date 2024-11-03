@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Header from '../../components/Header/Header';
+import PanelHeader from '../../components/PanelHeader/PanelHeader';
 import List from '../../components/List/List';
 import { deleteUser, getUsers } from '../../services/user.service';
 import Button from '../../../components/Button/Button';
@@ -46,7 +46,7 @@ const Users = () => {
 
 	return (
 		<div className='users-page flex flex-col gap-2'>
-			<Header title='Użytkownicy' />
+			<PanelHeader title='Użytkownicy' />
 			<div className='button-wrapper'>
 				<Button
 					linkTo={'/admin-panel/user/new'}

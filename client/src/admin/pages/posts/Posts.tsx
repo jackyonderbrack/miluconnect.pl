@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Button from '../../../components/Button/Button';
-import Header from '../../components/Header/Header';
+import PanelHeader from '../../components/PanelHeader/PanelHeader';
 import List from '../../components/List/List';
 import { Post } from '../../models/post.model';
 import { deletePost } from '../../services/post.service';
@@ -31,7 +31,7 @@ const Posts = () => {
 	};
 	return (
 		<div className='posts-page flex flex-col gap-2'>
-			<Header title='Wpisy' />
+			<PanelHeader title='Wpisy' />
 			<div className='button-wrapper'>
 				<Button
 					linkTo={'/admin-panel/post/new'}

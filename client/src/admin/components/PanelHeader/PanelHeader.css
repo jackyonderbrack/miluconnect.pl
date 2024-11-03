@@ -1,8 +1,7 @@
-.header {
+.panel_header {
 	height: 4rem;
 	display: block;
 	align-content: center;
-	background-color: var(--primary-dark-color);
 	padding: 0 3rem;
 	border-radius: 0.4rem;
 	font-size: 160%;

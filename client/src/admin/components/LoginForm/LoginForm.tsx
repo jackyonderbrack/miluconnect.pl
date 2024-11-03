@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import Header from '../Header/Header';
+import Header from '../PanelHeader/PanelHeader';
 import './LoginForm.css';
 import { getToken } from '../../services/login.service';
 import { useLoginFormik } from '../../../utils/useFormikConfig';
@@ -31,7 +31,7 @@ const LoginForm = () => {
 	});
 	return (
 		<div id='LoginForm'>
-			<Header title='Admin Panel' />
+			<PanelHeader title='Admin Panel' />
 			<p>Zaloguj się do panelu administracyjnego</p>
 			<form onSubmit={formik.handleSubmit}>
 				<div className='form-group login-form'>
