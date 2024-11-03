@@ -13,6 +13,7 @@ export const getData = async <T>(
 		return response;
 	} catch (error) {
 		console.error('Error fetching data:', error);
+		authService.handleUnauthorized(error)
 		throw error;
 	}
 };
@@ -28,6 +29,7 @@ export const postData = async <T>(
 		return response;
 	} catch (error) {
 		console.error('Error posting data:', error);
+		authService.handleUnauthorized(error)
 		throw error;
 	}
 };
@@ -43,6 +45,7 @@ export const putData = async <T>(
 		return response;
 	} catch (error) {
 		console.error('Error updating data:', error);
+		authService.handleUnauthorized(error)
 		throw error;
 	}
 };
@@ -57,6 +60,7 @@ export const deleteData = async (
 		return response;
 	} catch (error) {
 		console.error('Error deleting data:', error);
+		authService.handleUnauthorized(error)
 		throw error;
 	}
 };

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { checkPasswordHash} from '../utils/bcryptjs.util';
 import jwt from 'jsonwebtoken';
-import { User } from '../models/user.model';
+import { UserModel } from '../models/user.model';
 import dotenv from 'dotenv';
 import Logging from '../library/Logging';
 
@@ -14,7 +14,7 @@ export const getToken = async (req: Request, res: Response) => {
         const { email, password } = req.body;
         Logging.info(`getToken | body: ${req.body}`)
 
-        const user = await User.findOne({ where: { email } });
+        const user = await UserModel.findOne({ where: { email } });
         Logging.info(`getToken | user: ${user}`)
 
         if (!user) {

@@ -9,4 +9,11 @@ export const authService = {
 		const headers = token ? { Authorization: `Bearer ${token}` } : {};
 		return headers;
 	},
+
+	handleUnauthorized: (error: any) => {
+		if (error.response && error.response.status === 401) {
+			localStorage.removeItem('TOKEN');
+			window.location.href = '/admin-login'
+		};
+	},
 };

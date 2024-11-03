@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
-import { User } from "../models/user.model";
 import Logging from "../library/Logging";
-import sequelize from "sequelize";
+import { User } from "../config/database.config";
 
 export const createUser = async (req: Request, res: Response) => {
 	try {

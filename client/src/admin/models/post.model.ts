@@ -5,6 +5,6 @@ export interface Post {
 	description: string;
 	author: string;
 	date: string;
-	content: string;
+	content: HTMLElement;
 	tags: string[];
 }

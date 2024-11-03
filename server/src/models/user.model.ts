@@ -2,7 +2,7 @@ import { Model, DataTypes, Sequelize } from "sequelize";
 import { uuid } from "../utils/uuid.util";
 import { hashPassword } from "../utils/bcryptjs.util";
 
-export class User extends Model {
+export class UserModel extends Model {
 	public id!: number;
 	public name!: string;
 	public email!: string;
@@ -10,8 +10,8 @@ export class User extends Model {
 	public role!: string;
 }
 
-export function initUserModel(sequelize: Sequelize): typeof User {
-	User.init(
+export function initUserModel(sequelize: Sequelize): typeof UserModel {
+	UserModel.init(
 		{
 			id: {
 				type: DataTypes.STRING,
@@ -42,12 +42,12 @@ export function initUserModel(sequelize: Sequelize): typeof User {
 			sequelize,
 			timestamps: false,
 			hooks: {
-				beforeCreate: async (user: User) => {
+				beforeCreate: async (user: UserModel) => {
 					if (user.password) {
 						user.password = await hashPassword(user.password);
 					}
 				},
-				beforeUpdate: async (user: User) => {
+				beforeUpdate: async (user: UserModel) => {
 					if (user.password && user.changed("password")) {
 						user.password = await hashPassword(user.password);
 					}
@@ -55,5 +55,5 @@ export function initUserModel(sequelize: Sequelize): typeof User {
 			},
 		}
 	);
-	return User;
+	return UserModel;
 }

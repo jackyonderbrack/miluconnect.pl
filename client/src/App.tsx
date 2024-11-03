@@ -28,7 +28,7 @@ import Account from './admin/pages/account/Account';
 import Login from './admin/pages/login/Login';
 import BlogPage from './pages/BlogPage/BlogPage';
 
-function Layout() {
+function ClientLayout() {
 	const location = useLocation();
 
 	useEffect(() => {
@@ -66,7 +66,7 @@ function AdminLayout() {
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Layout />, // Główny layout aplikacji
+		element: <ClientLayout />,
 		children: [
 			{ index: true, element: <HomePage /> },
 			{ path: 'rozwiazania', element: <SolutionsPage /> },

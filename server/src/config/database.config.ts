@@ -1,6 +1,7 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
 import { initUserModel } from '../models/user.model';
+import { initPostModel } from '../models/post.model';
 
 
 dotenv.config();
@@ -17,5 +18,6 @@ const sequelize = new Sequelize(
 );
 
 const User = initUserModel(sequelize)
+const Post = initPostModel(sequelize)
 
-export { sequelize, User };
+export { sequelize, User, Post };

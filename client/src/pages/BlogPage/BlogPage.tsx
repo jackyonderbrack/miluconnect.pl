@@ -25,10 +25,13 @@ const BlogPage = () => {
         />
         <Layout variants="sidenavRight"> 
 			
-            <div>
+            <div className="blog_sidenav">
                 {/* Jakiś content dla bloga */}
                 <h1>Blog Content</h1>
                 <p>Example content here...</p>
+            </div>
+            <div className="blog_cards">
+                
             </div>
 
         </Layout>
