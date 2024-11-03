@@ -52,9 +52,9 @@ const Navigation: React.FC = () => {
 					<Link to='/rozwiazania' onClick={toggleMobileNav}>
 						Rozwiązania
 					</Link>
-					<Link to='/blog' onClick={toggleMobileNav}>
+					{/* <Link to='/blog' onClick={toggleMobileNav}>
 						Blog
-					</Link>
+					</Link> */}
 					<Link to='/kontakt' onClick={toggleMobileNav}>
 						Kontakt
 					</Link>

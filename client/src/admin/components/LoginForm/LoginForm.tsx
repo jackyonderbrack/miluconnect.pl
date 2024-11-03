@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import Header from '../PanelHeader/PanelHeader';
+import PanelHeader from '../PanelHeader/PanelHeader';
 import './LoginForm.css';
 import { getToken } from '../../services/login.service';
 import { useLoginFormik } from '../../../utils/useFormikConfig';

@@ -82,7 +82,7 @@ const Form: React.FC = () => {
 				navigate('/admin-panel/posts');
 			}
 		} catch (error) {
-			setError('Nie udało się dodać użytkownika');
+			setError('Błąd, sprawdź pola i spróbuj jeszcze raz');
 			console.error(error);
 		}
 	};
@@ -117,8 +117,9 @@ const Form: React.FC = () => {
 						</div>
 					</div>
 				))}
-				{error && <p className='error'>{error}</p>}
-				<button type='submit'>Utwórz</button>
+				{error && <p className='error-message'>{error}</p>}
+				<button type='submit' className='btn-primary'>Utwórz</button>
+				<button type='reset' className='btn-underline'>Anuluj</button>
 			</form>
 		</div>
 	);

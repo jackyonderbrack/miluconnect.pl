@@ -60,24 +60,6 @@ form textarea {
 	width: 100%;
 }
 
-form .btn-outline {
-	background-color: var(--color-accent-primary);
-	color: var(--color-secondary);
-	border: none;
-	border-radius: var(--radius-md);
-	padding: var(--padding);
-	font-size: 1.1rem;
-	cursor: pointer;
-	width: 100%;
-	transition:
-		background-color var(--transition),
-		color var(--transition);
-}
-
-form .btn-outline:hover {
-	color: var(--color-secondary);
-}
-
 .error-message {
 	color: var(--color-danger);
 	font-size: 0.6rem;
@@ -126,9 +108,6 @@ form {
 	justify-content: center;
 }
 
-button[type='submit'] {
-	min-height: 3rem;
-}
 .error-message {
 	height: 2rem;
 }

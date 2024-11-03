@@ -157,7 +157,7 @@ const HomePage = () => {
 			),
 		},
 		{
-			imgsrc: IconSpectialistTeam,
+			imgsrc: IconPartnership,
 			heading: 'Konsultacje technologiczne i wsparcie IT',
 			url: 'konsultacje-technologiczne',
 			content: (

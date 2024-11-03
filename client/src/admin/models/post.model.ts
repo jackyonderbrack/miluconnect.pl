@@ -5,6 +5,6 @@ export interface Post {
 	description: string;
 	author: string;
 	date: string;
-	content: HTMLElement;
+	content: React.ReactNode;
 	tags: string[];
 }

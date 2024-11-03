@@ -39,80 +39,78 @@
 	--blur: filter: blur(--radius-md);
 	--padding: 1rem 1.5rem;
 	--color-background-gradient: linear-gradient(70deg, var(--color-accent-background), var(--alternative-color))
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
 }
 
 /* MOBILE (SMALL) WIDTH FIRST */
 
-	body {
-		padding-bottom: env(safe-area-inset-bottom);
-		margin: 0 auto;
-		min-height: 100vh;
-	}
-	body::-webkit-scrollbar {
-		display: none;
-	}
-	h1 {
-		font: var(--h1);
-		margin-top: 8px;
-	}
-	h2 {
-		font: var(--h2);
-		margin-top: 8px;
-		position: relative;
-		padding-bottom: 5px;
-	}
-	h2::after {
-		content: '';
-		position: absolute;
-		bottom: -1rem;
-		left: 0;
-		width: 0;
-		height: 0.3rem;
-		background-color: var(--color-accent-primary);
-		transition: width 1s ease-in-out;
-	}
-	h2.active::after {
-		width: 200px;
-	}
-	h3 {
-		font: var(--h3);
-		margin-top: 8px;
-	}
-	p {
-		font: var(--p);
-	}
-		a {
-		color: var(--color-primary);
-		font: var(--links);
-		text-decoration: inherit;
-	}
-	a:hover {
-		color: var(--color-accent-primary);
-	}
-	
-	button > a {
-		color: var(--dark-color);
-	}
-	button,
+body {
+	padding-bottom: env(safe-area-inset-bottom);
+	margin: 0 auto;
+	min-height: 100vh;
+	padding: 0;
+	box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+h1 {
+	font: var(--h1);
+	margin-top: 8px;
+}
+h2 {
+	font: var(--h2);
+	margin-top: 8px;
+	position: relative;
+	padding-bottom: 5px;
+}
+h2::after {
+	content: '';
+	position: absolute;
+	bottom: -1rem;
+	left: 0;
+	width: 0;
+	height: 0.3rem;
+	background-color: var(--color-accent-primary);
+	transition: width 1s ease-in-out;
+}
+h2.active::after {
+	width: 200px;
+}
+h3 {
+	font: var(--h3);
+	margin-top: 8px;
+}
+p {
+	font: var(--p);
+}
 	a {
-		cursor: pointer;
-		transition: var(--transition);
-	}
-	button:hover {
-		scale: 1.05;
-	}
-	button:hover:not(.btn-underline) {
-		padding-right: 3rem;
-		border-top-right-radius: var(--radius-md);
-		border-bottom-right-radius: var(--radius-md);
-	}
-	.content {
-		margin: 0.25rem 0.4rem;
-	}
-	
+	color: var(--color-primary);
+	font: var(--links);
+	text-decoration: inherit;
+}
+a:hover {
+	color: var(--color-accent-primary);
+}
+
+button > a {
+	color: var(--dark-color);
+}
+button,
+a {
+	cursor: pointer;
+	transition: var(--transition);
+}
+button:hover {
+	scale: 1.05;
+}
+button:hover:not(.btn-underline) {
+	border-top-right-radius: var(--radius-md);
+	border-bottom-right-radius: var(--radius-md);
+}
+.content {
+	margin: 0.25rem 0.4rem;
+}
+
 #Client {
 	section {
 		scroll-snap-align: start;

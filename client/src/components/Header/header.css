@@ -12,25 +12,23 @@ section.header {
 	min-height: 24vh;
 	display: flex;
 	align-items: center;
+	padding-left: 0.2rem;
 }
-@media (min-width: 40em) {
+@media (width >= 40em) {
 	section.header {
+		padding-left: 0.5rem;
 		min-height: 28vh;
 	}
 }
-@media (min-width: 60em) {
+@media (width >= 60em) {
 	section.header {
+		padding-left: 1rem;
 		min-height: 32vh;
 	}
 }
 
 .header2 {
  	margin-bottom: 4rem;
-}
-
-.headerContent {
-
-	margin-top: -1rem;
 }
 
 .headerPicture {
