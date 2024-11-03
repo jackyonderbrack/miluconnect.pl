@@ -1,7 +1,8 @@
 User-agent: *
 Disallow: /private/
 Disallow: /tmp/
-Disallow: /kontakt/
+Allow: /kontakt/
+Allow: /polityka-prywatnosci/
 Allow: /public/
 Allow: /rozwiazania/
 Allow: /

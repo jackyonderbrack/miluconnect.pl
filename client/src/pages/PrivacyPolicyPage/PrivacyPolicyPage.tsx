@@ -17,12 +17,12 @@ const PrivacyPolicyPage = () => {
 				imgUrl={EarthImg}
 				align='start'
 			/>
-			<section className='content background-top pt-4'>
+			<section className='content background-top px-2 py-2'>
 				<h4>Wstęp</h4>
 				<p>
 					Niniejsza polityka prywatności opisuje, w jaki sposób miluConnect gromadzi,
 					wykorzystuje i chroni Twoje dane osobowe, które nam przekazujesz podczas
-					korzystania z naszej strony internetowej [miluConnect.com].
+					korzystania z naszej strony internetowej <a href='https://miluconnect.pl'>miluconnect.pl</a>.
 				</p>
 
 				<h4>Gromadzenie danych</h4>
@@ -78,7 +78,7 @@ const PrivacyPolicyPage = () => {
 				</p>
 				<p>
 					W celu skorzystania z tych praw prosimy o kontakt z nami pod adresem email:
-					[miluConnect@gmail.com].
+					<a href='mailto:kontakt@miluconnect.pl'>kontakt@miluconnect.pl</a>.
 				</p>
 
 				<h4>Zmiany w polityce prywatności</h4>
@@ -92,7 +92,7 @@ const PrivacyPolicyPage = () => {
 				<h4>Kontakt</h4>
 				<p>
 					Jeśli masz jakiekolwiek pytania dotyczące niniejszej polityki prywatności,
-					prosimy o kontakt z nami pod adresem email: [contact@yourwebsite.com].
+					prosimy o kontakt z nami pod adresem email: <a href='mailto:kontakt@miluconnect.pl'>kontakt@miluconnect.pl</a>.
 				</p>
 				<div className='my-4'>
 					<Button
