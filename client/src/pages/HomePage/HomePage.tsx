@@ -1,7 +1,7 @@
 // Styles
 import './HomePage.css';
 // Icons
-import IconDedidcatedSolutions from '../../assets/icon-dedicated-miluconnect.png';
+import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.png';
 import IconMobileApps from '../../assets/icon-mobileapps-miluconnect.png';
 import IconSpectialistTeam from '../../assets/icon-webspecialists-miluconnect.png';
 import IconPartnership from '../../assets/icon-partnership-miluconnect.png';
@@ -112,45 +112,94 @@ const HomePage = () => {
 
 	const _homeContents_ImageBox = [
 		{
-			imgsrc: IconDedidcatedSolutions,
-			heading: 'Wordpress WooCommerce',
-			url: 'rozwiazania',
+			imgsrc: IconDedicatedSolutions,
+			heading: 'Rozwiązania WooCommerce dla WordPress',
+			url: 'rozwiazania-wordpress-woocommerce',
 			content: (
 				<div className='text-align-left'>
 					<p>
-						Jesteśmy małym gronem programistów, grafików, wizjonerów <br />i chcemy rozwinąć Twój
-						biznes.
+						Specjalizujemy się w projektowaniu rozwiązań eCommerce na platformie <a href='/rozwiazania'>WordPress WooCommerce</a>, które wspierają rozwój sklepów internetowych i zwiększają konwersję.
 					</p>
 					<p>
-						Projektujemy Strony internetowe, sklepy oraz wszystko co związane z
-						siecią. Nasze <a href='#realizacje'>realizacje</a> to tworzenie systemów zarządzania
-						produkcją, zasobami, ale również interaktywnych gier, programów <br />i sieci.
-						Dostosowujemy się do specyficznych potrzeb klienta, zapewniając przy tym
-						elastyczność, skalowalność i integrację z istniejącymi systemami.
+						Nasze <a href='#realizacje'>projekty</a> obejmują kompleksowe tworzenie stron, sklepów, systemów zarządzania produkcją i zasobami oraz integrację z systemami ERP i CRM. Dzięki doświadczeniu i elastycznemu podejściu, pomagamy firmom zyskać przewagę konkurencyjną.
 					</p>
 				</div>
 			),
 		},
 		{
 			imgsrc: IconMobileApps,
-			heading: 'Responsywność',
-			url: 'responsywnosc',
-			content:
-				'Projektujemy zaawansowane aplikacje mobilne dla systemów iOS i Android. Zapewniamy intuicyjny interfejs użytkownika, niezawodny i bezpieczny kod, a także stabilną działalność. Nasze aplikacje są zoptymalizowane pod kątem wydajności i bezpieczeństwa, co gwarantuje doskonałe wrażenia użytkownika i responsywność każdego systemu.',
-		},
-		{
-			imgsrc: IconPartnership,
-			heading: 'Partnerstwo technologiczne',
-			url: 'technologie',
-			content:
-				'Dostarczamy wszechstronne konsultacje w dziedzinie technologii IT. Naszym celem jest osiągnięcie wyznaczonych rezultatów w ścisłej współpracy z naszymi klientami. Oferujemy wsparcie na każdym etapie projektu, od planowania, przez wdrożenie, aż po utrzymanie i rozwój.',
+			heading: 'Projektowanie Mobile-First',
+			url: 'projektowanie-mobile-first',
+			content: (
+				<div className='text-align-left'>
+					<p>
+						Tworzymy strony i aplikacje oparte na podejściu Mobile First, dostosowane do urządzeń mobilnych oraz desktopowych.
+					</p>
+					<p>
+						Dbamy o intuicyjny interfejs użytkownika, szybkość działania i responsywność na każdym urządzeniu, co jest kluczowe dla SEO i zadowolenia użytkowników.
+					</p>
+				</div>
+			),
 		},
 		{
 			imgsrc: IconSpectialistTeam,
-			heading: 'Kadra specjalistyczna',
-			url: 'nasz-team',
-			content:
-				'Nasza kadra to zespół wysoko wykwalifikowanych specjalistów, którzy projektują zaawansowane rozwiązania dla systemów iOS i Android. Zapewniamy intuicyjny interfejs użytkownika, niezawodny i bezpieczny kod oraz stabilną działalność aplikacji. Dzięki naszym ekspertom, możemy sprostać najbardziej wymagającym projektom.',
+			heading: 'Optymalizacja dla eCommerce',
+			url: 'optymalizacja-ecommerce',
+			content: (
+				<div className='text-align-left'>
+					<p>
+						Oferujemy pełną optymalizację SEO dla sklepów internetowychi stron eCommerce, koncentrując się na wzroście ruchu organicznego i zwiększeniu sprzedaży.
+					</p>
+					<p>
+						Nasze działania obejmują optymalizację treści, analizy danych i audyty SEO, które skutkują lepszą widocznością i konwersją.
+					</p>
+				</div>
+			),
+		},
+		{
+			imgsrc: IconSpectialistTeam,
+			heading: 'Konsultacje technologiczne i wsparcie IT',
+			url: 'konsultacje-technologiczne',
+			content: (
+				<div className='text-align-left'>
+					<p>
+						Nasz zespół oferuje wsparcie technologiczne na każdym etapie projektu.
+					</p>
+					<p>
+						Od planowania, przez wdrożenie, aż po optymalizację, zapewniamy efektywne i nowoczesne rozwiązania IT, które wspierają Twoją firmę w osiąganiu kluczowych celów.
+					</p>
+				</div>
+			),
+		},
+		{
+			imgsrc: IconSpectialistTeam,
+			heading: 'Audyt i optymalizacja SEO',
+			url: 'audyt-seo',
+			content: (
+				<div className='text-align-left'>
+					<p>
+						Nasze audyty SEO to szczegółowa analiza stron internetowych pod kątem wyszukiwarek.
+					</p>
+					<p>
+						Pomagamy zidentyfikować i wyeliminować techniczne problemy, poprawić struktury linków i zwiększyć pozycję Twojej strony w wynikach wyszukiwania.
+					</p>
+				</div>
+			),
+		},
+		{
+			imgsrc: IconSpectialistTeam,
+			heading: 'Zespół ekspertów IT',
+			url: 'zespol-ekspertow-it',
+			content: (
+				<div className='text-align-left'>
+					<p>
+						Mamy zespół specjalistów IT. To doświadczeni programiści i projektanci, którzy tworzą zaawansowane rozwiązania e-commerce.
+					</p>
+					<p>
+						Niezależnie od skali projektu, zapewniamy stabilność, bezpieczeństwo i najwyższą jakość wdrożeń, które odpowiadają na potrzeby biznesowe.
+					</p>
+				</div>
+			),
 		},
 	];
 
@@ -158,7 +207,7 @@ const HomePage = () => {
 		<>
 			<MetaTags
 				title='MILU Connect'
-				description='Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu. Katowice, Rybnik, Żory, Mikołów, Śląsk'
+				description='Tworzenie stron internetowych, sklepów e-commerce i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu.'
 			/>
 			<Header
 				content={
@@ -192,7 +241,9 @@ const HomePage = () => {
 				imgUrl={EarthImg}
 				align='start'
 			/>
+
 			<Pricing />
+
 			<div className='container'>
 				<H2 styleType='secondary'>Na czym się znamy</H2>
 				{_homeContents_ImageBox.map((item, index) => (

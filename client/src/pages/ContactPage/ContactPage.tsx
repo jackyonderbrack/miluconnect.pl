@@ -11,7 +11,7 @@ const ContactPage = () => {
 		<div id='ContactPage'>
 			<MetaTags
 				title='MILU Connect - Szybka i darmowa wycena'
-				description='Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu. Katowice, Rybnik, Żory, Mikołów, Śląsk'
+				description='Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu.'
 			/>
 			<Header
 				content={
@@ -49,9 +49,9 @@ const ContactPage = () => {
 							<p>
 								MILU Connect
 								<br />
-								Ul. Starowiejska 33a
+								Ul. Sławików 12A/13
 								<br />
-								44-245 Żory
+								44-200 Rybnik
 							</p>
 						</div>
 					</section>
