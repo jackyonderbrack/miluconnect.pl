@@ -8,6 +8,7 @@ import sendEmailRoute from "./routes/email.route";
 import { userRouter } from "./routes/user.route";
 import { loginRouter } from "./routes/login.route";
 import cors from "cors"
+import { postRouter } from "./routes/post.route";
 
 dotenv.config();
 const app = express();
@@ -39,6 +40,7 @@ const StartServer = () => {
 	app.use(API_URL, sendEmailRoute);
 	app.use(API_URL, userRouter);
 	app.use(API_URL, loginRouter);
+	app.use(API_URL, postRouter)
 
 	// Obsługa błędów dla nieznanych tras API
 	app.use(API_URL, (req, res) => {
