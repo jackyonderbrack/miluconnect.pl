@@ -12,6 +12,7 @@ interface ListProps<T extends ListItem> {
 	renderItem: (item: T) => ReactNode;
 	onUpdate: (itemId: string) => void;
 	onDelete: (itemId: string) => void;
+	isLoading: boolean;
 }
 
 function List<T extends ListItem>({
@@ -20,6 +21,7 @@ function List<T extends ListItem>({
 	itemsPerPage,
 	onUpdate,
 	onDelete,
+	isLoading,
 }: ListProps<T>) {
 	const [currentPage, setCurrentPage] = useState(1);
 
@@ -33,11 +35,19 @@ function List<T extends ListItem>({
 
 	return (
 		<div className='list-container'>
-			{items.length === 0 ? (
+			{isLoading ? (
 				<div className='list-item loading-item'></div>
+			) : items.length === 0 ? (
+				<div className='list-item'>Brak elementów</div>
 			) : (
-				currentItems.map((item) => (
-					<div key={item.id} className='list-item'>
+				currentItems.map((item, index) => (
+					<div 
+					key={item.id} 
+					className='list-item'
+					style={{
+							animationDelay: `${index * 100}ms`,
+						}}
+					>
 						<div className='list-item-content'>{renderItem(item)}</div>
 						<div className='list-item-icons'>
 							<HiPencilAlt size={32} onClick={() => onUpdate(item.id)} />

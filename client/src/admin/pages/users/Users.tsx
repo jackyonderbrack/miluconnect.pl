@@ -8,15 +8,19 @@ import './User.css';
 
 const Users = () => {
 	const [usersData, setUsersData] = useState<User[]>([]);
+	const [isLoading, setIsLoading] = useState(true)
 
 	useEffect(() => {
 		const fetchUsers = async () => {
 			try {
 				const response = await getUsers();
 				setUsersData(response.data);
+				await new Promise(resolve => setTimeout(resolve, 500));
+				setIsLoading(false)
 				console.log('Pobrano liste użytkowników:', response);
 			} catch (error) {
 				console.error('Nie udało się pobrać użytkowników:', error);
+				setIsLoading(false)
 			}
 		};
 		fetchUsers();
@@ -47,7 +51,7 @@ const Users = () => {
 	return (
 		<div className='users-page flex flex-col gap-2'>
 			<PanelHeader title='Użytkownicy' />
-			<div className='button-wrapper'>
+			<div className='add-button-wrapper text-align-end'>
 				<Button
 					linkTo={'/admin-panel/user/new'}
 					buttonText={'+ Dodaj użytkownika'}
@@ -70,6 +74,7 @@ const Users = () => {
 				)}
 				onUpdate={handleUpdate}
 				onDelete={handleDelete}
+				isLoading={isLoading}
 			/>
 		</div>
 	);
