@@ -99,7 +99,7 @@ const router = createBrowserRouter([
 			},
 		],
 	},
-	{ path: '*', element: <NotFoundPage /> }, // Dla nieznanych ścieżek
+	{ path: '*', element: <NotFoundPage /> },
 ]);
 
 function App() {
