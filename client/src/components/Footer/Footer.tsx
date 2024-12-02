@@ -67,7 +67,7 @@ const Footer = () => {
 								<img
 									className='githubSocialIconHover'
 									src={GithubSocialHover}
-									alt='Github social icon'
+									alt='Github social icon hover'
 								/>
 							</a>
 						</div>
