@@ -43,20 +43,6 @@ const Footer = () => {
 								/>
 							</a>
 						</div>
-
-						{/* <div className="socialIconContainer">
-              <img
-                className="instagramSocialIcon"
-                src={InstagramSocial}
-                alt="Instagram social icon"
-              />
-              <img
-                className="instagramSocialIconHover"
-                src={InstagramSocialHover}
-                alt="Instagram social icon"
-              />
-            </div> */}
-
 						<div className='socialIconContainer'>
 							<a href='https://github.com/jackyonderbrack' target='_blank'>
 								<img
@@ -67,7 +53,21 @@ const Footer = () => {
 								<img
 									className='githubSocialIconHover'
 									src={GithubSocialHover}
+									alt='Github social icon hover'
+								/>
+							</a>
+						</div>
+						<div className='socialIconContainer'>
+							<a href='https://github.com/tokarskadev' target='_blank'>
+								<img
+									className='githubSocialIcon'
+									src={GithubSocial}
 									alt='Github social icon'
+								/>
+								<img
+									className='githubSocialIconHover'
+									src={GithubSocialHover}
+									alt='Github social icon hover'
 								/>
 							</a>
 						</div>
