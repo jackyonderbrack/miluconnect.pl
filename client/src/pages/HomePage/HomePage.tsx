@@ -187,7 +187,7 @@ const HomePage = () => {
 			),
 		},
 		{
-			imgsrc: IconSpectialistTeam,
+			imgsrc: IconDedicatedSolutions,
 			heading: 'Zespół ekspertów IT',
 			url: 'zespol-ekspertow-it',
 			content: (
