@@ -177,7 +177,7 @@ const PricingForm = () => {
 	};
 
 	return (
-		<section id='PricingForm' className='background-primary py-4 px-4 mx-4 my-4'>
+		<section id='PricingForm' className='background-top py-4 px-4 mx-4 my-4'>
 			<H2 styleType='primary'>Konfigurator projektu</H2>
 			<p>
 				Wybierz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
