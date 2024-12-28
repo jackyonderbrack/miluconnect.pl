@@ -193,7 +193,7 @@ const PricingForm = () => {
 								{section.options?.map((option) => (
 									<label
 										key={option.value}
-										className={`border-radius  radio-button ${selectedProduct === option.value ? 'active' : ''}`}
+										className={`border-radius radio-button ${selectedProduct === option.value ? 'active' : ''}`}
 									>
 										<input
 											type='radio'
