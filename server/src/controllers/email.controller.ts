@@ -3,18 +3,23 @@ import Logging from "../library/Logging";
 import { Request, Response } from "express"
 
 export const sendEmail = async (req: Request, res: Response) => {
-    let transporter = nodemailer.createTransport({
-      host: "s145.cyber-folks.pl",
-      port: 465,
-      secure: true, 
+    const transporter = nodemailer.createTransport({
+      host: "mail.miluconnect.pl",
+      port: 587,
+      secure: false,
+      requireTLS: true,
       auth: {
         user: process.env.USER_EMAIL,
         pass: process.env.USER_EMAIL_PWD,
       },
+      tls: {
+        rejectUnauthorized: true,
+      },
     });
-  
+
+
     let mailOptions = {
-      from: "kontakt@miluconnect.pl",
+      from: "MILU Connect <kontakt@miluconnect.pl>",
       to: "mike.projektowanie@gmail.com",
       subject: `Wiadomość z witryny od: ${req.body.contactFormClientEmail}`,
       text: `Nadawca: ${req.body.contactFormClientName}\nWiadomość: ${req.body.contactFormMessage}`,
