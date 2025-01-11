@@ -17,7 +17,7 @@ const ContactPage = () => {
 				content={
 					<div>
 						<h1>
-							Masz jakiekolwiek <br />
+							Masz jakiekolwiek. <br />
 							<span className='text-gradient'>Pytania?</span>
 						</h1>
 					</div>
