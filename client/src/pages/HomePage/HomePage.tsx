@@ -113,7 +113,7 @@ const HomePage = () => {
 		},
 		{
 			title: 'Darel - IE',
-			description: 'SKLEP BRANŻOWY',
+			description: 'LOKALNY SKLEP BRANŻOWY',
 			imageUrl: PortfolioDarelBizPlImg,
 			buttonLink: 'https://darel.biz.pl',
 		},
@@ -156,6 +156,9 @@ const HomePage = () => {
 					</p>
 				</div>
 			),
+			labels: [
+				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
+			]
 		},
 		{
 			imgsrc: IconMobileApps,
@@ -171,6 +174,9 @@ const HomePage = () => {
 					</p>
 				</div>
 			),
+			labels: [
+				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
+			]
 		},
 		{
 			imgsrc: IconLongTerm,
@@ -189,6 +195,9 @@ const HomePage = () => {
 					
 				</div>
 			),
+			labels: [
+				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
+			]
 		},
 		{
 			imgsrc: IconBrainstorm,
@@ -205,6 +214,9 @@ const HomePage = () => {
 					</p>
 				</div>
 			),
+			labels: [
+				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
+			]
 		},
 		{
 			imgsrc: IconSpectialistTeam,
@@ -220,6 +232,9 @@ const HomePage = () => {
 					</p>
 				</div>
 			),
+			labels: [
+				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
+			]
 		},
 		{
 			imgsrc: IconPartnership,
@@ -235,6 +250,9 @@ const HomePage = () => {
 					</p>
 				</div>
 			),
+			labels: [
+				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
+			]
 		},
 	];
 
@@ -307,6 +325,7 @@ const HomePage = () => {
 					imgsrc={item.imgsrc}
 					content={item.content}
 					reverse={index % 2 !== 0}
+					labels={item.labels}
 					/>
 				))}
 			</div>

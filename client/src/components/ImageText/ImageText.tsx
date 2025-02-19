@@ -5,6 +5,7 @@ type ImageTextProps = {
 	heading: string;
 	content: React.ReactNode;
 	reverse?: boolean;
+	labels?: string[];
 };
 
 const ImageText: React.FC<ImageTextProps> = ({
@@ -12,6 +13,7 @@ const ImageText: React.FC<ImageTextProps> = ({
 	heading,
 	content,
 	reverse,
+	labels
 }) => {
 
 	return (
@@ -21,9 +23,15 @@ const ImageText: React.FC<ImageTextProps> = ({
 			</div>
 			<div className='content-wrapper'>
 				<h2>{heading}</h2>
-				<div className='icon-box-divider' />
+				<div className='labels'>
+					{labels?.map((label) => (
+						<div className='label'>{label}</div>
+					))}
+				</div>
 				<div className='icon-box-content'>{content}</div>
+				
 			</div>
+			
 		</section>
 	);
 };

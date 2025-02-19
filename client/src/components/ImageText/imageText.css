@@ -21,4 +21,16 @@
 		padding: 1rem 0.5rem;
 		text-align: left;
 	}
+
+	.labels {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	.label {
+		background-color: rgba(255, 255, 255, 0.064);
+		padding: 0.2rem 0.5rem;
+		border-radius: 0.4rem;
+		cursor: default;
+	}
 }
