@@ -144,117 +144,98 @@ const HomePage = () => {
 	const _homeContents_ImageBox = [
 		{
 			imgsrc: IconDedicatedSolutions,
-			heading: 'Rozwiązania WooCommerce dla WordPress',
+			heading: 'Pełny e-commerce',
 			url: 'rozwiazania-wordpress-woocommerce',
 			content: (
-				<div className='text-align-left'>
-					<p>
-						Specjalizujemy się w projektowaniu rozwiązań eCommerce na platformie <a href='/rozwiazania'>WordPress WooCommerce</a>, które wspierają rozwój sklepów internetowych i zwiększają konwersję.
-					</p>
-					<p>
-						Nasze <a href='#realizacje'>projekty</a> obejmują kompleksowe tworzenie stron, sklepów, systemów zarządzania produkcją i zasobami oraz integrację z systemami ERP i CRM. Dzięki doświadczeniu i elastycznemu podejściu, pomagamy firmom zyskać przewagę konkurencyjną.
-					</p>
-				</div>
+			<div className='text-align-left'>
+				<p>
+				Specjalizujemy się w projektowaniu i wdrażaniu rozwiązań eCommerce na platformie{' '}
+				<a href='/rozwiazania'>WordPress WooCommerce</a>, które wspierają rozwój sklepów internetowych i zwiększają konwersję.
+				</p>
+				<p>
+				Nasze <a href='#realizacje'>projekty</a> obejmują kompleksowe tworzenie stron, sklepów, systemów zarządzania produkcją i zasobami oraz integrację z systemami ERP i CRM. Dzięki doświadczeniu i elastycznemu podejściu pomagamy firmom zyskać przewagę konkurencyjną.
+				</p>
+			</div>
 			),
-			labels: [
-				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
-			]
+			labels: ["WordPress", "WooCommerce", "eCommerce", "Baselinker"]
 		},
 		{
 			imgsrc: IconMobileApps,
 			heading: 'Projektowanie Mobile-First',
 			url: 'projektowanie-mobile-first',
 			content: (
-				<div className='text-align-left'>
-					<p>
-						Tworzymy strony i aplikacje oparte na podejściu Mobile First, dostosowane do urządzeń mobilnych oraz desktopowych.
-					</p>
-					<p>
-						Dbamy o intuicyjny interfejs użytkownika, szybkość działania i responsywność na każdym urządzeniu, co jest kluczowe dla SEO i zadowolenia użytkowników.
-					</p>
-				</div>
+			<div className='text-align-left'>
+				<p>
+				Tworzymy strony i aplikacje oparte na podejściu Mobile First, dostosowane do urządzeń mobilnych oraz desktopowych.
+				</p>
+				<p>
+				Dbamy o intuicyjny interfejs użytkownika, szybkość działania i responsywność, co jest kluczowe dla SEO i zadowolenia użytkowników.
+				</p>
+			</div>
 			),
-			labels: [
-				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
-			]
+			labels: ["Mobile First", "Responsywność", "UI", "SEO"]
 		},
 		{
 			imgsrc: IconLongTerm,
 			heading: 'Profesjonalizm i długoterminowość',
 			url: 'profesjonalizm-długoterminowość',
 			content: (
-				<div className='text-align-left'>
-					<p>O gwarancjach można wiersze pisać. My chwalimy się efektami i zadowoleniem klientów.</p>
-					<p>
-						Znamy się na rzeczy więc działamy szybko, a szybka praca nie zawsze idzie w parze z szybkim projektem. Zastanawiamy się, planujemy, opisujemy, działamy.
-					</p>
-					<p>
-						Nasze działania często trwają tygodniami, miesiacami...
-						Dlatego nie boimy się dużych projektów - przeciwnie. Małe, szybkie i proste cieszą, ale to te wielkie napawają do dumy. Zaangażowanie zawsze przynosi upragniony efekt.
-					</p>
-					
-				</div>
+			<div className='text-align-left'>
+				<p>O gwarancjach można wiersze pisać. My chwalimy się efektami i zadowoleniem klientów.</p>
+				<p>
+				Znamy się na rzeczy, działamy szybko, a szybka praca nie zawsze idzie w parze z szybkim projektem. Zastanawiamy się, planujemy, opisujemy, działamy.
+				</p>
+				<p>
+				Nasze działania często trwają tygodniami, miesiącami... Dlatego nie boimy się dużych projektów – przeciwnie. Małe, szybkie i proste cieszą, ale to te wielkie napawają do dumy. Zaangażowanie zawsze przynosi upragniony efekt.
+				</p>
+			</div>
 			),
-			labels: [
-				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
-			]
+			labels: ["Profesjonalizm", "Planowanie", "Długoterminowość"]
 		},
 		{
 			imgsrc: IconBrainstorm,
 			heading: 'Konsultacje technologiczne i wsparcie IT',
 			url: 'konsultacje-technologiczne',
 			content: (
-				<div className='text-align-left'>
-					<p>
-						Nasz zespół oferuje wsparcie technologiczne na każdym etapie projektu.
-					</p>
-					<p>
-						Pomagamy dopracowywać na prawdę różne projekty.
-						Od planowania - przez wdrożenie, aż po optymalizację. Zapewniamy efektywne i nowoczesne rozwiązania IT, które wspierają Twoją firmę w osiąganiu kluczowych celów.
-					</p>
-				</div>
+			<div className='text-align-left'>
+				<p>Nasz zespół oferuje wsparcie technologiczne na każdym etapie projektu.</p>
+				<p>
+				Pomagamy dopracowywać różne projekty – od planowania, przez wdrożenie, aż po optymalizację. Zapewniamy efektywne i nowoczesne rozwiązania IT, które wspierają Twoją firmę w osiąganiu kluczowych celów.
+				</p>
+			</div>
 			),
-			labels: [
-				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
-			]
+			labels: ["Konsultacje", "Wsparcie", "Technologie"]
 		},
 		{
 			imgsrc: IconSpectialistTeam,
 			heading: 'Audyt i optymalizacja SEO',
 			url: 'audyt-seo',
 			content: (
-				<div className='text-align-left'>
-					<p>
-						Nasze audyty SEO to szczegółowa analiza stron internetowych pod kątem wyszukiwarek.
-					</p>
-					<p>
-						Pomagamy zidentyfikować i wyeliminować techniczne problemy, poprawić struktury linków i zwiększyć pozycję Twojej strony w wynikach wyszukiwania.
-					</p>
-				</div>
+			<div className='text-align-left'>
+				<p>Nasze audyty SEO to szczegółowa analiza stron internetowych pod kątem wyszukiwarek.</p>
+				<p>
+				Pomagamy zidentyfikować i wyeliminować techniczne problemy, poprawić struktury linków i zwiększyć pozycję Twojej strony w wynikach wyszukiwania.
+				</p>
+			</div>
 			),
-			labels: [
-				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
-			]
+			labels: ["SEO", "Audyt", "Optymalizacja"]
 		},
 		{
 			imgsrc: IconPartnership,
 			heading: 'Zespół ekspertów IT',
 			url: 'zespol-ekspertow-it',
 			content: (
-				<div className='text-align-left'>
-					<p>
-						Mamy zespół specjalistów IT. To doświadczeni programiści i projektanci, którzy tworzą zaawansowane rozwiązania e-commerce.
-					</p>
-					<p>
-						Niezależnie od skali projektu, zapewniamy stabilność, bezpieczeństwo i najwyższą jakość wdrożeń, które odpowiadają na potrzeby biznesowe.
-					</p>
-				</div>
+			<div className='text-align-left'>
+				<p>Mamy zespół specjalistów IT – doświadczonych programistów i projektantów, którzy tworzą zaawansowane rozwiązania e-commerce.</p>
+				<p>
+				Niezależnie od skali projektu, zapewniamy stabilność, bezpieczeństwo i najwyższą jakość wdrożeń, odpowiadających na potrzeby biznesowe.
+				</p>
+			</div>
 			),
-			labels: [
-				"Wordpress", "WooCommerce", "Allegro", "Baselinker"
-			]
+			labels: ["Programowanie", "Dedykowane rozwiązania"]
 		},
 	];
+
 
 	return (
 		<>
@@ -317,7 +298,7 @@ const HomePage = () => {
 			</section>
 
 			<div className='container'>
-				<H2 styleType='secondary'>Na czym się znamy</H2>
+				<H2 styleType='secondary'>Oferujemy:</H2>
 				{_homeContents_ImageBox.map((item, index) => (
 					<ImageText
 					key={index}
