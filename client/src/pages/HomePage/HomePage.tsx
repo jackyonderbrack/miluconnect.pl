@@ -58,6 +58,14 @@ import TechnologyNodejs from '../../assets/technologies/solutions-nodejs-light-m
 import TechnologyReactjs from '../../assets/technologies/solutions-react-miluconnect.webp';
 import TechnologySharepoint from '../../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
 import TechnologyKotlin from '../../assets/technologies/integrations-kotlin.webp';
+import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
+
+// Profelio
+import ProfelioImg1 from '../../assets/portfolio/profelio-miluconnect-image-1.png'
+import ProfelioImg2 from '../../assets/portfolio/profelio-miluconnect-image-2.png'
+import ProfelioImg3 from '../../assets/portfolio/profelio-miluconnect-image-3.png'
+import ProfelioImg4 from '../../assets/portfolio/profelio-miluconnect-image-4.png'
+
 
 
 const HomePage = () => {
@@ -141,7 +149,7 @@ const HomePage = () => {
 		{ url: TechnologySharepoint, alt: 'SharePoint' },
 	];
 
-	const _homeContents_ImageBox = [
+	const _homeContents_ImageBox_1 = [
 		{
 			imgsrc: IconDedicatedSolutions,
 			heading: 'Pełny e-commerce',
@@ -161,12 +169,12 @@ const HomePage = () => {
 		},
 		{
 			imgsrc: IconMobileApps,
-			heading: 'Projektowanie Mobile-First',
+			heading: 'Mobilność i responsywność',
 			url: 'projektowanie-mobile-first',
 			content: (
 			<div className='text-align-left'>
 				<p>
-				Tworzymy strony i aplikacje oparte na podejściu Mobile First, dostosowane do urządzeń mobilnych oraz desktopowych.
+				Tworzymy strony i aplikacje web i mobilne oparte na podejściu Mobile First, dostosowane do urządzeń mobilnych oraz desktopowych.
 				</p>
 				<p>
 				Dbamy o intuicyjny interfejs użytkownika, szybkość działania i responsywność, co jest kluczowe dla SEO i zadowolenia użytkowników.
@@ -175,6 +183,9 @@ const HomePage = () => {
 			),
 			labels: ["Mobile First", "Responsywność", "UI", "SEO"]
 		},
+	];
+
+	const _homeContents_ImageBox_2 = [
 		{
 			imgsrc: IconLongTerm,
 			heading: 'Profesjonalizm i długoterminowość',
@@ -236,6 +247,29 @@ const HomePage = () => {
 		},
 	];
 
+	const _homeContents_ImageBox_Profelio = [
+		{
+			imgsrc: [ProfelioImg1, ProfelioImg2, ProfelioImg3, ProfelioImg4],
+			heading: 'Profelio',
+			url: 'odkryj-profelio',
+			content: (
+			<div>
+				
+				<p>
+				Profelio to kompleksowa platforma do zarządzania projektami, która łączy nowoczesne technologie z intuicyjnym interfejsem.
+				</p>
+				<p>
+				Dzięki Profelio Twoje projekty nabiorą nowego wymiaru – możesz efektywnie planować, monitorować postępy i zarządzać zadaniami, a wszystko to w jednym miejscu.
+				</p>
+				<p>
+				Profesjonalizm, precyzyjne planowanie oraz długoterminowa strategia to fundamenty, na których opiera się nasza aplikacja. Odkryj potencjał swojej organizacji i ciesz się sukcesem razem z Profelio!
+				</p>
+				<button className='btn-primary'>Zarejestruj się za darmo</button>
+			</div>
+			),
+			labels: ["Planowanie", "Zarządzanie"]
+		},
+	];
 
 	return (
 		<>
@@ -299,7 +333,28 @@ const HomePage = () => {
 
 			<div className='container'>
 				<H2 styleType='secondary'>Oferujemy:</H2>
-				{_homeContents_ImageBox.map((item, index) => (
+				{_homeContents_ImageBox_1.map((item, index) => (
+					<ImageText
+					key={index}
+					heading={item.heading}
+					imgsrc={item.imgsrc}
+					content={item.content}
+					reverse={index % 2 !== 0}
+					labels={item.labels}
+					/>
+				))}
+				<H2 styleType={'primary'}>Nasz produkt</H2>
+				{_homeContents_ImageBox_Profelio.map((item, index) => (
+					<ImageTextSpecial
+					key={index}
+					heading={item.heading}
+					imgsrc={item.imgsrc}
+					content={item.content}
+					labels={item.labels}
+					/>
+				))}
+
+				{_homeContents_ImageBox_2.map((item, index) => (
 					<ImageText
 					key={index}
 					heading={item.heading}
