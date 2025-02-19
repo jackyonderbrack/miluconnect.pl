@@ -7,51 +7,11 @@ import './SolutionsPage.css';
 import IconCustomWebSites from '../../assets/icon-webadjustment-miluconnect.webp';
 import IconCustomWebShops from '../../assets/icon-webshop-miluconnect.png';
 import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.webp';
-
-// Clients
-import IntegrationAllegro from '../../assets/integrations/integrations-allegro-miluconnect.webp';
-import IntegrationBaseLinker from '../../assets/integrations/integrations-baselinker-light-miluconnect.webp';
-import IntegrationPresta from '../../assets/integrations/integrations-prestashop-light-miluconnect.webp';
-import IntegrationWordpress from '../../assets/integrations/integrations-wordpress-light-miluconnect.webp';
-import IntegrationWooCommerce from '../../assets/integrations/integrations-woocommerce-light-miluconnect.webp';
-import IntegrationShopGold from '../../assets/integrations/integrations-shopgold-light-miluconnect.webp';
-import IntegrationInPost from '../../assets/integrations/integrations-inpost-light-miluconnect.webp';
-import IntegrationCyberFolks from '../../assets/integrations/integrations-cyberfolks-light-miluconnect.webp';
-
-// Technologies
-import TechnologyAngular from '../../assets/technologies/solutions-agular-miluconnect.webp';
-import TechnologyExpress from '../../assets/technologies/solutions-expressjs-light-miluconnect.webp';
-import TechnologyGolang from '../../assets/technologies/solutions-go-miluconnect.webp';
-import TechnologyLitelements from '../../assets/technologies/solutions-lit-elements-light-miluconnect.webp';
-import TechnologyMongodb from '../../assets/technologies/solutions-mongodb-light-miluconnect.webp';
-import TechnologyNodejs from '../../assets/technologies/solutions-nodejs-light-miluconnect.webp';
-import TechnologyReactjs from '../../assets/technologies/solutions-react-miluconnect.webp';
-import TechnologySharepoint from '../../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
 import MetaTags from '../../components/MetaTags/MetaTags';
 import ImageText from '../../components/ImageText/ImageText';
 
 const SolutionsPage = () => {
-	const _integrationsContents = [
-		{ url: IntegrationAllegro, alt: 'Allegro' },
-		{ url: IntegrationBaseLinker, alt: 'BaseLinker' },
-		{ url: IntegrationPresta, alt: 'PrestaShop' },
-		{ url: IntegrationWordpress, alt: 'WordPress' },
-		{ url: IntegrationWooCommerce, alt: 'WooCommerce' },
-		{ url: IntegrationShopGold, alt: 'ShopGold' },
-		{ url: IntegrationInPost, alt: 'InPost' },
-		{ url: IntegrationCyberFolks, alt: 'CyberFolks' },
-	];
 
-	const _technologyContents = [
-		{ url: TechnologyAngular, alt: 'Angular' },
-		{ url: TechnologyExpress, alt: 'Express.js' },
-		{ url: TechnologyGolang, alt: 'Golang' },
-		{ url: TechnologyLitelements, alt: 'Litelements' },
-		{ url: TechnologyMongodb, alt: 'MongoDB' },
-		{ url: TechnologyNodejs, alt: 'Node.js' },
-		{ url: TechnologyReactjs, alt: 'React.js' },
-		{ url: TechnologySharepoint, alt: 'SharePoint' },
-	];
 
 	const _solutionsContents_ImageBox = [
 		{
@@ -175,34 +135,7 @@ const SolutionsPage = () => {
 				))}
 			</div>
 
-			<section className=' background-primary content py-4 grid grid-cols-2 justify-content-evenly gap-2'>
-				<div className='flex flex-col align-items-center'>
-					<h3>Tworzymy integracje do:</h3>
-					<div className='imageRows integrations flex flex-wrap justify-content-center'>
-						{_integrationsContents.map((integration, index) => (
-							<img
-								key={index}
-								src={integration.url}
-								alt={integration.alt}
-								className='p-2'
-							/>
-						))}
-					</div>
-				</div>
-				<div className='flex flex-col align-items-center'>
-					<h3>Technologia, na której się znamy:</h3>
-					<div className='imageRows integrations flex flex-wrap justify-content-center'>
-						{_technologyContents.map((technology, index) => (
-							<img
-								key={index}
-								src={technology.url}
-								alt={technology.alt}
-								className='p-2'
-							/>
-						))}
-					</div>
-				</div>
-			</section>
+			
 			<section className='container'>
 				<div className='text-align-center'>
 					<h3>Na czym się obecnie można się oprzeć?</h3>
