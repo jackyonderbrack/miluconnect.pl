@@ -13,7 +13,7 @@ import { postRouter } from "./routes/post.route";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
-const API_URL = process.env.API_URL || "/admin-panel/api";
+const API_SUFFIX = process.env.API_SUFFIX || "/admin-panel/api";
 
 const StartServer = () => {
 	// Logowanie przychodzących żądań
@@ -37,13 +37,13 @@ const StartServer = () => {
 	app.use(express.static(path.join(__dirname, "../../client/dist")));
 
 	// Dodanie tras API
-	app.use(API_URL, sendEmailRoute);
-	app.use(API_URL, userRouter);
-	app.use(API_URL, loginRouter);
-	app.use(API_URL, postRouter)
+	app.use(API_SUFFIX, sendEmailRoute);
+	app.use(API_SUFFIX, userRouter);
+	app.use(API_SUFFIX, loginRouter);
+	app.use(API_SUFFIX, postRouter)
 
 	// Obsługa błędów dla nieznanych tras API
-	app.use(API_URL, (req, res) => {
+	app.use(API_SUFFIX, (req, res) => {
 		const error = new Error("Not found anything");
 		Logging.error(error.message);
 		return res.status(404).json({ message: error.message });

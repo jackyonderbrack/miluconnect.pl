@@ -4,9 +4,9 @@ import { Request, Response } from "express"
 
 export const sendEmail = async (req: Request, res: Response) => {
     const transporter = nodemailer.createTransport({
-      host: "mail.miluconnect.pl",
-      port: 587,
-      secure: false,
+      host: "s145.cyber-folks.pl",
+      port: 465,
+      secure: true,
       requireTLS: true,
       auth: {
         user: process.env.USER_EMAIL,
@@ -20,7 +20,7 @@ export const sendEmail = async (req: Request, res: Response) => {
 
     let mailOptions = {
       from: "MILU Connect <kontakt@miluconnect.pl>",
-      to: "mike.projektowanie@gmail.com",
+      to: "kontakt@miluconnect.pl",
       subject: `Wiadomość z witryny od: ${req.body.contactFormClientEmail}`,
       text: `Nadawca: ${req.body.contactFormClientName}\nWiadomość: ${req.body.contactFormMessage}`,
     };

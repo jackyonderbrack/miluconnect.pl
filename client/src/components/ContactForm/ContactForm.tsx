@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import './ContactForm.css';
 import { useContactFormik } from '../../utils/useFormikConfig';
 
+const BASE_API_URL = import.meta.env.VITE_BASE_API_URL + import.meta.env.VITE_BASE_API_SUFIX 
+
 const ContactForm: React.FC = () => {
 	const [submitErrorStatus, setSubmitErrorStatus] = useState('');
 	const [submitSuccessStatus, setSubmitSuccessStatus] = useState('');
 	const formik = useContactFormik(async (formData) => {
 		try {
-			const response = await fetch(`https://miluconnect.pl/api/send-email`, {
+			const response = await fetch(`${BASE_API_URL}/send-email`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
