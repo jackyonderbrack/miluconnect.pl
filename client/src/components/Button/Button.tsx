@@ -1,13 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './button.css';
 
 type ButtonProps = {
 	linkTo: string;
 	buttonText: string;
 	theme: 'btn-primary' | 'btn-underline' | 'btn-outline';
-	targetId?: string; // Opcjonalny target ID do przewijania
-	offset?: number; // Opcjonalny offset do przewijania
+	targetId?: string;
+	offset?: number;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -39,12 +38,17 @@ const Button: React.FC<ButtonProps> = ({
 		} else {
 			setTimeout(() => {
 				navigate(linkTo.toString());
-			}, 300); // Taki sam czas, jak długość trwania animacji
+			}, 300);
 		}
 	};
 
 	return (
-		<button onClick={handleClick} className={theme}>
+		<button
+			onClick={handleClick}
+			className={theme}
+			aria-label={buttonText}
+			type='button'
+		>
 			{buttonText}
 		</button>
 	);

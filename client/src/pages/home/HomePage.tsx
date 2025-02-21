@@ -1,27 +1,24 @@
-import './HomePage.css';
 // Icons
+import IconBrainstorm from '../../assets/icon-brainstorm-miluconnect.png';
 import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.png';
+import IconLongTerm from '../../assets/icon-longterm-miluconnect.png';
 import IconMobileApps from '../../assets/icon-mobileapps-miluconnect.png';
 import IconPartnership from '../../assets/icon-partnership-miluconnect.png';
 import IconSpectialistTeam from '../../assets/icon-webspecialists-miluconnect.png';
-import IconLongTerm from '../../assets/icon-longterm-miluconnect.png';
-import IconBrainstorm from '../../assets/icon-brainstorm-miluconnect.png';
 // Banners
 import EarthImg from '../../assets/background-earth-01-miluconnect.webp';
 // Clients
-import Partner1 from '../../assets/partners/miluconnect-partner-hurtownia-slonca.png';
-import Partner2 from '../../assets/partners/partner-gentlemanshop-miluconnect.png';
 import Partner3 from '../../assets/partners/miluconnect-partner-holisticspa.png';
-import Partner4 from '../../assets/partners/partner-lesnaperla-miluconnect.png';
+import Partner1 from '../../assets/partners/miluconnect-partner-hurtownia-slonca.png';
 import Partner5 from '../../assets/partners/partner-darel-miluconnect.png';
+import Partner2 from '../../assets/partners/partner-gentlemanshop-miluconnect.png';
+import Partner4 from '../../assets/partners/partner-lesnaperla-miluconnect.png';
 import Partner6 from '../../assets/partners/partner-metkom-miluconnect.png';
 import Partner7 from '../../assets/partners/partner-natarasie-miluconnect.png';
 import Partner8 from '../../assets/partners/partner-vending4all-miluconnect.png';
 // Components
 import Header from '../../components/Header/Header';
-import Title from '../../components/Title/Title';
 // Images
-import PortfolioDarelBizPlImg from '../../assets/portfolio/miluconnect-darel-strony-internetowe-rybnik-zory.png';
 import PortfolioRestauracjaLesnaPerlaImg from '../../assets/portfolio/03_miluconnect-lesnaperla-strony-rybnik-radlin.png';
 import PorftolioNatarasieImg from '../../assets/portfolio/05_miluconnect-natarasie-strony-rybnik-zory.png';
 import PortfolioMetkomImg from '../../assets/portfolio/06_miluconnect-metkom-zory-cieszyn-strony-internetowe.png';
@@ -30,6 +27,7 @@ import PortfolioHolisticSpaImg from '../../assets/portfolio/08_miluconnect-holis
 import PortfolioStolarniaprecyzjaImg from '../../assets/portfolio/09_miluconnect-stolarniaprecyzja-spaslask-strony-rybnik-czerwionka-biznes.png';
 import PortfolioVending4AllImg from '../../assets/portfolio/10_miluconnect-vending-strony-rybnik-zory.png';
 import PortfolioCentrumBagsImg from '../../assets/portfolio/11_miluconnect-centrumbags-strony-rybnik-zory.png';
+import PortfolioDarelBizPlImg from '../../assets/portfolio/miluconnect-darel-strony-internetowe-rybnik-zory.png';
 // Components
 import Button from '../../components/Button/Button';
 import Gallery from '../../components/Gallery/Gallery';
@@ -42,14 +40,15 @@ import Slider from '../../components/Slider/Slider';
 // Clients
 import IntegrationAllegro from '../../assets/integrations/integrations-allegro-miluconnect.webp';
 import IntegrationBaseLinker from '../../assets/integrations/integrations-baselinker-light-miluconnect.webp';
-import IntegrationPresta from '../../assets/integrations/integrations-prestashop-light-miluconnect.webp';
-import IntegrationWordpress from '../../assets/integrations/integrations-wordpress-light-miluconnect.webp';
-import IntegrationWooCommerce from '../../assets/integrations/integrations-woocommerce-light-miluconnect.webp';
-import IntegrationShopGold from '../../assets/integrations/integrations-shopgold-light-miluconnect.webp';
-import IntegrationInPost from '../../assets/integrations/integrations-inpost-light-miluconnect.webp';
 import IntegrationCyberFolks from '../../assets/integrations/integrations-cyberfolks-light-miluconnect.webp';
+import IntegrationInPost from '../../assets/integrations/integrations-inpost-light-miluconnect.webp';
+import IntegrationPresta from '../../assets/integrations/integrations-prestashop-light-miluconnect.webp';
+import IntegrationShopGold from '../../assets/integrations/integrations-shopgold-light-miluconnect.webp';
+import IntegrationWooCommerce from '../../assets/integrations/integrations-woocommerce-light-miluconnect.webp';
+import IntegrationWordpress from '../../assets/integrations/integrations-wordpress-light-miluconnect.webp';
 
 // Technologies
+import TechnologyKotlin from '../../assets/technologies/integrations-kotlin.webp';
 import TechnologyAngular from '../../assets/technologies/solutions-agular-miluconnect.webp';
 import TechnologyExpress from '../../assets/technologies/solutions-expressjs-light-miluconnect.webp';
 import TechnologyGolang from '../../assets/technologies/solutions-go-miluconnect.webp';
@@ -57,7 +56,6 @@ import TechnologyMongodb from '../../assets/technologies/solutions-mongodb-light
 import TechnologyNodejs from '../../assets/technologies/solutions-nodejs-light-miluconnect.webp';
 import TechnologyReactjs from '../../assets/technologies/solutions-react-miluconnect.webp';
 import TechnologySharepoint from '../../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
-import TechnologyKotlin from '../../assets/technologies/integrations-kotlin.webp';
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
 
 // Profelio
@@ -308,16 +306,14 @@ const HomePage = () => {
 			/>
 			<Header
 				content={
-					<>
-						<div className='home-page-header-text'>
-							<h1>
-								&gt; szybki e-commerce
-								<br />
-								&gt; stylowa <span className='text-gradient'>strona internetowa</span>
-								<br />
-							</h1>
-						</div>
-						<div className='home-page-header-cta'>
+					<div className='space-y-6'>
+						<h1>
+							szybki e-commerce
+							<br />
+							&gt; stylowa <span className='text-gradient'>strona internetowa</span>
+							<br />
+						</h1>
+						<div className='flex gap-4'>
 							<Button
 								linkTo='#cennik'
 								buttonText='Cennik'
@@ -333,7 +329,7 @@ const HomePage = () => {
 								offset={140}
 							/>
 						</div>
-					</>
+					</div>
 				}
 				imgUrl={EarthImg}
 			/>
