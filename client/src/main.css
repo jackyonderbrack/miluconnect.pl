@@ -28,10 +28,10 @@
 
 	--ff: 'DM Sans', sans-serif;
 	--line-height: 1.4em;
-	--h1: bold 32px / var(--line-height) var(--ff);
-	--h2: bold 24px / var(--line-height) var(--ff);
+	--h1: bold 36px / var(--line-height) var(--ff);
+	--h2: bold 28px / var(--line-height) var(--ff);
 	--h3: bold 21px / var(--line-height) var(--ff);
-	--links: bold 1rem / var(--line-height) var(--ff);
+	--links: bold 18px / var(--line-height) var(--ff);
 	--p: 18px / var(--line-height) var(--ff);
 	--btn: bold 18px / var(--line-height) var(--ff);
 	--subtext: 12px / var(--line-height) var(-ff);
