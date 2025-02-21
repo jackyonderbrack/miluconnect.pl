@@ -11,8 +11,6 @@ import MetaTags from '../../components/MetaTags/MetaTags';
 import ImageText from '../../components/ImageText/ImageText';
 
 const SolutionsPage = () => {
-
-
 	const _solutionsContents_ImageBox = [
 		{
 			imgsrc: IconCustomWebSites,
@@ -69,7 +67,6 @@ const SolutionsPage = () => {
 					</div>
 				}
 				imgUrl={PuzzlesImg}
-				align='start'
 			/>
 			<section className='background-top container'>
 				<div>
@@ -135,13 +132,12 @@ const SolutionsPage = () => {
 				))}
 			</div>
 
-			
 			<section className='container'>
 				<div className='text-align-center'>
 					<h3>Na czym się obecnie można się oprzeć?</h3>
 				</div>
 				{/* <div className='actual-trends-container'> */}
-				<div className='grid grid-cols-4 gap-2 background-border-shadow '>
+				<div className='grid grid-cols-4 gap-2'>
 					<p>
 						<strong>AI-augmented Development</strong>: <br />
 						Sztuczna inteligencja (AI) staje się coraz bardziej integralną częścią

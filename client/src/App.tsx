@@ -1,21 +1,21 @@
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import './App.css';
-import HomePage from './pages/HomePage/HomePage';
-import ContactPage from './pages/ContactPage/ContactPage';
+import HomePage from './pages/home/HomePage';
+import ContactPage from './pages/contact/ContactPage';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
-import SolutionsPage from './pages/SolutionsPage/SolutionsPage';
+import NotFoundPage from './pages/notFound/NotFoundPage';
+import SolutionsPage from './pages/solutions/SolutionsPage';
 import { ScrollToTop } from './utils/ScrollToTop';
 import TrackPageView from './components/GoogleAnalytics/TrackPageView';
 import CustomCookieConsent from './components/CustomCookieConsent/CustomCookieConsent';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
-import ContactPageSent from './pages/ContactPage/ContactPageSent';
+import PrivacyPolicyPage from './pages/privactPolicy/PrivacyPolicyPage';
+import ContactPageSent from './pages/contact/ContactPageSent';
 import { AccessProvider } from './contexts/AccessContext';
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
-import NewsPage from './pages/NewsPage/NewsPage';
+import NewsPage from './pages/news/NewsPage';
 import Sidenav from './admin/components/Sidenav/Sidenav';
 import Dashboard from './admin/pages/dashboard/Dashboard';
 import Posts from './admin/pages/posts/Posts';
@@ -26,7 +26,7 @@ import Form from './admin/components/Form/Form';
 import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
 import Account from './admin/pages/account/Account';
 import Login from './admin/pages/login/Login';
-import BlogPage from './pages/BlogPage/BlogPage';
+import BlogPage from './pages/blog/BlogPage';
 
 function ClientLayout() {
 	const location = useLocation();

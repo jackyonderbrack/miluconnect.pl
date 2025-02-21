@@ -4,8 +4,8 @@ import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.png'
 import IconMobileApps from '../../assets/icon-mobileapps-miluconnect.png';
 import IconPartnership from '../../assets/icon-partnership-miluconnect.png';
 import IconSpectialistTeam from '../../assets/icon-webspecialists-miluconnect.png';
-import IconLongTerm from '../../assets/icon-longterm-miluconnect.png'
-import IconBrainstorm from '../../assets/icon-brainstorm-miluconnect.png'
+import IconLongTerm from '../../assets/icon-longterm-miluconnect.png';
+import IconBrainstorm from '../../assets/icon-brainstorm-miluconnect.png';
 // Banners
 import EarthImg from '../../assets/background-earth-01-miluconnect.webp';
 // Clients
@@ -61,12 +61,10 @@ import TechnologyKotlin from '../../assets/technologies/integrations-kotlin.webp
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
 
 // Profelio
-import ProfelioImg1 from '../../assets/portfolio/profelio-miluconnect-image-1.png'
-import ProfelioImg2 from '../../assets/portfolio/profelio-miluconnect-image-2.png'
-import ProfelioImg3 from '../../assets/portfolio/profelio-miluconnect-image-3.png'
-import ProfelioImg4 from '../../assets/portfolio/profelio-miluconnect-image-4.png'
-
-
+import ProfelioImg1 from '../../assets/portfolio/profelio-miluconnect-image-1.png';
+import ProfelioImg2 from '../../assets/portfolio/profelio-miluconnect-image-2.png';
+import ProfelioImg3 from '../../assets/portfolio/profelio-miluconnect-image-3.png';
+import ProfelioImg4 from '../../assets/portfolio/profelio-miluconnect-image-4.png';
 
 const HomePage = () => {
 	const _portfolio_items = [
@@ -155,33 +153,39 @@ const HomePage = () => {
 			heading: 'Pełny e-commerce',
 			url: 'rozwiazania-wordpress-woocommerce',
 			content: (
-			<div className='text-align-left'>
-				<p>
-				Specjalizujemy się w projektowaniu i wdrażaniu rozwiązań eCommerce na platformie{' '}
-				<a href='/rozwiazania'>WordPress WooCommerce</a>, które wspierają rozwój sklepów internetowych i zwiększają konwersję.
-				</p>
-				<p>
-				Nasze <a href='#realizacje'>projekty</a> obejmują kompleksowe tworzenie stron, sklepów, systemów zarządzania produkcją i zasobami oraz integrację z systemami ERP i CRM. Dzięki doświadczeniu i elastycznemu podejściu pomagamy firmom zyskać przewagę konkurencyjną.
-				</p>
-			</div>
+				<div className='text-align-left'>
+					<p>
+						Specjalizujemy się w projektowaniu i wdrażaniu rozwiązań eCommerce na
+						platformie <a href='/rozwiazania'>WordPress WooCommerce</a>, które
+						wspierają rozwój sklepów internetowych i zwiększają konwersję.
+					</p>
+					<p>
+						Nasze <a href='#realizacje'>projekty</a> obejmują kompleksowe tworzenie
+						stron, sklepów, systemów zarządzania produkcją i zasobami oraz integrację
+						z systemami ERP i CRM. Dzięki doświadczeniu i elastycznemu podejściu
+						pomagamy firmom zyskać przewagę konkurencyjną.
+					</p>
+				</div>
 			),
-			labels: ["WordPress", "WooCommerce", "eCommerce", "Baselinker"]
+			labels: ['WordPress', 'WooCommerce', 'eCommerce', 'Baselinker'],
 		},
 		{
 			imgsrc: IconMobileApps,
 			heading: 'Mobilność i responsywność',
 			url: 'projektowanie-mobile-first',
 			content: (
-			<div className='text-align-left'>
-				<p>
-				Tworzymy strony i aplikacje web i mobilne oparte na podejściu Mobile First, dostosowane do urządzeń mobilnych oraz desktopowych.
-				</p>
-				<p>
-				Dbamy o intuicyjny interfejs użytkownika, szybkość działania i responsywność, co jest kluczowe dla SEO i zadowolenia użytkowników.
-				</p>
-			</div>
+				<div className='text-align-left'>
+					<p>
+						Tworzymy strony i aplikacje web i mobilne oparte na podejściu Mobile
+						First, dostosowane do urządzeń mobilnych oraz desktopowych.
+					</p>
+					<p>
+						Dbamy o intuicyjny interfejs użytkownika, szybkość działania i
+						responsywność, co jest kluczowe dla SEO i zadowolenia użytkowników.
+					</p>
+				</div>
 			),
-			labels: ["Mobile First", "Responsywność", "UI", "SEO"]
+			labels: ['Mobile First', 'Responsywność', 'UI', 'SEO'],
 		},
 	];
 
@@ -191,59 +195,80 @@ const HomePage = () => {
 			heading: 'Profesjonalizm i długoterminowość',
 			url: 'profesjonalizm-długoterminowość',
 			content: (
-			<div className='text-align-left'>
-				<p>O gwarancjach można wiersze pisać. My chwalimy się efektami i zadowoleniem klientów.</p>
-				<p>
-				Znamy się na rzeczy, działamy szybko, a szybka praca nie zawsze idzie w parze z szybkim projektem. Zastanawiamy się, planujemy, opisujemy, działamy.
-				</p>
-				<p>
-				Nasze działania często trwają tygodniami, miesiącami... Dlatego nie boimy się dużych projektów – przeciwnie. Małe, szybkie i proste cieszą, ale to te wielkie napawają do dumy. Zaangażowanie zawsze przynosi upragniony efekt.
-				</p>
-			</div>
+				<div className='text-align-left'>
+					<p>
+						O gwarancjach można wiersze pisać. My chwalimy się efektami i zadowoleniem
+						klientów.
+					</p>
+					<p>
+						Znamy się na rzeczy, działamy szybko, a szybka praca nie zawsze idzie w
+						parze z szybkim projektem. Zastanawiamy się, planujemy, opisujemy,
+						działamy.
+					</p>
+					<p>
+						Nasze działania często trwają tygodniami, miesiącami... Dlatego nie boimy
+						się dużych projektów – przeciwnie. Małe, szybkie i proste cieszą, ale to
+						te wielkie napawają do dumy. Zaangażowanie zawsze przynosi upragniony
+						efekt.
+					</p>
+				</div>
 			),
-			labels: ["Profesjonalizm", "Planowanie", "Długoterminowość"]
+			labels: ['Profesjonalizm', 'Planowanie', 'Długoterminowość'],
 		},
 		{
 			imgsrc: IconBrainstorm,
 			heading: 'Konsultacje technologiczne i wsparcie IT',
 			url: 'konsultacje-technologiczne',
 			content: (
-			<div className='text-align-left'>
-				<p>Nasz zespół oferuje wsparcie technologiczne na każdym etapie projektu.</p>
-				<p>
-				Pomagamy dopracowywać różne projekty – od planowania, przez wdrożenie, aż po optymalizację. Zapewniamy efektywne i nowoczesne rozwiązania IT, które wspierają Twoją firmę w osiąganiu kluczowych celów.
-				</p>
-			</div>
+				<div className='text-align-left'>
+					<p>
+						Nasz zespół oferuje wsparcie technologiczne na każdym etapie projektu.
+					</p>
+					<p>
+						Pomagamy dopracowywać różne projekty – od planowania, przez wdrożenie, aż
+						po optymalizację. Zapewniamy efektywne i nowoczesne rozwiązania IT, które
+						wspierają Twoją firmę w osiąganiu kluczowych celów.
+					</p>
+				</div>
 			),
-			labels: ["Konsultacje", "Wsparcie", "Technologie"]
+			labels: ['Konsultacje', 'Wsparcie', 'Technologie'],
 		},
 		{
 			imgsrc: IconSpectialistTeam,
 			heading: 'Audyt i optymalizacja SEO',
 			url: 'audyt-seo',
 			content: (
-			<div className='text-align-left'>
-				<p>Nasze audyty SEO to szczegółowa analiza stron internetowych pod kątem wyszukiwarek.</p>
-				<p>
-				Pomagamy zidentyfikować i wyeliminować techniczne problemy, poprawić struktury linków i zwiększyć pozycję Twojej strony w wynikach wyszukiwania.
-				</p>
-			</div>
+				<div className='text-align-left'>
+					<p>
+						Nasze audyty SEO to szczegółowa analiza stron internetowych pod kątem
+						wyszukiwarek.
+					</p>
+					<p>
+						Pomagamy zidentyfikować i wyeliminować techniczne problemy, poprawić
+						struktury linków i zwiększyć pozycję Twojej strony w wynikach
+						wyszukiwania.
+					</p>
+				</div>
 			),
-			labels: ["SEO", "Audyt", "Optymalizacja"]
+			labels: ['SEO', 'Audyt', 'Optymalizacja'],
 		},
 		{
 			imgsrc: IconPartnership,
 			heading: 'Zespół ekspertów IT',
 			url: 'zespol-ekspertow-it',
 			content: (
-			<div className='text-align-left'>
-				<p>Mamy zespół specjalistów IT – doświadczonych programistów i projektantów, którzy tworzą zaawansowane rozwiązania e-commerce.</p>
-				<p>
-				Niezależnie od skali projektu, zapewniamy stabilność, bezpieczeństwo i najwyższą jakość wdrożeń, odpowiadających na potrzeby biznesowe.
-				</p>
-			</div>
+				<div className='text-align-left'>
+					<p>
+						Mamy zespół specjalistów IT – doświadczonych programistów i projektantów,
+						którzy tworzą zaawansowane rozwiązania e-commerce.
+					</p>
+					<p>
+						Niezależnie od skali projektu, zapewniamy stabilność, bezpieczeństwo i
+						najwyższą jakość wdrożeń, odpowiadających na potrzeby biznesowe.
+					</p>
+				</div>
 			),
-			labels: ["Programowanie", "Dedykowane rozwiązania"]
+			labels: ['Programowanie', 'Dedykowane rozwiązania'],
 		},
 	];
 
@@ -253,21 +278,25 @@ const HomePage = () => {
 			heading: 'Profelio',
 			url: 'odkryj-profelio',
 			content: (
-			<div>
-				
-				<p>
-				Profelio to kompleksowa platforma do zarządzania projektami, która łączy nowoczesne technologie z intuicyjnym interfejsem.
-				</p>
-				<p>
-				Dzięki Profelio Twoje projekty nabiorą nowego wymiaru – możesz efektywnie planować, monitorować postępy i zarządzać zadaniami, a wszystko to w jednym miejscu.
-				</p>
-				<p>
-				Profesjonalizm, precyzyjne planowanie oraz długoterminowa strategia to fundamenty, na których opiera się nasza aplikacja. Odkryj potencjał swojej organizacji i ciesz się sukcesem razem z Profelio!
-				</p>
-				<button className='btn-primary'>Zarejestruj się za darmo</button>
-			</div>
+				<div>
+					<p>
+						Profelio to kompleksowa platforma do zarządzania projektami, która łączy
+						nowoczesne technologie z intuicyjnym interfejsem.
+					</p>
+					<p>
+						Dzięki Profelio Twoje projekty nabiorą nowego wymiaru – możesz efektywnie
+						planować, monitorować postępy i zarządzać zadaniami, a wszystko to w
+						jednym miejscu.
+					</p>
+					<p>
+						Profesjonalizm, precyzyjne planowanie oraz długoterminowa strategia to
+						fundamenty, na których opiera się nasza aplikacja. Odkryj potencjał swojej
+						organizacji i ciesz się sukcesem razem z Profelio!
+					</p>
+					<button className='btn-primary'>Zarejestruj się za darmo</button>
+				</div>
 			),
-			labels: ["Planowanie", "Zarządzanie"]
+			labels: ['Planowanie', 'Zarządzanie'],
 		},
 	];
 
@@ -307,7 +336,6 @@ const HomePage = () => {
 					</>
 				}
 				imgUrl={EarthImg}
-				align='start'
 			/>
 
 			<Pricing />
@@ -317,15 +345,18 @@ const HomePage = () => {
 				id='realizacje'
 			>
 				<div className='align-items-center py-4 px-2'>
-					<p>Jestesmy na rynku od ponad <strong>5 lat</strong></p>
+					<p>
+						Jestesmy na rynku od ponad <strong>5 lat</strong>
+					</p>
 					<h2>
 						Opracowaliśmy już 100+ <span className='text-gradient'>realizacji</span>
 					</h2>
 					<p className='text-align-center container px-4'>
-						Wszystkie są <strong>realnymi</strong> projektami,
-						którymi klienci się cieszą, zarządzają i wykorzystują w swoim biznesie.
-						Mimo tego, że każdy projekt zakładał inny scenariusz, wszystkie są
-						<strong> szybkie, responsywne i dostosowane</strong> do aktualnych warunków.
+						Wszystkie są <strong>realnymi</strong> projektami, którymi klienci się
+						cieszą, zarządzają i wykorzystują w swoim biznesie. Mimo tego, że każdy
+						projekt zakładał inny scenariusz, wszystkie są
+						<strong> szybkie, responsywne i dostosowane</strong> do aktualnych
+						warunków.
 					</p>
 				</div>
 				<Slider items={_portfolio_items} />
@@ -335,37 +366,38 @@ const HomePage = () => {
 				<H2 styleType='secondary'>Oferujemy:</H2>
 				{_homeContents_ImageBox_1.map((item, index) => (
 					<ImageText
-					key={index}
-					heading={item.heading}
-					imgsrc={item.imgsrc}
-					content={item.content}
-					reverse={index % 2 !== 0}
-					labels={item.labels}
+						key={index}
+						heading={item.heading}
+						imgsrc={item.imgsrc}
+						content={item.content}
+						reverse={index % 2 !== 0}
+						labels={item.labels}
 					/>
 				))}
 				<H2 styleType={'primary'}>Nasz produkt</H2>
 				{_homeContents_ImageBox_Profelio.map((item, index) => (
 					<ImageTextSpecial
-					key={index}
-					heading={item.heading}
-					imgsrc={item.imgsrc}
-					content={item.content}
-					labels={item.labels}
+						key={index}
+						heading={item.heading}
+						imgsrc={item.imgsrc}
+						content={item.content}
+						labels={item.labels}
 					/>
 				))}
 
 				{_homeContents_ImageBox_2.map((item, index) => (
 					<ImageText
-					key={index}
-					heading={item.heading}
-					imgsrc={item.imgsrc}
-					content={item.content}
-					reverse={index % 2 !== 0}
-					labels={item.labels}
+						key={index}
+						heading={item.heading}
+						imgsrc={item.imgsrc}
+						content={item.content}
+						reverse={index % 2 !== 0}
+						labels={item.labels}
 					/>
 				))}
 			</div>
-			<section className=' background-primary content py-4 grid grid-cols-2 justify-content-evenly gap-2'>
+
+			<section className='py-4 grid grid-cols-2 justify-content-evenly gap-2'>
 				<div className='flex flex-col align-items-center'>
 					<h3>Tworzymy integracje do:</h3>
 					<div className='imageRows integrations flex flex-wrap justify-content-center'>
@@ -393,31 +425,28 @@ const HomePage = () => {
 					</div>
 				</div>
 			</section>
-			<section className='col background-top pt-2 pb-6'>
-				<div className='flex flex-col align-items-center pb-6'>
-					<Title
-						gradientHeader='Nasi klienci są zadowoleni'
-						leadHeader={null}
-						leadParagraph={
-							<div>
-								<p>Wybierz z naszego portfolio jakikolwiek projekt, zadzwoń i zapytaj klienta o współpracę z nami.</p>
-								<p>Zaufali nam m.in:</p>
-							</div>
-						}
-					/>
-					<Gallery
-						imageUrls={[
-							Partner1,
-							Partner2,
-							Partner3,
-							Partner4,
-							Partner5,
-							Partner6,
-							Partner7,
-							Partner8,
-						]}
-					/>
+
+			<section className='background-top flex flex-col align-center text-center justify-center'>
+				<h2 className='text-gradient'>Nasi klienci są zadowoleni</h2>
+				<div>
+					<p>
+						Wybierz z naszego portfolio jakikolwiek projekt, zadzwoń i zapytaj klienta
+						o współpracę z nami.
+					</p>
+					<p>Zaufali nam m.in:</p>
 				</div>
+				<Gallery
+					imageUrls={[
+						Partner1,
+						Partner2,
+						Partner3,
+						Partner4,
+						Partner5,
+						Partner6,
+						Partner7,
+						Partner8,
+					]}
+				/>
 			</section>
 		</>
 	);

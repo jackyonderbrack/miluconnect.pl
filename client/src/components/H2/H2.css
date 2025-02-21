@@ -16,3 +16,7 @@ h2.primary::after {
 h2.secondary::after {
 	background-color: var(--color-accent-secondary);
 }
+
+.header2 {
+	margin-bottom: 4rem;
+}

@@ -1,12 +1,12 @@
 import { useRef, useEffect } from 'react';
-import './header.css';
+
 type HeaderProps = {
 	content: React.ReactNode;
 	imgUrl?: string;
-	align: 'start' | 'center' | 'end';
+	className?: string;
 };
 
-const Header: React.FC<HeaderProps> = ({ imgUrl, content, align = 'left' }) => {
+const Header: React.FC<HeaderProps> = ({ imgUrl, content }) => {
 	const parallaxRef = useRef<HTMLImageElement>(null);
 
 	useEffect(() => {
@@ -27,16 +27,14 @@ const Header: React.FC<HeaderProps> = ({ imgUrl, content, align = 'left' }) => {
 	}, []);
 
 	return (
-		<section
-			className={`header ${imgUrl ? '' : 'without-image'} justify-content-${align}`}
-		>
-			<div className='headerContent'>{content}</div>
+		<section className='flex flex-row justify-between'>
+			<div className='flex-1'>{content}</div>
 			{imgUrl && (
 				<img
 					src={imgUrl}
 					alt='MILU Connect Zdjęcie główne'
 					ref={parallaxRef}
-					className='headerPicture'
+					className='flex-2 z-[-1] mt-[-20rem] opacity-36 [animation:var(--fade-in)]'
 				/>
 			)}
 		</section>
