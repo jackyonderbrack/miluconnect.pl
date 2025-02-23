@@ -7,10 +7,10 @@ const PrivacyPolicy = () => {
     <div className="grid grid-cols-2">
       <div>
         <p className="copyright">
-          <span>© 2024 miluConnect</span>
+          <span>© 2025 MILU Connect</span>
           <span>Wszelkie prawa zastrzeżone</span>
         </p> 
-        <p className="contactInfo">
+        <p className="">
           <Button linkTo="/polityka-prywatnosci" buttonText="Polityka prywatności" theme="btn-primary"></Button>
         </p>
       </div>

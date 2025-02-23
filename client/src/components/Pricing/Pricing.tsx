@@ -335,7 +335,7 @@ const PricingForm = () => {
 				<div className='flex justify-content-center align-items-center align-content-center align-center'>
 					<button
 						onClick={calculateTotal}
-						className='btn-primary my-4 flex justify-content-center align-items-center'
+						className='my-4 flex justify-center items-center w-48 bg-[var(--color-accent-primary)]'
 					>
 						<HiOutlineCalculator size={36} />
 						Oblicz cenę i czas

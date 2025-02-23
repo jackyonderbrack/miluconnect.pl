@@ -337,17 +337,17 @@ const HomePage = () => {
 			<Pricing />
 
 			<section
-				className='background-top my-3 py-4 text-align-center'
+				className='background-top my-3 py-8 text-center'
 				id='realizacje'
 			>
-				<div className='align-items-center py-4 px-2'>
+				<div className='text-center py-6 px-2'>
 					<p>
 						Jestesmy na rynku od ponad <strong>5 lat</strong>
 					</p>
 					<h2>
 						Opracowaliśmy już 100+ <span className='text-gradient'>realizacji</span>
 					</h2>
-					<p className='text-align-center container px-4'>
+					<p className='text-center px-2 md:px-32 py-6 '>
 						Wszystkie są <strong>realnymi</strong> projektami, którymi klienci się
 						cieszą, zarządzają i wykorzystują w swoim biznesie. Mimo tego, że każdy
 						projekt zakładał inny scenariusz, wszystkie są
@@ -358,7 +358,7 @@ const HomePage = () => {
 				<Slider items={_portfolio_items} />
 			</section>
 
-			<div className='container'>
+			<div className='px-4 md:px-8'>
 				<H2 styleType='secondary'>Oferujemy:</H2>
 				{_homeContents_ImageBox_1.map((item, index) => (
 					<ImageText
@@ -393,36 +393,36 @@ const HomePage = () => {
 				))}
 			</div>
 
-			<section className='py-4 grid grid-cols-2 justify-content-evenly gap-2'>
-				<div className='flex flex-col align-items-center'>
-					<h3>Tworzymy integracje do:</h3>
-					<div className='imageRows integrations flex flex-wrap justify-content-center'>
-						{_integrationsContents.map((integration, index) => (
-							<img
-								key={index}
-								src={integration.url}
-								alt={integration.alt}
-								className='p-2'
-							/>
-						))}
-					</div>
+			<section className="py-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div className="flex flex-col items-center">
+				<h3>Tworzymy integracje do:</h3>
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-center mt-8">
+				{_integrationsContents.map((integration, index) => (
+					<img
+					key={index}
+					src={integration.url}
+					alt={integration.alt}
+					className="p-2"
+					/>
+				))}
 				</div>
-				<div className='flex flex-col align-items-center'>
-					<h3>Technologia, na której się znamy:</h3>
-					<div className='imageRows integrations flex flex-wrap justify-content-center'>
-						{_technologyContents.map((technology, index) => (
-							<img
-								key={index}
-								src={technology.url}
-								alt={technology.alt}
-								className='p-2'
-							/>
-						))}
-					</div>
+			</div>
+			<div className="flex flex-col items-center">
+				<h3>Technologia, na której się znamy:</h3>
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-center mt-8">
+				{_technologyContents.map((technology, index) => (
+					<img
+					key={index}
+					src={technology.url}
+					alt={technology.alt}
+					className="p-2"
+					/>
+				))}
 				</div>
+			</div>
 			</section>
 
-			<section className='background-top flex flex-col align-center text-center justify-center'>
+			<section className='py-8 background-top flex flex-col align-center text-center justify-center'>
 				<h2 className='text-gradient'>Nasi klienci są zadowoleni</h2>
 				<div>
 					<p>

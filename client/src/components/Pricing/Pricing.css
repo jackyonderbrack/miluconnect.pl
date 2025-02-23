@@ -20,6 +20,7 @@
 	display: flex;
 	min-width: 200px;
 	justify-content: center;
+    border-radius: 1rem;
 }
 
 /* Styl dla aktywnego przycisku (gdy radio jest zaznaczone) */
@@ -27,6 +28,7 @@
 	background-color: var(--color-accent-primary);
 	color: var(--color-secondary);
 	transition: (--transition);
+    
 }
 
 /* Efekt hover */
@@ -56,6 +58,7 @@
 		font-weight: bold;
 		font-size: 120%;
 	}
+    
 }
 
 /* Styl dla aktywnego przycisku w sekcji details */
