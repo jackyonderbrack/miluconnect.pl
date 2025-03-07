@@ -3,7 +3,15 @@
   color: var(--color-secondary);
   padding: 1rem 2rem;
   display: flex;
-  height: 600px;
+  flex-direction: row;
+  min-height: 600px;
+  
+}
+
+@media (width < 1080px) {
+  #ImageTextSpecial {
+    flex-direction: column;
+  }
 }
 
 /* Lewa część – tekst */
@@ -11,6 +19,10 @@
   flex: 1;
   padding: 1rem 0.5rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.8rem;
 }
 
 #ImageTextSpecial .labels {
