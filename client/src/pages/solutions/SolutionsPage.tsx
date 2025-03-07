@@ -146,7 +146,7 @@ const SolutionsPage = () => {
 					</p>
 					<p>
 						<strong>Cybersecurity</strong>: <br />
-						Cyberbezpieczeństwo pozostaje priorytetem w 2024 roku, z rosnącym
+						Cyberbezpieczeństwo pozostaje priorytetem w 2025 roku, z rosnącym
 						znaczeniem strategii takich jak wykrywanie zagrożeń oparte na AI/ML,
 						architektura zero-trust oraz siatka bezpieczeństwa (cybersecurity mesh).
 					</p>

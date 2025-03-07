@@ -46,7 +46,7 @@
 		},
 		{
 			"id": "details",
-			"label": "Wybierz szczegóły produktu:",
+			"label": "Szegóły usługi:",
 			"type": "select",
 			"dependsOn": "product",
 			"optionsByCondition": {

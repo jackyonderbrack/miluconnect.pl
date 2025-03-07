@@ -18,6 +18,7 @@ const Footer = () => {
 						<Link to='/'>Strona główna</Link>
 						<Link to='/rozwiazania'>Rozwiązania</Link>
 						<Link to='/kontakt'>Kontakt</Link>
+						<Link to='/polityka-prywatności'>Polityka prywatności</Link>
 					</nav>
 
 					<div className='flex gap-2'>
@@ -49,11 +50,16 @@ const Footer = () => {
 							</a>
 						</div>
 				</div>
-				<div className='footerHeaderCol'>
+				<div className='flex flex-col gap-2'>
 					<Button
 						linkTo='/kontakt'
-						buttonText='Skontaktuj się z nami'
+						buttonText='Kontakt'
 						theme='btn-outline'
+					/>
+					<Button
+						linkTo='/'
+						buttonText='Wycena'
+						theme='btn-underline'
 					/>
 				</div>
 			</section>

@@ -178,17 +178,21 @@ const PricingForm = () => {
 
 	return (
 		<section id='PricingForm' className='background-top py-4 px-4 mx-4 my-4'>
-			<H2 styleType='primary'>Konfigurator projektu</H2>
+			<H2 styleType='primary'>Konfigurator projektu i wyceny</H2>
 			<p>
-				Wybierz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
+				Wyceń swój projekt kompletnie za darmo.
 			</p>
+			<p>
+				Zaznacz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
+			</p>
+			
 
 			<div>
 				{pricingConfig.sections
 					.filter((section) => section.id === 'product')
 					.map((section) => (
 						<div key={section.id}>
-							<h3>{section.label}</h3>
+							<p className='font-bold! text-2xl! my-6'>{section.label}</p>
 							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-2'>
 								{section.options?.map((option) => (
 									<label
@@ -217,7 +221,7 @@ const PricingForm = () => {
 						.filter((section) => section.id === 'design')
 						.map((section) => (
 							<div key={section.id}>
-								<h3>{section.label}</h3>
+								<p className='font-bold! text-2xl! my-6'>{section.label}</p>
 								<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-2'>
 									{section.options?.map((option) => (
 										<label
@@ -240,7 +244,7 @@ const PricingForm = () => {
 				</div>
 			)}
 
-			{/* Sekcja "details" */}
+			{/* Section "Szczegóły produktu" */}
 			{selectedDesign && selectedProduct && (
 				<div>
 					{pricingConfig.sections
@@ -254,7 +258,7 @@ const PricingForm = () => {
 
 							return (
 								<div key={section.id} className='details-section'>
-									<h3>{section.label}</h3>
+									<p className='font-bold! text-2xl! my-6'>{section.label}</p>
 									<div className='grid grid-cols-1 md:grid-cols-3 gap-2 my-2'>
 										{optionsByCondition.map((option) => (
 											<label
@@ -269,7 +273,8 @@ const PricingForm = () => {
 													onChange={() => handleDetailsChange(option.value)}
 												/>
 												<span>{option.title}</span>
-												<ul>
+												<ul className='mt-3'>
+													<div role='spacer' ></div>
 													{Array.isArray(option.label) &&
 														option.label.map((labelItem, index) => (
 															<li key={index}>{labelItem}</li>
@@ -298,7 +303,7 @@ const PricingForm = () => {
 
 							return (
 								<div key={section.id}>
-									<h3>{section.label}</h3>
+									<p className='font-bold! text-2xl! my-6'>{section.label}</p>
 									<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
 										{optionsByCondition.map((option) => (
 											<label

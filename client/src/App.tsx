@@ -27,6 +27,7 @@ import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
 import Account from './admin/pages/account/Account';
 import Login from './admin/pages/login/Login';
 import BlogPage from './pages/blog/BlogPage';
+import Websites from './pages/websites/Websites';
 
 function ClientLayout() {
 	const location = useLocation();
@@ -74,7 +75,8 @@ const router = createBrowserRouter([
 			{ path: 'wyslano', element: <ContactPageSent /> },
 			{ path: 'polityka-prywatnosci', element: <PrivacyPolicyPage /> },
 			{ path: 'nowosci', element: <NewsPage /> },
-			{ path: 'blog', element: <BlogPage />}
+			{ path: 'blog', element: <BlogPage />},
+			{ path: 'strony-internetowe', element: <Websites />}
 		],
 	},
 	{

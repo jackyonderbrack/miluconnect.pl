@@ -112,7 +112,7 @@ const Slider: FC<SliderProps> = ({ items }) => {
 							<div className='slider-card-image-wrapper'>
 								<img
 									src={item.imageUrl}
-									alt={item.title}
+									alt={`Link do strony ${item.title}`}
 									className='slider-card-image'
 								/>
 							</div>
