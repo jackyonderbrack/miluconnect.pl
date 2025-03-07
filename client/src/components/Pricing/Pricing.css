@@ -23,15 +23,12 @@
     border-radius: 1rem;
 }
 
-/* Styl dla aktywnego przycisku (gdy radio jest zaznaczone) */
 .radio-button.active {
 	background-color: var(--color-accent-primary);
 	color: var(--color-secondary);
-	transition: (--transition);
-    
+	transition: (--transition); 
 }
 
-/* Efekt hover */
 .radio-button:hover {
 	scale: 1.02;
 	background-color: var(--color-accent-primary);
@@ -42,7 +39,6 @@
 	transition: (--transition);
 }
 
-/* Stylizacja dla sekcji details */
 .details-section .radio-button {
 	background-color: var(--color-accent-background);
 	border-color: var(--color-secondary-background);
@@ -61,15 +57,13 @@
     
 }
 
-/* Styl dla aktywnego przycisku w sekcji details */
 .details-section .radio-button.active {
 	background-color: var(--color-accent-primary);
 	color: var(--color-secondary);
 }
 
-/* Efekt hover dla sekcji details */
 .details-section .radio-button:hover {
-	scale: 1.02; /* Większe powiększenie przy hover */
+	scale: 1.02; 
 	background-color: var(--color-accent-primary);
 	color: var(--color-secondary);
 }
@@ -98,12 +92,10 @@
 	padding: 0.7rem 1.5rem;
 }
 
-/* Styl dla aktywnego przycisku */
 .checkbox-button.active {
 	color: var(--color-accent-primary);
 }
 
-/* Efekt hover */
 .checkbox-button:hover {
 	scale: 1.02;
 	color: var(--color-accent-primary);
