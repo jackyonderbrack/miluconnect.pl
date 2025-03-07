@@ -36,7 +36,6 @@ import TechnologyMongodb from '../../assets/technologies/solutions-mongodb-light
 import TechnologyNodejs from '../../assets/technologies/solutions-nodejs-light-miluconnect.webp';
 import TechnologyReactjs from '../../assets/technologies/solutions-react-miluconnect.webp';
 import TechnologySharepoint from '../../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
-import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
 
 // Profelio
 import ProfelioImg1 from '../../assets/portfolio/profelio-miluconnect-image-1.png';
