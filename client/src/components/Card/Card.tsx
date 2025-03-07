@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({
   buttonLink,
 }) => {
   return (
-    <a href={buttonLink} className="card-link" target='_blank'>
+    <a href={buttonLink} className="card-link" target='_blank' rel='nofollow, noopener'>
       <div className="card">
         <div className="card-image-wrapper">
           <img src={imageUrl} alt={title} className="card-image" />

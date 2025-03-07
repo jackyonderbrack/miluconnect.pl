@@ -105,7 +105,7 @@ const Slider: FC<SliderProps> = ({ items }) => {
 					<a
 						href={item.buttonLink}
 						className='slider-item'
-						target='_blank'
+						target='_blank' rel='nofollow, noopener'
 						key={index}
 					>
 						<div className='slider-card'>

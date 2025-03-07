@@ -11,7 +11,7 @@ const Footer = () => {
 		<footer id='Footer' className='background-top px-4'>
 			<section className='grid grid-cols-4 items-center gap-2 px-4 py-2'>
 					<Link to='/#' className=''>
-						<img src={Logo} alt='miluconnect' className='w-32 place-self-center md:place-self-start' />
+						<img src={Logo} alt='Logo MILU Connect' className='w-32 place-self-center md:place-self-start' />
 					</Link>
 
 					<nav className='flex flex-col gap-2'>
@@ -22,7 +22,7 @@ const Footer = () => {
 
 					<div className='flex gap-2'>
 						<div className='relative w-8 object-contain h-8'>
-							<a href='https://www.facebook.com/people/MILU-Connect/61571345354897/' target='_blank'>
+							<a href='https://www.facebook.com/people/MILU-Connect/61571345354897/' target='_blank' rel='nofollow, noopener'>
 								<img
 									className='filter grayscale contrast-200 hover:filter-none transition'
 									src={FacebookSocialHover}
@@ -31,7 +31,7 @@ const Footer = () => {
 							</a>
 						</div>
 						<div className='relative w-8 object-contain h-8'>
-							<a href='https://github.com/jackyonderbrack' target='_blank'>
+							<a href='https://github.com/jackyonderbrack' target='_blank' rel='nofollow, noopener'>
 								<img
 									className='filter grayscale contrast-200 hover:filter-none transition'
 									src={GithubSocialHover}
@@ -40,7 +40,7 @@ const Footer = () => {
 							</a>
 						</div>
 						<div className='relative w-8 object-contain h-8'>
-							<a href='https://github.com/tokarskadev' target='_blank'>
+							<a href='https://github.com/tokarskadev' target='_blank' rel='nofollow, noopener'>
 								<img
 									className='filter grayscale contrast-200 hover:filter-none transition'
 									src={GithubSocialHover}
