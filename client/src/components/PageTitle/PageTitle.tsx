@@ -1,4 +1,4 @@
-import './title.css';
+import './pageTitle.css';
 
 type TitleProps = {
   gradientHeader: string | null;

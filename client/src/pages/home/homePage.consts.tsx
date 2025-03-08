@@ -42,6 +42,40 @@ import ProfelioImg1 from '../../assets/portfolio/profelio-miluconnect-image-1.pn
 import ProfelioImg2 from '../../assets/portfolio/profelio-miluconnect-image-2.png';
 import ProfelioImg3 from '../../assets/portfolio/profelio-miluconnect-image-3.png';
 import ProfelioImg4 from '../../assets/portfolio/profelio-miluconnect-image-4.png';
+import { BoxProps } from '../../components/Box/Box';
+
+export const offer_boxes: BoxProps[] = [
+    {
+        title: 'Strony internetowe',
+        iconUrl: IconBrainstorm,
+        buttonLink: ''
+    }, 
+    {
+        title: 'Projektowanie graficzne',
+        iconUrl: IconDedicatedSolutions,
+        buttonLink: ''
+    },
+    {
+        title: 'Pozycjonowanie i Google Ads',
+        iconUrl: IconDedicatedSolutions,
+        buttonLink: ''
+    }, 
+    {
+        title: 'Domeny i hosting',
+        iconUrl: IconDedicatedSolutions,
+        buttonLink: ''
+    },
+    {
+        title: 'Sklepy internetowe',
+        iconUrl: IconDedicatedSolutions,
+        buttonLink: ''
+    }, 
+    {
+        title: 'Doradztwo techniczne',
+        iconUrl: IconDedicatedSolutions,
+        buttonLink: ''
+    },
+]
 
 export const _portfolio_items = [
     {

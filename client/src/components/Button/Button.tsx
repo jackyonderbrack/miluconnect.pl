@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { handleScroll } from '../../utils/handleScroll';
 
 type ButtonProps = {
 	linkTo: string;
@@ -17,20 +18,6 @@ const Button: React.FC<ButtonProps> = ({
 	offset = 0,
 }) => {
 	const navigate = useNavigate();
-
-	const handleScroll = (targetId: string, offset: number) => {
-		const targetElement = document.getElementById(targetId);
-		if (targetElement) {
-			const elementPosition =
-				targetElement.getBoundingClientRect().top + window.scrollY;
-			const offsetPosition = elementPosition - offset;
-
-			window.scrollTo({
-				top: offsetPosition,
-				behavior: 'smooth',
-			});
-		}
-	};
 
 	const handleClick = () => {
 		if (targetId) {

@@ -20,11 +20,14 @@ import MetaTags from '../../components/MetaTags/MetaTags';
 import Pricing from '../../components/Pricing/Pricing';
 import Slider from '../../components/Slider/Slider';
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
-import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio } from './homePage.consts';
+import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes } from './homePage.consts';
+import './home.css'
+import Box from '../../components/Box/Box';
+import { HiArrowCircleDown } from 'react-icons/hi';
+import BouncingButton from '../../components/BouncingButton/BouncingButton';
+import Typewriter from '../../components/TypeWriter/TypeWriter';
 
 const HomePage = () => {
-	
-
 	return (
 		<>
 			<MetaTags
@@ -33,11 +36,16 @@ const HomePage = () => {
 			/>
 			<Header
 				content={
-					<div className='space-y-6'>
-						<h1>
-							szybki e-commerce
+					<div className='space-y-6 place-content-center'>
+						<Typewriter 
+							text="# Tworzymy, uzupełniamy, utrzymujemy..." 
+							speed={100} 
+						/>
+
+						<h1 className='text-6xl!'>
+							&gt; szybki e-commerce
 							<br />
-							&gt; stylowa <span className='text-gradient'>strona internetowa</span>
+							&gt; czy stylowa <span className='text-gradient'>strona internetowa?</span>
 							<br />
 						</h1>
 						<div className='flex gap-4'>
@@ -56,10 +64,27 @@ const HomePage = () => {
 								offset={140}
 							/>
 						</div>
+						
+						<p>Szybka, <i><strong>darmowa wycena</strong></i> i prosty kontakt online. <br /> Jeśli wolisz się spotkać - <a href='/kontakt'>Skontaktuj się</a></p>
+						
+						<BouncingButton targetId='OfferBoxes'>
+							<HiArrowCircleDown size={32}  />
+							Oferta
+						</BouncingButton>
 					</div>
+					
 				}
 				imgUrl={EarthImg}
 			/>
+			<div id='OfferBoxes' className='grid grid-cols-1 md:grid-cols-2 w-full mb-12'>
+				{offer_boxes.map((box) => (
+					<Box title={box.title} iconUrl={box.iconUrl} buttonLink={box.buttonLink} />
+				))}
+			</div>
+			<div className='w-full bg-white p-6 flex justify-between items-center'>
+				<p className='text-black!'>Mamy <u>wolne terminy</u> na marzec!</p>
+				<Button linkTo={'/kontakt'} buttonText={'Umów się na wycenę'} theme={'btn-primary'} />
+			</div>
 
 			<Pricing />
 
@@ -171,6 +196,7 @@ const HomePage = () => {
 					]}
 				/>
 			</section>
+				
 		</>
 	);
 };

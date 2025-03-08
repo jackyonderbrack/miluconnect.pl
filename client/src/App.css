@@ -11,20 +11,6 @@
 
 #Client {
 	.client-outlet {
-		margin: 12rem auto 0;
-		padding: 0 0.2rem;
-		max-width: 1680px;
-	}
-	
-	@media (width >= 40em) {
-		.client-outlet {
-			padding: 0 0.6rem;
-		}
-	}
-
-	@media (width >= 60em) {
-		.client-outlet {
-			padding: 0 0.8rem;
-		}
+		margin: 8rem auto 0;
 	}
 }
