@@ -38,7 +38,7 @@ const HomePage = () => {
 				content={
 					<div className='space-y-6 place-content-center'>
 						<Typewriter 
-							text="# Tworzymy, uzupełniamy, utrzymujemy..." 
+							text={`# Tworzymy # Modernizujemy # Utrzymujemy`} 
 							speed={100} 
 						/>
 

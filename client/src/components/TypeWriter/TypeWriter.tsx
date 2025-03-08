@@ -7,6 +7,8 @@ interface TypewriterProps {
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 100, pause = 2000 }) => {
+ const processedText = text.replace(/ #/g, "\n#").trim();
+
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
@@ -14,8 +16,8 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 100, pause = 2000
     let timeoutId: ReturnType<typeof setTimeout>;
 
     const type = () => {
-      if (currentIndex <= text.length) {
-        setDisplayedText(text.substring(0, currentIndex));
+      if (currentIndex <= processedText.length) {
+        setDisplayedText(processedText.substring(0, currentIndex));
         currentIndex++;
         timeoutId = setTimeout(type, speed);
       } else {
@@ -27,11 +29,19 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 100, pause = 2000
     };
 
     type();
-
     return () => clearTimeout(timeoutId);
-  }, [text, speed, pause]);
+  }, [processedText, speed, pause]);
 
-  return <p className='h-10'>{displayedText}</p>;
+  return (
+    <p className='h-10'>
+      {displayedText.split('\n').map((line, index, arr) => (
+        <React.Fragment key={index}>
+          {line}
+          {index !== arr.length - 1 && <br />}
+        </React.Fragment>
+      ))}
+    </p>
+  );
 };
 
 export default Typewriter;
