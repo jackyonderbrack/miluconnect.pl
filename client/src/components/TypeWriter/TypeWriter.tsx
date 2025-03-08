@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 interface TypewriterProps {
+  className?: string;
   text: string;
   speed?: number; // time in ms between each character
   pause?: number; // pause time after finishing the text before restarting
 }
 
-const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 100, pause = 2000 }) => {
+const Typewriter: React.FC<TypewriterProps> = ({ 
+  text, 
+  speed = 100, 
+  pause = 2000,
+  className
+}) => {
  const processedText = text.replace(/ #/g, "\n#").trim();
 
   const [displayedText, setDisplayedText] = useState('');
@@ -33,7 +39,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 100, pause = 2000
   }, [processedText, speed, pause]);
 
   return (
-    <p className='h-10'>
+    <p className={className}>
       {displayedText.split('\n').map((line, index, arr) => (
         <React.Fragment key={index}>
           {line}

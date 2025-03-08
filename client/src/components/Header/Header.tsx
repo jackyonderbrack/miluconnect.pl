@@ -27,10 +27,10 @@ const Header: React.FC<HeaderProps> = ({ imgUrl, content }) => {
 	}, []);
 
 	return (
-		<section className='flex flex-row justify-between items-center min-h-[100dvh] space-y-6 px-2 md:px-8'>
+		<section className='flex flex-row justify-between items-center min-h-[100dvh] px-2 md:px-8'>
 			{content}
 			{imgUrl && (
-				<div className='absolute top-12 md:top-0 md:right-0 aspect-[4/3] z-[-1] md:w-[61dvw]  [animation:var(--fade-in)]'>
+				<div className='absolute top-12 md:right-0 aspect-[4/3] z-[-1] md:w-[61dvw] [animation:var(--fade-in)]'>
 					<img
 						src={imgUrl}
 						alt='MILU Connect Zdjęcie główne'

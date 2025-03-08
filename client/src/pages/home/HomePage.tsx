@@ -21,7 +21,6 @@ import Pricing from '../../components/Pricing/Pricing';
 import Slider from '../../components/Slider/Slider';
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
 import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes } from './homePage.consts';
-import './home.css'
 import Box from '../../components/Box/Box';
 import { HiArrowCircleDown } from 'react-icons/hi';
 import BouncingButton from '../../components/BouncingButton/BouncingButton';
@@ -36,18 +35,20 @@ const HomePage = () => {
 			/>
 			<Header
 				content={
-					<div className='space-y-6 place-content-center'>
+					<div className='space-y-10'>
 						<Typewriter 
 							text={`# Tworzymy # Modernizujemy # Utrzymujemy`} 
-							speed={100} 
+							speed={100}
+							className='h-12'
 						/>
 
-						<h1 className='text-6xl!'>
-							&gt; szybki e-commerce
+						<h1 className='text-4xl! md:text-5xl! lg:text-6xl!'>
+							&gt; szybki <span className="whitespace-nowrap">e-commerce</span>
 							<br />
 							&gt; czy stylowa <span className='text-gradient'>strona internetowa?</span>
 							<br />
 						</h1>
+
 						<div className='flex gap-4'>
 							<Button
 								linkTo='#cennik'
@@ -65,7 +66,9 @@ const HomePage = () => {
 							/>
 						</div>
 						
-						<p>Szybka, <i><strong>darmowa wycena</strong></i> i prosty kontakt online. <br /> Jeśli wolisz się spotkać - <a href='/kontakt'>Skontaktuj się</a></p>
+						<p>
+							Szybka, <i><strong>darmowa wycena</strong></i> i prosty kontakt online. <br /> Jeśli wolisz się spotkać - <a href='/kontakt'>Skontaktuj się</a>
+						</p>
 						
 						<BouncingButton targetId='OfferBoxes'>
 							<HiArrowCircleDown size={32}  />
@@ -76,7 +79,7 @@ const HomePage = () => {
 				}
 				imgUrl={EarthImg}
 			/>
-			<div id='OfferBoxes' className='grid grid-cols-1 md:grid-cols-2 w-full mb-12'>
+			<div id='OfferBoxes' className='grid grid-cols-1 md:grid-cols-2 w-full'>
 				{offer_boxes.map((box) => (
 					<Box title={box.title} iconUrl={box.iconUrl} buttonLink={box.buttonLink} />
 				))}
