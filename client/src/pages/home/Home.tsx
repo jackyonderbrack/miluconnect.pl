@@ -87,14 +87,11 @@ const HomePage = () => {
 				<p className='text-black!'>Mamy <u>wolne terminy</u> na marzec!</p>
 				<Button linkTo={'/kontakt'} buttonText={'Umów się na wycenę'} theme={'btn-primary'} />
 			</div>
-			<div className='my-8'>
-				<Pricing />
-			</div>
 			<section
-				className='background-top my-3 py-8 text-center'
+				className='my-6 text-center mb-24'
 				id='realizacje'
 			>
-				<div className='text-center py-6 px-2'>
+				<div className='text-center py-6 px-2 '>
 					<p>
 						Jestesmy na rynku od ponad <strong>5 lat</strong>
 					</p>
@@ -113,7 +110,7 @@ const HomePage = () => {
 			</section>
 
 			<div className='px-4 md:px-8'>
-				<H2 styleType='secondary'>Oferujemy:</H2>
+				<H2 styleType='secondary'>W naszej ofercie znajdziesz:</H2>
 				{_homeContents_ImageBox_1.map((item, index) => (
 					<ImageText
 						key={index}

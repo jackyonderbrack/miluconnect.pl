@@ -2,44 +2,23 @@
 import './SolutionsPage.css';
 
 // Icons imports
-import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.webp';
-import IconCustomWebSites from '../../assets/icon-webadjustment-miluconnect.webp';
-import IconCustomWebShops from '../../assets/icon-webshop-miluconnect.png';
-import ImageText from '../../components/ImageText/ImageText';
+import BackgroundPuzzles from '../../assets/background-puzzles-01-miluconnect.webp';
 import PageTitle from '../../components/PageTitle/PageTitle';
-import BackgroundPuzzles from '../../assets/background-puzzles-01-miluconnect.webp'
 
 const SolutionsPage = () => {
-	const _solutionsContents_ImageBox = [
-		{
-			imgsrc: IconCustomWebSites,
-			heading: 'Witryny internetowe',
-			content: (
-				""
-			),
-		},
-	];
+	
 
 	return (
 		<>
 			<PageTitle img={BackgroundPuzzles}>
 				<h1 className='text-4xl! md:text-5xl! lg:text-6xl!'>
-					&gt; Tworzymy <span className='text-gradient'>strony internetowe</span>
+					&gt; Dlaczego to nasze <span className='text-gradient'>rozwiązania</span>
 					<br />
+					dadzą Ci efekt, którego szukasz?
 				</h1>
 			</PageTitle>
-			<div id='CategoryBoxes' className='grid grid-cols-1 gap-1'>
-				{_solutionsContents_ImageBox.map((item, index) => (
-					<ImageText
-						key={index}
-						heading={item.heading}
-						imgsrc={item.imgsrc}
-						content={item.content}
-					/>
-				))}
-			</div>
-
-			<section className='container'>
+			
+			<section>
 				<div className='text-align-center'>
 					<h3>Na czym się obecnie można się oprzeć?</h3>
 				</div>

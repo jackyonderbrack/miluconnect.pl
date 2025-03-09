@@ -180,7 +180,7 @@ const PricingForm = () => {
 		<section id='PricingForm' className='background-top p-4 lg:px-8'>
 			<H2 styleType='primary'>Konfigurator projektu i wyceny</H2>
 			<p>
-				Wyceń swój projekt kompletnie za darmo.
+				Wyceń swój projekt - <span className='text-[var(--gradient-light-color-mid)]'>kompletnie za darmo.</span>
 			</p>
 			<p>
 				Zaznacz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
@@ -212,7 +212,7 @@ const PricingForm = () => {
 					))}
 			</div>
 
-			{/* Sekcja "design" */}
+			{/* Section "Wybierz Design" */}
 			{selectedProduct && (
 				<div>
 					{pricingConfig.sections
@@ -287,7 +287,7 @@ const PricingForm = () => {
 				</div>
 			)}
 
-			{/* Sekcja "extras" */}
+			{/* Section "Dodatkowe opcje" */}
 			{selectedDetails && selectedProduct && (
 				<div>
 					{pricingConfig.sections
@@ -333,12 +333,12 @@ const PricingForm = () => {
 				</div>
 			)}
 
-			{/* Przycisk "Oblicz" */}
+			{/* Button "Oblicz cenę i czas" */}
 			{showCalculateButton && (
-				<div className='flex justify-content-center align-items-center align-content-center align-center'>
+				<div className='flex justify-content-center align-items-center align-content-center align-center my-8'>
 					<button
 						onClick={calculateTotal}
-						className='my-4 flex justify-center items-center w-48 bg-[var(--color-accent-primary)]'
+						className='btn-outline flex! items-center gap-4'
 					>
 						<HiOutlineCalculator size={36} />
 						Oblicz cenę i czas
@@ -346,9 +346,9 @@ const PricingForm = () => {
 				</div>
 			)}
 
-			{/* Wynik */}
+			{/* Result */}
 			{totalPrice > 0 && (
-				<div className='result'>
+				<div className='result my-8'>
 					<p>
 						Szacowana cena:{' '}
 						<span className='total-price'>
@@ -359,7 +359,7 @@ const PricingForm = () => {
 						Szacowany czas realizacji:{' '}
 						<span className='total-time'>{Math.ceil(totalTime / 15)} tygodni</span>
 					</p>
-					<div className='grid grid-cols-2 gap-2'>
+					<div className='grid grid-cols-3 gap-4 my-8'>
 						<Button
 							linkTo='/kontakt'
 							buttonText='Poproś o ofertę'

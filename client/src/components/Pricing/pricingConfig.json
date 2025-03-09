@@ -21,7 +21,7 @@
 		},
 		{
 			"id": "design",
-			"label": "Wybierz design:",
+			"label": "Co z wyglądem?:",
 			"type": "select",
 			"options": [
 				{
@@ -46,7 +46,7 @@
 		},
 		{
 			"id": "details",
-			"label": "Szegóły usługi:",
+			"label": "Szegóły usługi (jako wstęp, pomysł):",
 			"type": "select",
 			"dependsOn": "product",
 			"optionsByCondition": {
@@ -54,14 +54,14 @@
 					{
 						"value": "spa",
 						"title": "Signe Page App",
-						"label": ["Jedna strona", "Główna", "O nas", "Kontakt", "Inne"],
+						"label": ["Wizytówka na głównej stronie, czyli m.in.:", "• Główna", "• O nas", "• Kontakt", "+ Inne"],
 						"price": 1100,
 						"time": 12
 					},
 					{
 						"value": "mini",
 						"title": "Mini",
-						"label": ["Główna", "O nas", "Kontakt", "+ do 3 innych"],
+						"label": ["Kilka stron, czyli;","Główna", "O nas", "Kontakt", "+ do 3 innych"],
 						"price": 800,
 						"time": 9
 					},
@@ -69,13 +69,14 @@
 						"value": "standard",
 						"title": "Standard",
 						"label": [
-							"Główna",
-							"O nas",
-							"Kontakt",
-							"Blog",
-							"Portfolio",
-							"Katalog produków",
-							"+ do 3 innych"
+							"Pełna, funkcjonalna przestrzeń reklamowa:",
+							"•  Główna",
+							"• O nas",
+							"• Kontakt",
+							"• Blog",
+							"• Portfolio",
+							"• Katalog produków",
+							"+ do 3 innych."
 						],
 						"price": 1800,
 						"time": 14
@@ -84,13 +85,8 @@
 						"value": "full",
 						"title": "Full",
 						"label": [
-							"Główna",
-							"O nas",
-							"Kontakt",
-							"Blog",
-							"Portfolio",
-							"Katalog produktów",
-							"+ inne"
+							"Opcja obejmująca ponad-standard",
+							"Wybierz jeśli potrzebujesz stworzyć np. dedykowany katalog produktów, specjalne strefy do interakcji z klientami, albo reklamujesz swoją markę i potrzebujesz może odtwarzacza multimediów albo innych bajerów."
 						],
 						"price": 2400,
 						"time": 20
@@ -99,23 +95,24 @@
 						"value": "dedicated",
 						"title": "Dedykowane",
 						"label": [
-							"Dedykowany projekt",
-							"Nieszablonowe rozwiązania",
-							"Interaktywność",
-							"Sprzedaż skupiona",
-							"Konfiguratory"
+							"Jeśli prowadzisz specyficzny rodzaj biznesu, potrzebujesz rozwiązania dedykowanego, np.:",
+							"• Dedykowany projekt",
+							"• Nieszablonowe rozwiązania",
+							"• Interaktywność",
+							"• Sprzedaż skupiona",
+							"• Konfiguratory."
 						],
 						"price": 2900,
 						"time": 30
 					},
 					{
 						"value": "moderate",
-						"title": "Modyfikacja istniejącej",
+						"title": "Modyfikacja / Programowanie",
 						"label": [
-							"Modyfikacja istniejącej strony,",
-							"Naprawa istniejącej strony,",
-							"W proszę załączyć swoją dotychczasową witrynę w formularzu kontaktowym,",
-							"Wycena będzie uaktualniana"
+							"Masz już stronę, ale potrzebujesz stworzyć coś więcej, np.:",
+							"• Modyfikacja istniejącej strony,",
+							"• Naprawa istniejącej strony,",
+							"Możesz załączyć swoją dotychczasową witrynę w formularzu kontaktowym."
 						],
 						"price": 400,
 						"time": 12
