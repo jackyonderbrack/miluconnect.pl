@@ -1,8 +1,9 @@
 #PageTitle {
     position: relative;
-    height: 300px;
+    height: 360px;
     display: flex;
     align-items: center;
+    padding: 0 128px;
 }
 
 #PageTitle div {
@@ -11,7 +12,6 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(0deg, transparent, rgba(176, 136, 35, 0.037), rgba(0, 0, 0, 0.219));
     img {
         filter: brightness(3);
         position: absolute;
