@@ -1,17 +1,23 @@
-#Title h1 {
-    margin-bottom: 0;
-}
-
-#Title {
+#PageTitle {
+    position: relative;
+    height: 300px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     align-items: center;
-    gap: 1em;
-    padding: 1rem;
 }
 
-#Title .divider{
-    width: 17rem;
+#PageTitle div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(0deg, transparent, rgba(176, 136, 35, 0.037), rgba(0, 0, 0, 0.219));
+    img {
+        filter: brightness(3);
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        opacity: 10%;
+    }
 }

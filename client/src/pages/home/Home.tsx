@@ -20,7 +20,7 @@ import MetaTags from '../../components/MetaTags/MetaTags';
 import Pricing from '../../components/Pricing/Pricing';
 import Slider from '../../components/Slider/Slider';
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
-import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes } from './homePage.consts';
+import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes } from '../../consts/home.consts';
 import Box from '../../components/Box/Box';
 import { HiArrowCircleDown } from 'react-icons/hi';
 import BouncingButton from '../../components/BouncingButton/BouncingButton';
@@ -75,7 +75,6 @@ const HomePage = () => {
 							Oferta
 						</BouncingButton>
 					</div>
-					
 				}
 				imgUrl={EarthImg}
 			/>
@@ -84,13 +83,13 @@ const HomePage = () => {
 					<Box title={box.title} iconUrl={box.iconUrl} buttonLink={box.buttonLink} />
 				))}
 			</div>
-			<div className='w-full bg-white p-6 flex justify-between items-center'>
+			<div className='w-full bg-amber-100 p-6 flex justify-between items-center'>
 				<p className='text-black!'>Mamy <u>wolne terminy</u> na marzec!</p>
 				<Button linkTo={'/kontakt'} buttonText={'Umów się na wycenę'} theme={'btn-primary'} />
 			</div>
-
-			<Pricing />
-
+			<div className='my-8'>
+				<Pricing />
+			</div>
 			<section
 				className='background-top my-3 py-8 text-center'
 				id='realizacje'

@@ -5,6 +5,7 @@ import ContactImg from '../../assets/background-letters-01-miluconnect.webp';
 import PhoneIcon from '../../assets/icons/icon-phone.png';
 import MailIcon from '../../assets/icons/icon-mail.png';
 import MetaTags from '../../components/MetaTags/MetaTags';
+import PageTitle from '../../components/PageTitle/PageTitle';
 
 const ContactPage = () => {
 	return (
@@ -13,18 +14,12 @@ const ContactPage = () => {
 				title='MILU Connect - Szybka i darmowa wycena'
 				description='Tworzenie stron internetowych, sklepów online i usługi IT. Skontaktuj się z nami, aby uzyskać dedykowane rozwiązania dla Twojego biznesu.'
 			/>
-			<Header
-				content={
-					<div>
-						<h1>
-							Masz jakiekolwiek <br />
-							<span className='text-gradient'>Pytania?</span>
-						</h1>
-					</div>
-				}
-				imgUrl={ContactImg}
-				align='start'
-			/>
+			<PageTitle img={ContactImg}>
+				<h1>
+					Masz jakiekolwiek <br />
+					<span className='text-gradient'>Pytania?</span>
+				</h1>
+			</PageTitle>
 			<div className='contactPageLayout grid grid-cols-2 gap-4 background-top pt-4 pb-8'>
 				<div>
 					<ContactForm />

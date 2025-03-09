@@ -177,7 +177,7 @@ const PricingForm = () => {
 	};
 
 	return (
-		<section id='PricingForm' className='background-top py-4 px-4 mx-4 my-4'>
+		<section id='PricingForm' className='background-top p-4 lg:px-8'>
 			<H2 styleType='primary'>Konfigurator projektu i wyceny</H2>
 			<p>
 				Wyceń swój projekt kompletnie za darmo.
@@ -185,8 +185,6 @@ const PricingForm = () => {
 			<p>
 				Zaznacz odpowiednie pola aby poznać szacunkową cenę oraz termin realizacji
 			</p>
-			
-
 			<div>
 				{pricingConfig.sections
 					.filter((section) => section.id === 'product')

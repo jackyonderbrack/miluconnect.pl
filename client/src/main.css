@@ -87,7 +87,7 @@ h3 {
 	font: var(--h3);
 	margin-top: 8px;
 }
-p {
+p, li {
 	font: var(--p);
 }
 a {

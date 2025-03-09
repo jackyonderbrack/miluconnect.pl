@@ -1,78 +1,82 @@
 // Icons
-import IconBrainstorm from '../../assets/icon-brainstorm-miluconnect.png';
-import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.png';
-import IconLongTerm from '../../assets/icon-longterm-miluconnect.png';
-import IconMobileApps from '../../assets/icon-mobileapps-miluconnect.png';
-import IconPartnership from '../../assets/icon-partnership-miluconnect.png';
-import IconSpectialistTeam from '../../assets/icon-webspecialists-miluconnect.png';
+import IconBrainstorm from '../assets/icon-brainstorm-miluconnect.png';
+import IconDedicatedSolutions from '../assets/icon-dedicated-miluconnect.png';
+import IconLongTerm from '../assets/icon-longterm-miluconnect.png';
+import IconMobileApps from '../assets/icon-mobileapps-miluconnect.png';
+import IconPartnership from '../assets/icon-partnership-miluconnect.png';
+import IconSpectialistTeam from '../assets/icon-webspecialists-miluconnect.png';
+import IconWebAdjustment from '../assets/icon-webadjustment-miluconnect.png';
+import IconEcommerce from '../assets/icon-idea-miluconnect.webp';
+import IconWebsite from '../assets/icon-website-miluconnect.png'
+import IconGraphicDesign from '../assets/icon-web-design-miluconnect.png'
 
 // Images
-import PortfolioRestauracjaLesnaPerlaImg from '../../assets/portfolio/03_miluconnect-lesnaperla-strony-rybnik-radlin.png';
-import PorftolioNatarasieImg from '../../assets/portfolio/05_miluconnect-natarasie-strony-rybnik-zory.png';
-import PortfolioMetkomImg from '../../assets/portfolio/06_miluconnect-metkom-zory-cieszyn-strony-internetowe.png';
-import PortfolioSkinsnImg from '../../assets/portfolio/07_miluconnect-skinsn-plock-rybnik-strony.png';
-import PortfolioHolisticSpaImg from '../../assets/portfolio/08_miluconnect-holisticspa-spaslask-strony-rybnik-czerwionka-salon.png';
-import PortfolioStolarniaprecyzjaImg from '../../assets/portfolio/09_miluconnect-stolarniaprecyzja-spaslask-strony-rybnik-czerwionka-biznes.png';
-import PortfolioVending4AllImg from '../../assets/portfolio/10_miluconnect-vending-strony-rybnik-zory.png';
-import PortfolioCentrumBagsImg from '../../assets/portfolio/11_miluconnect-centrumbags-strony-rybnik-zory.png';
-import PortfolioDarelBizPlImg from '../../assets/portfolio/miluconnect-darel-strony-internetowe-rybnik-zory.png';
+import PortfolioRestauracjaLesnaPerlaImg from '../assets/portfolio/03_miluconnect-lesnaperla-strony-rybnik-radlin.png';
+import PorftolioNatarasieImg from '../assets/portfolio/05_miluconnect-natarasie-strony-rybnik-zory.png';
+import PortfolioMetkomImg from '../assets/portfolio/06_miluconnect-metkom-zory-cieszyn-strony-internetowe.png';
+import PortfolioSkinsnImg from '../assets/portfolio/07_miluconnect-skinsn-plock-rybnik-strony.png';
+import PortfolioHolisticSpaImg from '../assets/portfolio/08_miluconnect-holisticspa-spaslask-strony-rybnik-czerwionka-salon.png';
+import PortfolioStolarniaprecyzjaImg from '../assets/portfolio/09_miluconnect-stolarniaprecyzja-spaslask-strony-rybnik-czerwionka-biznes.png';
+import PortfolioVending4AllImg from '../assets/portfolio/10_miluconnect-vending-strony-rybnik-zory.png';
+import PortfolioCentrumBagsImg from '../assets/portfolio/11_miluconnect-centrumbags-strony-rybnik-zory.png';
+import PortfolioDarelBizPlImg from '../assets/portfolio/miluconnect-darel-strony-internetowe-rybnik-zory.png';
 
 // Clients
-import IntegrationAllegro from '../../assets/integrations/integrations-allegro-miluconnect.webp';
-import IntegrationBaseLinker from '../../assets/integrations/integrations-baselinker-light-miluconnect.webp';
-import IntegrationCyberFolks from '../../assets/integrations/integrations-cyberfolks-light-miluconnect.webp';
-import IntegrationInPost from '../../assets/integrations/integrations-inpost-light-miluconnect.webp';
-import IntegrationPresta from '../../assets/integrations/integrations-prestashop-light-miluconnect.webp';
-import IntegrationShopGold from '../../assets/integrations/integrations-shopgold-light-miluconnect.webp';
-import IntegrationWooCommerce from '../../assets/integrations/integrations-woocommerce-light-miluconnect.webp';
-import IntegrationWordpress from '../../assets/integrations/integrations-wordpress-light-miluconnect.webp';
+import IntegrationAllegro from '../assets/integrations/integrations-allegro-miluconnect.webp';
+import IntegrationBaseLinker from '../assets/integrations/integrations-baselinker-light-miluconnect.webp';
+import IntegrationCyberFolks from '../assets/integrations/integrations-cyberfolks-light-miluconnect.webp';
+import IntegrationInPost from '../assets/integrations/integrations-inpost-light-miluconnect.webp';
+import IntegrationPresta from '../assets/integrations/integrations-prestashop-light-miluconnect.webp';
+import IntegrationShopGold from '../assets/integrations/integrations-shopgold-light-miluconnect.webp';
+import IntegrationWooCommerce from '../assets/integrations/integrations-woocommerce-light-miluconnect.webp';
+import IntegrationWordpress from '../assets/integrations/integrations-wordpress-light-miluconnect.webp';
 
 // Technologies
-import TechnologyKotlin from '../../assets/technologies/integrations-kotlin.webp';
-import TechnologyAngular from '../../assets/technologies/solutions-agular-miluconnect.webp';
-import TechnologyExpress from '../../assets/technologies/solutions-expressjs-light-miluconnect.webp';
-import TechnologyGolang from '../../assets/technologies/solutions-go-miluconnect.webp';
-import TechnologyMongodb from '../../assets/technologies/solutions-mongodb-light-miluconnect.webp';
-import TechnologyNodejs from '../../assets/technologies/solutions-nodejs-light-miluconnect.webp';
-import TechnologyReactjs from '../../assets/technologies/solutions-react-miluconnect.webp';
-import TechnologySharepoint from '../../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
+import TechnologyKotlin from '../assets/technologies/integrations-kotlin.webp';
+import TechnologyAngular from '../assets/technologies/solutions-agular-miluconnect.webp';
+import TechnologyExpress from '../assets/technologies/solutions-expressjs-light-miluconnect.webp';
+import TechnologyGolang from '../assets/technologies/solutions-go-miluconnect.webp';
+import TechnologyMongodb from '../assets/technologies/solutions-mongodb-light-miluconnect.webp';
+import TechnologyNodejs from '../assets/technologies/solutions-nodejs-light-miluconnect.webp';
+import TechnologyReactjs from '../assets/technologies/solutions-react-miluconnect.webp';
+import TechnologySharepoint from '../assets/technologies/solutions-sharepoint-light-miluconnect.webp';
 
 // Profelio
-import ProfelioImg1 from '../../assets/portfolio/profelio-miluconnect-image-1.png';
-import ProfelioImg2 from '../../assets/portfolio/profelio-miluconnect-image-2.png';
-import ProfelioImg3 from '../../assets/portfolio/profelio-miluconnect-image-3.png';
-import ProfelioImg4 from '../../assets/portfolio/profelio-miluconnect-image-4.png';
-import { BoxProps } from '../../components/Box/Box';
+import ProfelioImg1 from '../assets/portfolio/profelio-miluconnect-image-1.png';
+import ProfelioImg2 from '../assets/portfolio/profelio-miluconnect-image-2.png';
+import ProfelioImg3 from '../assets/portfolio/profelio-miluconnect-image-3.png';
+import ProfelioImg4 from '../assets/portfolio/profelio-miluconnect-image-4.png';
+import { BoxProps } from '../components/Box/Box';
 
 export const offer_boxes: BoxProps[] = [
     {
         title: 'Strony internetowe',
-        iconUrl: IconBrainstorm,
-        buttonLink: ''
+        iconUrl: IconWebsite,
+        buttonLink: '/strony-internetowe'
     }, 
     {
         title: 'Projektowanie graficzne',
-        iconUrl: IconDedicatedSolutions,
+        iconUrl: IconGraphicDesign,
         buttonLink: ''
     },
     {
         title: 'Pozycjonowanie i Google Ads',
-        iconUrl: IconDedicatedSolutions,
+        iconUrl: IconLongTerm,
         buttonLink: ''
     }, 
     {
         title: 'Domeny i hosting',
-        iconUrl: IconDedicatedSolutions,
+        iconUrl: IconWebAdjustment,
         buttonLink: ''
     },
     {
         title: 'Sklepy internetowe',
-        iconUrl: IconDedicatedSolutions,
+        iconUrl: IconEcommerce,
         buttonLink: ''
     }, 
     {
-        title: 'Doradztwo techniczne',
-        iconUrl: IconDedicatedSolutions,
+        title: 'Aplikacje mobilne',
+        iconUrl: IconMobileApps,
         buttonLink: ''
     },
 ]

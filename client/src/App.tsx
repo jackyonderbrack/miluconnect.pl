@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import './App.css';
-import HomePage from './pages/home/HomePage';
+import HomePage from './pages/home/Home';
 import ContactPage from './pages/contact/ContactPage';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
