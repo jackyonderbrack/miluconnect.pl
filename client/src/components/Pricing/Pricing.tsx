@@ -335,7 +335,7 @@ const PricingForm = () => {
 
 			{/* Button "Oblicz cenę i czas" */}
 			{showCalculateButton && (
-				<div className='flex justify-content-center align-items-center align-content-center align-center my-8'>
+				<div className='my-8 place-items-center md:place-items-start'>
 					<button
 						onClick={calculateTotal}
 						className='btn-outline flex! items-center gap-4'
@@ -359,7 +359,7 @@ const PricingForm = () => {
 						Szacowany czas realizacji:{' '}
 						<span className='total-time'>{Math.ceil(totalTime / 15)} tygodni</span>
 					</p>
-					<div className='grid grid-cols-3 gap-4 my-8'>
+					<div className='grid grid-cols-1 md:grid-cols-3 gap-4 my-8'>
 						<Button
 							linkTo='/kontakt'
 							buttonText='Poproś o ofertę'
