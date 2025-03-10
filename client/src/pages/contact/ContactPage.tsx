@@ -20,7 +20,7 @@ const ContactPage = () => {
 					<span className='text-gradient'>Pytania?</span>
 				</h1>
 			</PageTitle>
-			<div className='contactPageLayout grid grid-cols-2 gap-4 background-top pt-4 pb-8'>
+			<div className='contactPageLayout grid grid-cols-1 md:grid-cols-2 gap-4 background-top pt-4 pb-8'>
 				<div>
 					<ContactForm />
 				</div>
