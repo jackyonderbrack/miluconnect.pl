@@ -12,6 +12,8 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 
+	--nav-height: 8rem;
+
 	--color-primary: #e0e0e0;
 	--color-secondary: #292929;
 	--color-background: #242424;

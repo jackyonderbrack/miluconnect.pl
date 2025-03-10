@@ -17,7 +17,6 @@ import Gallery from '../../components/Gallery/Gallery';
 import H2 from '../../components/H2/H2';
 import ImageText from '../../components/ImageText/ImageText';
 import MetaTags from '../../components/MetaTags/MetaTags';
-import Pricing from '../../components/Pricing/Pricing';
 import Slider from '../../components/Slider/Slider';
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
 import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes } from '../../consts/home.consts';
@@ -35,7 +34,7 @@ const HomePage = () => {
 			/>
 			<Header
 				content={
-					<div className='space-y-10'>
+					<div className='space-y-10 place-self-center'>
 						<Typewriter 
 							text={`# Tworzymy # Modernizujemy # Utrzymujemy`} 
 							speed={100}
