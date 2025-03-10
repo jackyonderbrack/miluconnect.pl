@@ -1,5 +1,5 @@
-Ukrywamy domyślny radio button
 #PricingForm {
+	background-color: rgba(255, 255, 255, 0.060);
 	.total-price,
 	.total-time {
 		color: white;

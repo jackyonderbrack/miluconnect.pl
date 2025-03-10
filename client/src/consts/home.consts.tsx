@@ -293,20 +293,9 @@ export const _homeContents_ImageBox_Profelio = [
         url: 'odkryj-profelio',
         content: (
             <div className='flex flex-col'>
-                <p>
-                    Profelio to kompleksowa platforma do zarządzania projektami, która łączy
-                    nowoczesne technologie z intuicyjnym interfejsem.
-                </p>
-                <p>
-                    Dzięki Profelio Twoje projekty nabiorą nowego wymiaru – możesz efektywnie
-                    planować, monitorować postępy i zarządzać zadaniami, a wszystko to w
-                    jednym miejscu.
-                </p>
-                <p>
-                    Profesjonalizm, precyzyjne planowanie oraz długoterminowa strategia to
-                    fundamenty, na których opiera się nasza aplikacja. Odkryj potencjał swojej
-                    organizacji i ciesz się sukcesem razem z Profelio!
-                </p>
+                <p className="text-xl mb-4">
+					Przedstawiamy <strong>Profelio</strong> – nowoczesne narzędzie do zarządzania projektami, działające na zasadach znanych z Jira. Dzięki Profelio możesz kompleksowo <span className='text-[var(--color-accent-secondary)] font-bold'>planować, monitorować i koordynować</span> prace zespołu, korzystając z intuicyjnego interfejsu i wysokiej wydajności. To rozwiązanie usprawnia procesy projektowe, <strong>zwiększa produktywność</strong> i pomaga osiągać cele biznesowe.
+				</p>
                 <button className='btn-primary mt-6'>Poproś o wcześniejszy dostęp</button>
             </div>
         ),

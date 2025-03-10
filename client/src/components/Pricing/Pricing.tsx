@@ -177,7 +177,7 @@ const PricingForm = () => {
 	};
 
 	return (
-		<section id='PricingForm' className='background-top p-4 lg:px-8'>
+		<section id='PricingForm' className='p-4 lg:px-8'>
 			<H2 styleType='primary'>Konfigurator projektu i wyceny</H2>
 			<p>
 				Wyceń swój projekt - <span className='text-[var(--gradient-light-color-mid)]'>kompletnie za darmo.</span>

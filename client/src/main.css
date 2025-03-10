@@ -15,6 +15,8 @@
 	--color-primary: #e0e0e0;
 	--color-secondary: #292929;
 	--color-background: #242424;
+	--color-background-30: #ffffff0c;
+	--color-background-60: #ffffff10;
 	--color-accent-primary: #f5b642;
 	--color-accent-secondary: #5e6b6d;
 	--gradient-light-color-mid: #dbc499;
@@ -200,12 +202,9 @@ button:hover:not(.btn-underline) {
 	z-index: 25;
 }
 
-section {
-	border-radius: 2rem;
-}
-
 .background-top {
 	background: linear-gradient(180deg, var(--color-secondary), transparent);
+	border-radius: 1.8rem ;
 }
 .background-left {
 	background: linear-gradient(90deg, var(--color-secondary), transparent);

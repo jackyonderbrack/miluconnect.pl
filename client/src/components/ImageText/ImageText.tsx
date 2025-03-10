@@ -27,7 +27,7 @@ const ImageText: React.FC<ImageTextProps> = ({
           className="object-contain max-h-48 md:max-h-64"
         />
       </div>
-      <div className="flex-1 flex flex-col gap-4 md:h-full">
+      <div className="flex-1 flex flex-col gap-4 md:h-full bg-[var(--color-background-30)] p-4 md:p-6 rounded-2xl">
         <h2>{heading}</h2>
         {labels && (
           <div className="flex gap-2 flex-wrap">
