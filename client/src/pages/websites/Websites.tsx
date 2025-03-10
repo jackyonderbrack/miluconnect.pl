@@ -1,8 +1,7 @@
-import MetaTags from '../../components/MetaTags/MetaTags'
-import PageTitle from '../../components/PageTitle/PageTitle'
-import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.webp';
 import ImageIdeaToWebsite from '../../assets/banners/idea-to-website-miluconnect.png';
-import Pricing from '../../components/Pricing/Pricing';
+import IconDedicatedSolutions from '../../assets/icon-dedicated-miluconnect.webp';
+import MetaTags from '../../components/MetaTags/MetaTags';
+import PageTitle from '../../components/PageTitle/PageTitle';
 
 const Websites = () => {
   return (
