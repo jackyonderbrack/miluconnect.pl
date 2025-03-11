@@ -1,5 +1,6 @@
 import React from 'react';
-import "./Layout.css"
+import Sidebar from '../Sidebar/Sidebar';
+import "./Layout.css";
 
 interface LayoutProps {
     variants: "sidenavLeft" | "sidenavRight" | "topNav" | "fullWidth";
@@ -23,6 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ variants, children }) => {
 
   return (
     <div className={layoutClass}>
+        <Sidebar />
         {children}
     </div>
   );

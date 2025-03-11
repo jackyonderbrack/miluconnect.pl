@@ -5,11 +5,13 @@
 .layout_sidenav_left {
   display: flex;
   flex-direction: row;
+  gap: 1.5rem
 }
 
 .layout_sidenav_right {
   display: flex;
   flex-direction: row-reverse;
+  gap: 1.5rem;
 }
 
 .layout_top_nav {
