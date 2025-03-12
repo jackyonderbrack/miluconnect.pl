@@ -27,7 +27,10 @@ import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
 import Account from './admin/pages/account/Account';
 import Login from './admin/pages/login/Login';
 import BlogPage from './pages/blog/BlogPage';
-import Websites from './pages/websites/Websites';
+import Websites from './pages/offer/Websites';
+import Ecommerce from './pages/offer/Ecommerce';
+import SeoAndGoogleAds from './pages/offer/SeoAndGoogleAds';
+import GraphicDesign from './pages/offer/GraphicDesign';
 
 function ClientLayout() {
 	const location = useLocation();
@@ -76,7 +79,10 @@ const router = createBrowserRouter([
 			{ path: 'polityka-prywatnosci', element: <PrivacyPolicyPage /> },
 			{ path: 'nowosci', element: <NewsPage /> },
 			{ path: 'blog', element: <BlogPage />},
-			{ path: 'strony-internetowe', element: <Websites />}
+			{ path: 'strony-internetowe', element: <Websites />},
+			{ path: 'ecommerce', element: <Ecommerce />},
+			{ path: 'seo-i-google-ads', element: <SeoAndGoogleAds />},
+			{ path: 'projektowanie-graficzne', element: <GraphicDesign />},
 		],
 	},
 	{

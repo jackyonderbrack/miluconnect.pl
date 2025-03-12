@@ -4,15 +4,15 @@ import Link from "../Link/Link"
 
 const Sidebar = () => {
   return (
-    <section className="flex-1 background-top p-2 md:p-4 lg:p-8 flex flex-col gap-12">
+    <section className="flex-1 background-top py-3 px-2 md:p-4 lg:p-8 mr-0 md:mr-4 lg:mr-8 flex flex-col gap-12">
       <p>Szukasz czegoś innego?</p>
       <div className="flex flex-col gap-6">
         <h3>Oferta:</h3>
         <ul className="flex flex-col gap-2">
           <Link href='/strony-internetowe' text={"Strony internetowe"} theme={"link-secondary"} />
-          <Link href='/' text={"Sklepy internetowe"} theme={"link-secondary"} />
+          <Link href='/ecommerce' text={"Sklepy internetowe"} theme={"link-secondary"} />
           <Link href='/' text={"Projektowanie graficzne"} theme={"link-secondary"} />
-          <Link href='/' text={"Pozycjonowanie i Google Ads"} theme={"link-secondary"} />
+          <Link href='/seo-i-google-ads' text={"Pozycjonowanie i Google Ads"} theme={"link-secondary"} />
           <Link href='/' text={"Hosting i domeny"} theme={"link-secondary"} />
           <Link href='/' text={"Aplikacje mobilne"} theme={"link-secondary"} />
         </ul>

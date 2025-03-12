@@ -82,7 +82,7 @@ export const offer_boxes: BoxProps[] = [
     {
         title: 'Sklepy internetowe',
         iconUrl: IconEcommerce,
-        buttonLink: ''
+        buttonLink: '/ecommerce'
     }, 
     {
         title: 'Aplikacje mobilne',
