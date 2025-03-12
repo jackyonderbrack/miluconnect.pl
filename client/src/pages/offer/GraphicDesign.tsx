@@ -53,8 +53,6 @@ const GraphicDesign = () => {
               <span className="text-[var(--gradient-light-color-mid)]"> spójność stylistyczną</span>
               oraz funkcjonalność, aby każdy projekt wyglądał nowocześnie i budził zaufanie odbiorców.
             </p>
-
-            {/* Sekcja z listą i ikonami */}
             <section>
               <h2 className='flex items-center gap-2'>
                 <HiLightBulb size={28} className='text-[var(--gradient-light-color-mid)]' />
@@ -105,7 +103,6 @@ const GraphicDesign = () => {
                 </li>
               </ul>
             </section>
-
             <p>
               Naszym priorytetem jest spójność koncepcji oraz <strong>wysoka jakość wykonania</strong>.
               Staramy się, by każdy element graficzny
@@ -113,8 +110,6 @@ const GraphicDesign = () => {
               zarówno projekty cyfrowe, jak i drukowane, co daje Ci pełne wsparcie w rozwoju wizerunku Twojej firmy.
             </p>
           </div>
-
-          {/* Sekcja CTA z lekką animacją */}
           <div className='my-8 border-t-2 pt-8 border-[var(--color-accent-secondary)] text-center'>
             <p className='text-lg animate-pulse'>
               Masz pomysł, który wymaga kreatywnej oprawy graficznej? 
