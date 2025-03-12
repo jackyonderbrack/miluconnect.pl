@@ -67,17 +67,17 @@ export const offer_boxes: BoxProps[] = [
     {
         title: 'Projektowanie graficzne',
         iconUrl: IconGraphicDesign,
-        buttonLink: ''
+        buttonLink: '/projektowanie-graficzne'
     },
     {
         title: 'Pozycjonowanie i Google Ads',
         iconUrl: IconLongTerm,
-        buttonLink: ''
+        buttonLink: '/seo-i-google-ads'
     }, 
     {
         title: 'Domeny i hosting',
         iconUrl: IconWebAdjustment,
-        buttonLink: ''
+        buttonLink: '/domeny-i-hosting'
     },
     {
         title: 'Sklepy internetowe',
@@ -87,7 +87,7 @@ export const offer_boxes: BoxProps[] = [
     {
         title: 'Aplikacje mobilne',
         iconUrl: IconMobileApps,
-        buttonLink: ''
+        buttonLink: '/aplikacje-mobilne'
     },
 ]
 

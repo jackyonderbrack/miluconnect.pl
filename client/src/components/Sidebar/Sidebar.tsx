@@ -11,10 +11,10 @@ const Sidebar = () => {
         <ul className="flex flex-col gap-2">
           <Link href='/strony-internetowe' text={"Strony internetowe"} theme={"link-secondary"} />
           <Link href='/ecommerce' text={"Sklepy internetowe"} theme={"link-secondary"} />
-          <Link href='/' text={"Projektowanie graficzne"} theme={"link-secondary"} />
+          <Link href='/projektowanie-graficzne' text={"Projektowanie graficzne"} theme={"link-secondary"} />
           <Link href='/seo-i-google-ads' text={"Pozycjonowanie i Google Ads"} theme={"link-secondary"} />
-          <Link href='/' text={"Hosting i domeny"} theme={"link-secondary"} />
-          <Link href='/' text={"Aplikacje mobilne"} theme={"link-secondary"} />
+          <Link href='/domeny-i-hosting' text={"Hosting i domeny"} theme={"link-secondary"} />
+          <Link href='/aplikacje-mobilne' text={"Aplikacje mobilne"} theme={"link-secondary"} />
         </ul>
         <a href="/" className="flex gap-4 items-center"><HiBackward />Powrót do Strony głównej</a>
       </div>

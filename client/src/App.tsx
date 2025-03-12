@@ -31,6 +31,8 @@ import Websites from './pages/offer/Websites';
 import Ecommerce from './pages/offer/Ecommerce';
 import SeoAndGoogleAds from './pages/offer/SeoAndGoogleAds';
 import GraphicDesign from './pages/offer/GraphicDesign';
+import DomainsAndHosting from './pages/offer/DomainsAndHosting';
+import MobileApps from './pages/offer/MobileApps';
 
 function ClientLayout() {
 	const location = useLocation();
@@ -83,6 +85,8 @@ const router = createBrowserRouter([
 			{ path: 'ecommerce', element: <Ecommerce />},
 			{ path: 'seo-i-google-ads', element: <SeoAndGoogleAds />},
 			{ path: 'projektowanie-graficzne', element: <GraphicDesign />},
+			{ path: 'domeny-i-hosting', element: <DomainsAndHosting />},
+			{ path: 'aplikacje-mobilne', element: <MobileApps />},
 		],
 	},
 	{
