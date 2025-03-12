@@ -28,7 +28,7 @@ const Ecommerce = () => {
             <img src={ImageIdeaToEcommerce} className='p-2 place-self-center mb-8' alt='MiluConnect E-commerce' />
             
             <p>
-              Starannie przygotowany <span className="uppercase font-bold">sklep internetowy eCommerce</span> to znacznie więcej niż oferta produktowa – to Twoja wizytówka w świecie online, która buduje wiarygodność marki i napędza konwersję. Dzięki responsywności, szybkiej obsłudze zamówień oraz <a className="font-medium" href="/pozycjonowanie-i-google-ads">optymalizacji SEO</a>, Twój sklep będzie się wyświetlał wyżej w wynikach wyszukiwania, docierając do większej grupy odbiorców.
+              Starannie przygotowany <span className="uppercase font-bold">sklep internetowy eCommerce</span> to znacznie więcej niż oferta produktowa – to Twoja wizytówka w świecie online, która buduje wiarygodność marki i napędza konwersję. Dzięki responsywności, szybkiej obsłudze zamówień oraz <a className="font-medium" href="/seo-i-google-ads">optymalizacji SEO</a>, Twój sklep będzie się wyświetlał wyżej w wynikach wyszukiwania, docierając do większej grupy odbiorców.
             </p>
 
             <section>

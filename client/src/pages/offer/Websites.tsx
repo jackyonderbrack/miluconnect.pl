@@ -26,7 +26,7 @@ const Websites = () => {
 
               <img src={ImageIdeaToWebsite} className='p-2 place-self-center mb-8'/>
               <p>
-                Profesjonalna <span className="uppercase font-bold">strona internetowa WWW</span> to fundament <span className="uppercase font-bold">skutecznego marketingu</span> online. Twoja witryna to nie tylko wizytówka firmy – to narzędzie, które buduje zaufanie, <span className="font-bold text-[var(--color-accent-primary)]">zwiększa widoczność</span> w wyszukiwarkach i napędza sprzedaż. Dzięki nowoczesnemu web designowi, responsywności, szybkiemu ładowaniu oraz <a className="font-medium" href="/pozycjonowanie-i-google-ads">optymalizacji SEO</a> Twoja strona zyskuje przewagę nad konkurencją.
+                Profesjonalna <span className="uppercase font-bold">strona internetowa WWW</span> to fundament <span className="uppercase font-bold">skutecznego marketingu</span> online. Twoja witryna to nie tylko wizytówka firmy – to narzędzie, które buduje zaufanie, <span className="font-bold text-[var(--color-accent-primary)]">zwiększa widoczność</span> w wyszukiwarkach i napędza sprzedaż. Dzięki nowoczesnemu web designowi, responsywności, szybkiemu ładowaniu oraz <a className="font-medium" href="/seo-i-google-ads">optymalizacji SEO</a> Twoja strona zyskuje przewagę nad konkurencją.
               </p>
 
               <section>
