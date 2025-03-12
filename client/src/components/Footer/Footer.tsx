@@ -60,8 +60,8 @@ const Footer = () => {
 							theme='btn-outline'
 						/>
 						<Button
-							linkTo='/'
-							buttonText='Wycena'
+							linkTo='/seo-i-google-ads'
+							buttonText='Pozycjonowanie i Google ADS'
 							theme='btn-underline'
 						/>
 					</div>

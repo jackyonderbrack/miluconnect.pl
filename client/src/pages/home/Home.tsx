@@ -25,7 +25,7 @@ const HomePage = () => {
 			/>
 			<Header
 				content={
-					<div className='space-y-10 place-self-center'>
+					<div className='flex flex-col space-y-12 justify-center'>
 						<Typewriter 
 							text={`# Tworzymy # Modernizujemy # Utrzymujemy`} 
 							speed={100}
@@ -57,7 +57,7 @@ const HomePage = () => {
 						</div>
 						
 						<p>
-							Szybka, <i><strong>darmowa wycena</strong></i> i prosty kontakt online. <br /> Jeśli wolisz się spotkać - <a href='/kontakt'>Skontaktuj się</a>
+							Szybka, <i><strong>darmowa wycena </strong></i><span className='whitespace-nowrap'>i prosty kontakt online. </span> <br /> Jeśli wolisz się spotkać <span className='whitespace-nowrap'>- <a href='/kontakt'>Skontaktuj się</a></span>
 						</p>
 						
 						<BouncingButton targetId='OfferBoxes'>

@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ imgUrl, content }) => {
 	}, []);
 
 	return (
-		<section className='flex flex-row h-[100vh] px-2 md:px-8'>
+		<section className='flex flex-row h-[calc(100dvh-var(--nav-height))] px-2 md:ml-24 lg:ml-48 justify-start align-middle'>
 			{content}
 			{imgUrl && (
 				<div className='absolute top-12 md:right-0 aspect-[4/3] z-[-1] md:w-[61dvw] [animation:var(--fade-in)]'>
