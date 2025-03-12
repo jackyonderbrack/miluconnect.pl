@@ -1,8 +1,8 @@
-import { HiBackward } from "react-icons/hi2"
+import { HiArrowCircleDown, HiChevronRight } from "react-icons/hi"
+import { HiOutlineBackward } from "react-icons/hi2"
+import BouncingButton from "../BouncingButton/BouncingButton"
 import Button from "../Button/Button"
 import Link from "../Link/Link"
-import BouncingButton from "../BouncingButton/BouncingButton"
-import { HiArrowCircleDown } from "react-icons/hi"
 
 const Sidebar = () => {
   return (
@@ -11,14 +11,14 @@ const Sidebar = () => {
       <div className="flex flex-col gap-6">
         <h3>Oferta:</h3>
         <ul className="flex flex-col gap-2">
-          <Link href='/strony-internetowe' text={"Strony internetowe"} theme={"link-secondary"} />
-          <Link href='/ecommerce' text={"Sklepy internetowe"} theme={"link-secondary"} />
-          <Link href='/projektowanie-graficzne' text={"Projektowanie graficzne"} theme={"link-secondary"} />
-          <Link href='/seo-i-google-ads' text={"Pozycjonowanie i Google Ads"} theme={"link-secondary"} />
-          <Link href='/domeny-i-hosting' text={"Hosting i domeny"} theme={"link-secondary"} />
-          <Link href='/aplikacje-mobilne' text={"Aplikacje mobilne"} theme={"link-secondary"} />
+          <Link href='/strony-internetowe' text={"Strony internetowe"} theme={"link-secondary"}><HiChevronRight /></Link>
+          <Link href='/ecommerce' text={"E-Commerce"} theme={"link-secondary"}><HiChevronRight /></Link>
+          <Link href='/projektowanie-graficzne' text={"Projektowanie graficzne"} theme={"link-secondary"}><HiChevronRight /></Link>
+          <Link href='/seo-i-google-ads' text={"Pozycjonowanie i Google Ads"} theme={"link-secondary"}><HiChevronRight /></Link>
+          <Link href='/domeny-i-hosting' text={"Hosting i domeny"} theme={"link-secondary"}><HiChevronRight /></Link>
+          <Link href='/aplikacje-mobilne' text={"Aplikacje mobilne"} theme={"link-secondary"}><HiChevronRight /></Link>
         </ul>
-        <a href="/" className="flex gap-4 items-center"><HiBackward />Powrót do Strony głównej</a>
+        <a href="/" className="flex gap-4 items-center text-[var(--gradient-light-color-mid)]!"><HiOutlineBackward />Powrót do Strony głównej</a>
       </div>
       <div className="flex flex-col gap-6">
         <h3>Profelio</h3>

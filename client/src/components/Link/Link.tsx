@@ -3,13 +3,14 @@ import './link.css'
 
 type LinkProps = {
     href: string | undefined;
-    text: string;
+    text: React.ReactNode;
     theme: "link-primary" | "link-secondary" | "link-underline";
+    children?: React.ReactNode
 }
 
-const Link: React.FC<LinkProps> = ({href, text, theme}) => {
+const Link: React.FC<LinkProps> = ({href, text, theme, children}) => {
   return (
-    <a href={href} className={theme}>{text}</a>
+    <a href={href} className={`${theme} flex gap-2 items-center`}>{children} {text}</a>
   )
 }
 
