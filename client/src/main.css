@@ -12,8 +12,7 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 
-	--nav-height: 8rem;
-
+	--nav-height: 5rem;
 	--color-primary: #e0e0e0;
 	--color-secondary: #292929;
 	--color-background: #242424;
@@ -214,6 +213,9 @@ button:hover:not(.btn-underline) {
 
 /* TABLET (MEDIUM) WIDTH */
 @media (width >= 40em) {
+	:root {
+		--nav-height: 8rem;
+	}
 	.nav-overlay.active {
 		display: none !important;
 	}

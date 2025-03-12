@@ -11,11 +11,6 @@
 
 #Client {
 	.client-outlet {
-		padding: 5rem auto 0;
-	}
-	@media (width > 1080px) {
-		.client-outlet {
-			padding: 8rem auto 0;
-		}
-	}
+		margin: var(--nav-height) auto 0;
+	}	
 }

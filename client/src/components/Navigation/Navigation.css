@@ -5,9 +5,13 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: var(--nav-height);
+	display: flex;
+	flex-direction: column;
 }
 
 .navigation-header {
+	flex: 1;
 	display: flex;
 	justify-content: center;
 }
@@ -22,12 +26,6 @@ nav {
 }
 
 .mainLogoText {
-	p {
-		margin-block-start: -0.5rem;
-		margin-block-end: 0.1rem;
-		margin-inline-start: inherit;
-		margin-inline-end: inherit;
-	}
 	span:nth-child(1) {
 		font-size: 2rem;
 		font-weight: bold;
@@ -65,10 +63,12 @@ nav {
 	display: flex;
 	text-align: center;
 	justify-content: center;
+	align-items: center;
 	background-color: rgba(255, 255, 255, 0.205);
 	border-radius: 1rem 1rem 0 0;
 	gap: 2rem;
 	padding: 0.5rem;
+	height: 3rem;
 }
 
 .nav-mobile-icon {
@@ -76,6 +76,12 @@ nav {
 }
 
 @media (width < 40em) {
+	.navigation {
+		height: var(--nav-height);
+		display: initial;
+		flex-direction: initial;
+		align-content: center;
+	}
 	.nav-mobile-icon {
 		display: block;
 		position: absolute;
