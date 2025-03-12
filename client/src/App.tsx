@@ -33,7 +33,6 @@ import SeoAndGoogleAds from './pages/offer/SeoAndGoogleAds';
 import GraphicDesign from './pages/offer/GraphicDesign';
 import DomainsAndHosting from './pages/offer/DomainsAndHosting';
 import MobileApps from './pages/offer/MobileApps';
-import './main.css'
 
 function ClientLayout() {
 	const location = useLocation();
