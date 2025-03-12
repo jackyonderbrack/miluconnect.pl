@@ -14,7 +14,7 @@ const Ecommerce = () => {
       />
       <PageTitle img={IconEcommerce}>
         <h1 className='text-4xl! md:text-5xl! lg:text-6xl!'>
-          &gt; Tworzymy <span className='text-gradient'>e-commerce</span>
+          &gt; Tworzymy <span className='text-gradient whitespace-nowrap'>e-commerce</span>
           <br />
         </h1>
       </PageTitle>
