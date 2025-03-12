@@ -143,33 +143,33 @@ const HomePage = () => {
 				))}
 			</div>
 
-			<section className="py-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-			<div className="flex flex-col items-center">
-				<h3>Tworzymy integracje do:</h3>
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-center mt-8">
-				{_integrationsContents.map((integration, index) => (
-					<img
-					key={index}
-					src={integration.url}
-					alt={integration.alt}
-					className="p-2"
-					/>
-				))}
+			<section className="py-8 grid grid-cols-1 md:grid-cols-2 gap-4 border-1 rounded-2xl border-[var(--color-background-60)] m-8 p-8">
+				<div className="flex flex-col items-center">
+					<h3>Tworzymy integracje do:</h3>
+					<div className="grid grid-cols-4 gap-2 justify-center mt-8">
+					{_integrationsContents.map((integration, index) => (
+						<img
+						key={index}
+						src={integration.url}
+						alt={integration.alt}
+						className="p-2"
+						/>
+					))}
+					</div>
 				</div>
-			</div>
-			<div className="flex flex-col items-center">
-				<h3>Technologia, na której się znamy:</h3>
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-center mt-8">
-				{_technologyContents.map((technology, index) => (
-					<img
-					key={index}
-					src={technology.url}
-					alt={technology.alt}
-					className="p-2"
-					/>
-				))}
+				<div className="flex flex-col items-center">
+					<h3>Technologia, na której się znamy:</h3>
+					<div className="grid grid-cols-4 gap-4 justify-center mt-8">
+					{_technologyContents.map((technology, index) => (
+						<img
+						key={index}
+						src={technology.url}
+						alt={technology.alt}
+						className="p-2"
+						/>
+					))}
+					</div>
 				</div>
-			</div>
 			</section>
 
 			<section className='py-8 background-top flex flex-col align-center text-center justify-center'>
