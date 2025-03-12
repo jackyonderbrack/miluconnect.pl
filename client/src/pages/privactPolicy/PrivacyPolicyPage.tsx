@@ -1,5 +1,5 @@
-import Button from '../../components/Button/Button';
 import EarthImg from '../../assets/background-earth-01-miluconnect.webp';
+import Button from '../../components/Button/Button';
 import Header from '../../components/Header/Header';
 
 const PrivacyPolicyPage = () => {
@@ -15,7 +15,6 @@ const PrivacyPolicyPage = () => {
 					</div>
 				}
 				imgUrl={EarthImg}
-				align='start'
 			/>
 			<section className='content background-top px-2 py-2'>
 				<h4>Wstęp</h4>

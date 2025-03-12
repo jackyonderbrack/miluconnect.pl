@@ -1,11 +1,10 @@
-import ContactForm from '../../components/ContactForm/ContactForm';
-import Header from '../../components/Header/Header';
-import './ContactPage.css';
 import ContactImg from '../../assets/background-letters-01-miluconnect.webp';
-import PhoneIcon from '../../assets/icons/icon-phone.png';
 import MailIcon from '../../assets/icons/icon-mail.png';
+import PhoneIcon from '../../assets/icons/icon-phone.png';
+import ContactForm from '../../components/ContactForm/ContactForm';
 import MetaTags from '../../components/MetaTags/MetaTags';
 import PageTitle from '../../components/PageTitle/PageTitle';
+import './ContactPage.css';
 
 const ContactPage = () => {
 	return (

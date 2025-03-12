@@ -3,19 +3,18 @@
 import EarthImg from '../../assets/background-earth-01-miluconnect.webp';
 
 // Components
-import Header from '../../components/Header/Header';
-import Button from '../../components/Button/Button';
-import Gallery from '../../components/Gallery/Gallery';
-import H2 from '../../components/H2/H2';
-import ImageText from '../../components/ImageText/ImageText';
-import MetaTags from '../../components/MetaTags/MetaTags';
-import Slider from '../../components/Slider/Slider';
-import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
-import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes, _clientsContents } from '../../consts/home.consts';
-import Box from '../../components/Box/Box';
 import { HiArrowCircleDown } from 'react-icons/hi';
 import BouncingButton from '../../components/BouncingButton/BouncingButton';
+import Box from '../../components/Box/Box';
+import Button from '../../components/Button/Button';
+import H2 from '../../components/H2/H2';
+import Header from '../../components/Header/Header';
+import ImageText from '../../components/ImageText/ImageText';
+import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
+import MetaTags from '../../components/MetaTags/MetaTags';
+import Slider from '../../components/Slider/Slider';
 import Typewriter from '../../components/TypeWriter/TypeWriter';
+import { _clientsContents, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _homeContents_ImageBox_Profelio, _integrationsContents, _portfolio_items, _technologyContents, offer_boxes } from '../../consts/home.consts';
 
 const HomePage = () => {
 	return (

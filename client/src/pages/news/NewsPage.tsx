@@ -19,7 +19,6 @@ const ContactPage = () => {
 					</div>
 				}
 				imgUrl={ContactImg}
-				align='start'
 			/>
 			<div className='contactPageLayout grid grid-cols-2 gap-4 background-top pt-4 pb-8'></div>
 		</>

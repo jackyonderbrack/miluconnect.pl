@@ -5,23 +5,22 @@ import BackgroundPuzzles from '../../assets/background-puzzles-01-miluconnect.we
 import PageTitle from '../../components/PageTitle/PageTitle';
 
 // Portfolio images
-import PortfolioImg1 from '../../assets/portfolio/03_miluconnect-lesnaperla-strony-rybnik-radlin.png';
 import PortfolioImg2 from '../../assets/portfolio/03_miluconnect-lesnaperla-strony-internetowe-rybnik-radlin-2.png';
 import PortfolioImg3 from '../../assets/portfolio/03_miluconnect-lesnaperla-strony-internetowe-rybnik-radlin-3.png';
 import PortfolioImg4 from '../../assets/portfolio/03_miluconnect-lesnaperla-strony-internetowe-rybnik-radlin-4.png';
+import PortfolioImg1 from '../../assets/portfolio/03_miluconnect-lesnaperla-strony-rybnik-radlin.png';
 
 // "Zaufali nam" images
 import Trusted1 from '../../assets/partners/miluconnect-partner-holisticspa.png';
 import Trusted2 from '../../assets/partners/miluconnect-partner-hurtownia-slonca.png';
 import Trusted3 from '../../assets/partners/partner-darel-miluconnect.png';
-import Trusted4 from '../../assets/partners/partner-lesnaperla-miluconnect.png';
 import Trusted5 from '../../assets/partners/partner-gentlemanshop-miluconnect.png';
+import Trusted4 from '../../assets/partners/partner-lesnaperla-miluconnect.png';
 import Trusted6 from '../../assets/partners/partner-metkom-miluconnect.png';
-import Trusted7 from '../../assets/partners/partner-vending4all-miluconnect.png';
 import Trusted8 from '../../assets/partners/partner-natarasie-miluconnect.png';
+import Trusted7 from '../../assets/partners/partner-vending4all-miluconnect.png';
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
 import { _homeContents_ImageBox_Profelio } from '../../consts/home.consts';
-import Button from '../../components/Button/Button';
 
 const SolutionsPage = () => {
 	return (
