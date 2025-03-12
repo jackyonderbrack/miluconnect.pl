@@ -42,10 +42,23 @@ function ClientLayout() {
 		});
 	}, [location]);
 
+
+	const ScrollToTop = () => {
+		useEffect(() => {
+			window.scrollTo({
+			top: 0,
+			left: 0,
+			});
+		}, [location]);
+
+		return null;
+	};
+
 	return (
 		<div id='Client'>
 			<Navigation />
 			<div className='client-outlet'>
+				<ScrollToTop />
 				<Outlet />
 				<Footer />
 				<TrackPageView />
