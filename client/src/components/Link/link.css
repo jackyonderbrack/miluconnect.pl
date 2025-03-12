@@ -11,3 +11,15 @@
     text-underline-offset: 0.5rem;
     cursor: pointer;
 }
+
+.link-secondary {
+    font-weight: 400;
+}
+
+.link-secondary:hover {
+    color: var(--gradient-light-color-mid);
+    background-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    cursor: pointer;
+}

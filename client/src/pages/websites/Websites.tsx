@@ -18,7 +18,7 @@ const Websites = () => {
         </h1>
       </PageTitle>
       <Layout variants={'sidenavRight'}>
-          <section className="flex-3 background-top p-2 md:p-8">
+          <section className="flex-3 background-top p-2 md:p-4 lg:p-8">
             <div className="category-boxes_webpages flex flex-col gap-4">
               <p className="text-xl!">
                 Czytelna i funkcjonalna strona <strong>WWW</strong> stanowi kluczowy element skutecznego marketingu online. Ta <span className="uppercase">strona internetowa</span> pełni rolę Twojej siedziby w sieci, gdzie intuicyjna nawigacja, starannie dobrana kolorystyka oraz szybkie ładowanie wpływają na pozytywne doświadczenia użytkowników i wspierają SEO. <u>Przemyślana architektura informacji</u> oraz intuicyjne formularze kontaktowe zwiększają zaangażowanie odwiedzających, budując trwałe relacje i przekładając się na lepsze <span className='text-[var(--gradient-light-color-mid)]'>wyniki biznesowe.</span>

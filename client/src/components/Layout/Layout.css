@@ -23,3 +23,11 @@
   width: 100%;
   /* Inne style pełnej szerokości */
 }
+
+@media (width < 60em) {
+  .layout_sidenav_right {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}

@@ -10,7 +10,7 @@ type IconBouncingButtonProps = {
 };
 
 const BouncingButton: FC<IconBouncingButtonProps> = ({
-  children, href = '', targetId, offset = 108
+  children, href = '', targetId, offset = 128
 }) => {
   const navigate = useNavigate();
 

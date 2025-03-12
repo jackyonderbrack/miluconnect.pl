@@ -205,7 +205,7 @@ button:hover:not(.btn-underline) {
 
 .background-top {
 	background: linear-gradient(180deg, var(--color-secondary), transparent);
-	border-radius: 1.8rem ;
+	border-radius: 1.8rem;
 }
 .background-left {
 	background: linear-gradient(90deg, var(--color-secondary), transparent);
