@@ -2,17 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://miluconnect.pl/</loc>
-    <lastmod>2024-07-23</lastmod>
+    <lastmod>2025-03-12</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://miluconnect.pl/rozwiazania</loc>
-    <lastmod>2024-07-23</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://miluconnect.pl/kontakt</loc>
-    <lastmod>2024-07-23</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/wyslano</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.20</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/strony-internetowe</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/ecommerce</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/seo-i-google-ads</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/projektowanie-graficzne</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/domeny-i-hosting</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/aplikacje-mobilne</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://miluconnect.pl/polityka-prywatnosci</loc>
+    <lastmod>2025-03-12</lastmod>
+    <priority>0.40</priority>
   </url>
 </urlset>
