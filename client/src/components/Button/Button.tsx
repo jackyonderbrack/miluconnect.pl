@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { handleScroll } from '../../utils/handleScroll';
+import { parallax } from '../../utils/parallax';
 
 type ButtonProps = {
 	linkTo: string;
@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	const handleClick = () => {
 		if (targetId) {
-			handleScroll(targetId, offset);
+			parallax(targetId, offset);
 		} else {
 			setTimeout(() => {
 				navigate(linkTo.toString());

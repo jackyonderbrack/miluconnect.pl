@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 import { useNavigate } from 'react-router';
-import { handleScroll } from '../../utils/handleScroll';
+import { parallax } from '../../utils/parallax';
 
 type IconBouncingButtonProps = {
 	href?: string;
@@ -16,7 +16,7 @@ const BouncingButton: FC<IconBouncingButtonProps> = ({
 
 	const handleClick = () => {
 		if (targetId) {
-			handleScroll(targetId, offset);
+			parallax(targetId, offset);
 		} else {
 			setTimeout(() => {
 				navigate(href.toString());

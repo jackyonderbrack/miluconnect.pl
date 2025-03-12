@@ -1,38 +1,36 @@
-import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
-import './App.css';
-import HomePage from './pages/home/Home';
-import ContactPage from './pages/contact/ContactPage';
-import Navigation from './components/Navigation/Navigation';
-import Footer from './components/Footer/Footer';
-import NotFoundPage from './pages/notFound/NotFoundPage';
-import SolutionsPage from './pages/solutions/SolutionsPage';
-import { ScrollToTop } from './utils/ScrollToTop';
-import TrackPageView from './components/GoogleAnalytics/TrackPageView';
-import CustomCookieConsent from './components/CustomCookieConsent/CustomCookieConsent';
-import PrivacyPolicyPage from './pages/privactPolicy/PrivacyPolicyPage';
-import ContactPageSent from './pages/contact/ContactPageSent';
-import { AccessProvider } from './contexts/AccessContext';
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
-import { useLocation } from 'react-router-dom';
-import NewsPage from './pages/news/NewsPage';
-import Sidenav from './admin/components/Sidenav/Sidenav';
-import Dashboard from './admin/pages/dashboard/Dashboard';
-import Posts from './admin/pages/posts/Posts';
-import Users from './admin/pages/users/Users';
-import Settings from './admin/pages/settings/Settings';
-import Reports from './admin/pages/reports/Reports';
+import { createBrowserRouter, Outlet, RouterProvider, useLocation } from 'react-router-dom';
 import Form from './admin/components/Form/Form';
 import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
+import Sidenav from './admin/components/Sidenav/Sidenav';
 import Account from './admin/pages/account/Account';
+import Dashboard from './admin/pages/dashboard/Dashboard';
 import Login from './admin/pages/login/Login';
+import Posts from './admin/pages/posts/Posts';
+import Reports from './admin/pages/reports/Reports';
+import Settings from './admin/pages/settings/Settings';
+import Users from './admin/pages/users/Users';
+import './App.css';
+import CustomCookieConsent from './components/CustomCookieConsent/CustomCookieConsent';
+import Footer from './components/Footer/Footer';
+import TrackPageView from './components/GoogleAnalytics/TrackPageView';
+import Navigation from './components/Navigation/Navigation';
+import { AccessProvider } from './contexts/AccessContext';
 import BlogPage from './pages/blog/BlogPage';
-import Websites from './pages/offer/Websites';
-import Ecommerce from './pages/offer/Ecommerce';
-import SeoAndGoogleAds from './pages/offer/SeoAndGoogleAds';
-import GraphicDesign from './pages/offer/GraphicDesign';
+import ContactPage from './pages/contact/ContactPage';
+import ContactPageSent from './pages/contact/ContactPageSent';
+import HomePage from './pages/home/Home';
+import NewsPage from './pages/news/NewsPage';
+import NotFoundPage from './pages/notFound/NotFoundPage';
 import DomainsAndHosting from './pages/offer/DomainsAndHosting';
+import Ecommerce from './pages/offer/Ecommerce';
+import GraphicDesign from './pages/offer/GraphicDesign';
 import MobileApps from './pages/offer/MobileApps';
+import SeoAndGoogleAds from './pages/offer/SeoAndGoogleAds';
+import Websites from './pages/offer/Websites';
+import PrivacyPolicyPage from './pages/privactPolicy/PrivacyPolicyPage';
+import SolutionsPage from './pages/solutions/SolutionsPage';
 
 function ClientLayout() {
 	const location = useLocation();
@@ -48,7 +46,6 @@ function ClientLayout() {
 		<div id='Client'>
 			<Navigation />
 			<div className='client-outlet'>
-				<ScrollToTop />
 				<Outlet />
 				<Footer />
 				<TrackPageView />

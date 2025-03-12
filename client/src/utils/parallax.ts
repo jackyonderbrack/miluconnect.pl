@@ -1,4 +1,4 @@
-export const handleScroll = (targetId: string, offset: number) => {
+export const parallax = (targetId: string, offset: number) => {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
         const elementPosition =
