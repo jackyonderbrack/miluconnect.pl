@@ -48,6 +48,16 @@ import ProfelioImg3 from '../assets/portfolio/profelio-miluconnect-image-3.png';
 import ProfelioImg4 from '../assets/portfolio/profelio-miluconnect-image-4.png';
 import { BoxProps } from '../components/Box/Box';
 
+// Clients
+import Partner3 from '../assets/partners/miluconnect-partner-holisticspa.png';
+import Partner1 from '../assets/partners/miluconnect-partner-hurtownia-slonca.png';
+import Partner5 from '../assets/partners/partner-darel-miluconnect.png';
+import Partner2 from '../assets/partners/partner-gentlemanshop-miluconnect.png';
+import Partner4 from '../assets/partners/partner-lesnaperla-miluconnect.png';
+import Partner6 from '../assets/partners/partner-metkom-miluconnect.png';
+import Partner7 from '../assets/partners/partner-natarasie-miluconnect.png';
+import Partner8 from '../assets/partners/partner-vending4all-miluconnect.png';
+
 export const offer_boxes: BoxProps[] = [
     {
         title: 'Strony internetowe',
@@ -159,6 +169,17 @@ export const _technologyContents = [
     { url: TechnologyNodejs, alt: 'Node.js' },
     { url: TechnologyReactjs, alt: 'React.js' },
     { url: TechnologySharepoint, alt: 'SharePoint' },
+];
+
+export const _clientsContents = [
+    { url: Partner1, alt: 'Logo Hurtownia słońca' },
+    { url: Partner2, alt: 'Logo Gentleman Shop' },
+    { url: Partner3, alt: 'Logo Holistic Spa' },
+    { url: Partner4, alt: 'Logo Restauracja Leśna Perła' },
+    { url: Partner5, alt: 'Logo Instalacje Darel.biz' },
+    { url: Partner6, alt: 'Logo Grupa Metkom' },
+    { url: Partner7, alt: 'Logo Na tarasie' },
+    { url: Partner8, alt: 'Logo Vending 4 All' },
 ];
 
 export const _homeContents_ImageBox_1 = [

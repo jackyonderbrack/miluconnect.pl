@@ -1,15 +1,7 @@
 
 // Banners
 import EarthImg from '../../assets/background-earth-01-miluconnect.webp';
-// Clients
-import Partner3 from '../../assets/partners/miluconnect-partner-holisticspa.png';
-import Partner1 from '../../assets/partners/miluconnect-partner-hurtownia-slonca.png';
-import Partner5 from '../../assets/partners/partner-darel-miluconnect.png';
-import Partner2 from '../../assets/partners/partner-gentlemanshop-miluconnect.png';
-import Partner4 from '../../assets/partners/partner-lesnaperla-miluconnect.png';
-import Partner6 from '../../assets/partners/partner-metkom-miluconnect.png';
-import Partner7 from '../../assets/partners/partner-natarasie-miluconnect.png';
-import Partner8 from '../../assets/partners/partner-vending4all-miluconnect.png';
+
 // Components
 import Header from '../../components/Header/Header';
 import Button from '../../components/Button/Button';
@@ -19,7 +11,7 @@ import ImageText from '../../components/ImageText/ImageText';
 import MetaTags from '../../components/MetaTags/MetaTags';
 import Slider from '../../components/Slider/Slider';
 import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial';
-import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes } from '../../consts/home.consts';
+import { _portfolio_items, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _integrationsContents, _technologyContents, _homeContents_ImageBox_Profelio, offer_boxes, _clientsContents } from '../../consts/home.consts';
 import Box from '../../components/Box/Box';
 import { HiArrowCircleDown } from 'react-icons/hi';
 import BouncingButton from '../../components/BouncingButton/BouncingButton';
@@ -146,7 +138,7 @@ const HomePage = () => {
 			<section className="py-8 grid grid-cols-1 md:grid-cols-2 gap-4 border-1 rounded-2xl border-[var(--color-background-60)] m-8 p-8">
 				<div className="flex flex-col items-center">
 					<h3>Tworzymy integracje do:</h3>
-					<div className="grid grid-cols-4 gap-2 justify-center mt-8">
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center mt-8">
 					{_integrationsContents.map((integration, index) => (
 						<img
 						key={index}
@@ -159,7 +151,7 @@ const HomePage = () => {
 				</div>
 				<div className="flex flex-col items-center">
 					<h3>Technologia, na której się znamy:</h3>
-					<div className="grid grid-cols-4 gap-4 justify-center mt-8">
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center mt-8">
 					{_technologyContents.map((technology, index) => (
 						<img
 						key={index}
@@ -181,18 +173,16 @@ const HomePage = () => {
 					</p>
 					<p>Zaufali nam m.in:</p>
 				</div>
-				<Gallery
-					imageUrls={[
-						Partner1,
-						Partner2,
-						Partner3,
-						Partner4,
-						Partner5,
-						Partner6,
-						Partner7,
-						Partner8,
-					]}
-				/>
+				<div className="grid grid-cols-4 md:grid-cols-8 gap-2 justify-center mt-8">
+					{_clientsContents.map((integration, index) => (
+						<img
+						key={index}
+						src={integration.url}
+						alt={integration.alt}
+						className="p-2"
+						/>
+					))}
+					</div>
 			</section>
 				
 		</>
