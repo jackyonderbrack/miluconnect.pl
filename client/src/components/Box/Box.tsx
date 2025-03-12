@@ -10,7 +10,7 @@ export interface BoxProps {
 
 const Box: FC<BoxProps> = ({ title, iconUrl, buttonLink }) => {
   return (
-    <a id="Box" className="box" href={buttonLink}>
+    <a id="Box" className="box relative" href={buttonLink}>
         <div className="gradient-overlay"></div>
         <span
             className="title font-black text-2xl"
@@ -18,8 +18,8 @@ const Box: FC<BoxProps> = ({ title, iconUrl, buttonLink }) => {
         >
             {title}
         </span>
-        <span className="button animate-bounce" aria-label="Sprawdź">
-            <HiArrowRight />
+        <span className="button" aria-label="Sprawdź" typeof="button">
+            <HiArrowRight className="absolute z-10 animate-bounce -inset-6"/>
         </span>
     </a>
   );
