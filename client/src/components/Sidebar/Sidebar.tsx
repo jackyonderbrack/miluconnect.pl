@@ -1,6 +1,8 @@
 import { HiBackward } from "react-icons/hi2"
 import Button from "../Button/Button"
 import Link from "../Link/Link"
+import BouncingButton from "../BouncingButton/BouncingButton"
+import { HiArrowCircleDown } from "react-icons/hi"
 
 const Sidebar = () => {
   return (
@@ -26,13 +28,10 @@ const Sidebar = () => {
       <div className="flex flex-col gap-6">
         <h3>Masz już pomysł?</h3>
         <p>Spróbuj go wycenić</p>
-        <Button
-          linkTo='#cennik'
-          buttonText='Cennik'
-          theme='btn-primary'
-          targetId='PricingForm'
-          offset={140}
-        />
+        <BouncingButton targetId='PricingForm'>
+							<HiArrowCircleDown size={32}  />
+							Cennik
+						</BouncingButton>
       </div>
 
       <div className="flex flex-col gap-6">
