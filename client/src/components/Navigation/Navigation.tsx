@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import CloseIcon from '../../assets/icon-close-miluconnect.png';
+import NavIcon from '../../assets/icon-menu-miluconnect.png';
 import Logo from '../../assets/logo/miluconnect-f5b642-transparent.png';
 import './Navigation.css';
-import NavIcon from '../../assets/icon-menu-miluconnect.png';
-import CloseIcon from '../../assets/icon-close-miluconnect.png';
-import { useEffect, useRef, useState } from 'react';
 
 const Navigation: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const naviRef = useRef<null | HTMLDivElement>(null);
+	const location = useLocation()
 
 	useEffect(() => {
 		const navigation = naviRef.current;
@@ -33,7 +34,7 @@ const Navigation: React.FC = () => {
 		<>
 			<div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`}></div>
 			<div className='navigation'>
-				<div className='navigation-header'>
+				<div className='navigation-header items-center justify-between'>
 					<Link to='/#' className='mainLogoContainer'>
 						<img src={Logo} alt='Logo miluConnect' className='mainLogoImg' />
 						<div className='mainLogoText'>
@@ -45,6 +46,9 @@ const Navigation: React.FC = () => {
 						</div>
 					</Link>
 				</div>
+				{location.pathname !== '/kontakt' && (
+					<a className='absolute top-4 right-2 w-20 text-center text-xs! font-light! border-1 border-[var(--color-accent-primary)] rounded-sm py-1.5' href='/kontakt'>Darmowa wycena</a>
+				)}
 				<div ref={naviRef} className='main-navigation-links'>
 					<Link to='/' onClick={toggleMobileNav}>
 						Strona główna
@@ -58,6 +62,7 @@ const Navigation: React.FC = () => {
 					<Link to='/kontakt' onClick={toggleMobileNav}>
 						Kontakt
 					</Link>
+					
 				</div>
 				<div className='mobileNav'>
 					<img
