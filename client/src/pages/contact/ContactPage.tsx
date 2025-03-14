@@ -29,7 +29,7 @@ const ContactPage = () => {
 					<div className='contact-cta my-6 space-y-4'>
 						<div className='space-y-2'>
 							<p>Jeśli masz jakiekolwiek pytania zawsze możesz napisać do mnie zwykły prosty e-mail:</p>
-							<a href='mailto:kontakt@miluconnect.pl' className='contact-cta-child text-2xl! items-center h-10'>
+							<a href='mailto:kontakt@miluconnect.pl' className='contact-cta-child text-xl! items-center h-10'>
 								<img src={MailIcon} alt='Ikona e-mail'/>
 								kontakt@miluconnect.pl
 							</a>	
@@ -42,7 +42,7 @@ const ContactPage = () => {
 							</a>
 						</div>
 						<p>
-							MILU Connect
+							<span className='text-2xl! font-bold'>MILU Connect</span>
 							<br />
 							Ul. Sławików 12A/13
 							<br />
