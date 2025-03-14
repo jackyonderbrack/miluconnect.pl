@@ -8,6 +8,7 @@ type ButtonProps = {
 	theme: 'btn-primary' | 'btn-underline' | 'btn-outline';
 	targetId?: string;
 	offset?: number;
+	onClick?: Function
 };
 
 const Button: React.FC<ButtonProps> = ({
