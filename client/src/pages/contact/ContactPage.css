@@ -3,7 +3,8 @@
         display: flex;
         flex-direction: column;
         img {
-            width: 1.5rem;
+            width: 2rem;
+            height: 2rem;
         }
         .contact-cta-child {
             display: flex;

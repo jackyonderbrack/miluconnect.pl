@@ -23,32 +23,32 @@ const ContactPage = () => {
 				<div>
 					<ContactForm />
 				</div>
-				<div className='flex flex-col additional-info'>
+				<div className='flex flex-col additional-info space-y-4'>
 					<h3>INFORMACJE DODATKOWE</h3>
-					<p>
-						Jeśli masz jakiekolwiek pytania zawsze możesz napisać do mnie zwykły
-						prosty e-mail
-					</p>
-					<section>
-						<h4>Możesz to nas napisać lub zadzwonić</h4>
-						<div className='contact-cta'>
-							<a href='mailto:kontakt@miluconnect.pl' className='contact-cta-child'>
-								<img src={MailIcon} alt='Mail Icon' />
+					
+					<div className='contact-cta my-6 space-y-4'>
+						<div className='space-y-2'>
+							<p>Jeśli masz jakiekolwiek pytania zawsze możesz napisać do mnie zwykły prosty e-mail:</p>
+							<a href='mailto:kontakt@miluconnect.pl' className='contact-cta-child text-2xl! items-center h-10'>
+								<img src={MailIcon} alt='Ikona e-mail'/>
 								kontakt@miluconnect.pl
-							</a>
-							<a href='tel:+48575740815' className='contact-cta-child'>
-								<img src={PhoneIcon} alt='Phone Icon' />
+							</a>	
+						</div>
+						<div className='space-y-2'>
+							<p>Jeśli chcesz omówić parę rzeczy wpierw:</p>
+							<a href='tel:+48575740815' className='contact-cta-child text-2xl! items-center'>
+								<img src={PhoneIcon} alt='Ikona telefonu' />
 								+48 575 740 815
 							</a>
-							<p>
-								MILU Connect
-								<br />
-								Ul. Sławików 12A/13
-								<br />
-								44-200 Rybnik
-							</p>
 						</div>
-					</section>
+						<p>
+							MILU Connect
+							<br />
+							Ul. Sławików 12A/13
+							<br />
+							44-200 Rybnik
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
