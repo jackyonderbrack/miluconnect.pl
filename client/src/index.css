@@ -51,7 +51,7 @@
 		var(--alternative-color)
 	);
 
-	--fade-in: fade-in 3.5s forwards;
+	--fade-in: fade-in 1s forwards;
 }
 
 body {
@@ -91,7 +91,8 @@ h3 {
 	font: var(--h3);
 	margin-top: 8px;
 }
-p, li {
+p,
+li {
 	font: var(--p);
 }
 a {
@@ -263,7 +264,9 @@ button:hover:not(.btn-underline) {
 .fade-enter-active {
 	opacity: 1;
 	transform: translateY(0);
-	transition: opacity 300ms, transform 300ms;
+	transition:
+		opacity 300ms,
+		transform 300ms;
 }
 .fade-exit {
 	opacity: 1;

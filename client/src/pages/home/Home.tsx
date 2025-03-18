@@ -1,6 +1,5 @@
-
 // Banners
-import EarthImg from '../../assets/background-earth-01-miluconnect.webp';
+import EarthImg from '../../assets/miluconnect-baner-header-strona-glowna.webp';
 
 // Components
 import { HiArrowCircleDown } from 'react-icons/hi';
@@ -14,7 +13,16 @@ import ImageTextSpecial from '../../components/ImageTextSpecial/ImageTextSpecial
 import MetaTags from '../../components/MetaTags/MetaTags';
 import Slider from '../../components/Slider/Slider';
 import Typewriter from '../../components/TypeWriter/TypeWriter';
-import { _clientsContents, _homeContents_ImageBox_1, _homeContents_ImageBox_2, _homeContents_ImageBox_Profelio, _integrationsContents, _portfolio_items, _technologyContents, offer_boxes } from '../../consts/home.consts';
+import {
+	_clientsContents,
+	_homeContents_ImageBox_1,
+	_homeContents_ImageBox_2,
+	_homeContents_ImageBox_Profelio,
+	_integrationsContents,
+	_portfolio_items,
+	_technologyContents,
+	offer_boxes,
+} from '../../consts/home.consts';
 
 const HomePage = () => {
 	return (
@@ -26,16 +34,17 @@ const HomePage = () => {
 			<Header
 				content={
 					<div className='flex flex-col space-y-12 justify-center'>
-						<Typewriter 
-							text={`# Tworzymy # Modernizujemy # Utrzymujemy`} 
-							speed={100}
+						<Typewriter
+							text={['# Tworzymy', '# Modernizujemy', '# Utrzymujemy']}
+							speed={300}
 							className='h-12'
 						/>
 
 						<h1 className='text-4xl! md:text-5xl! lg:text-6xl!'>
-							&gt; szybki <span className="whitespace-nowrap">e-commerce</span>
+							&gt; szybki <span className='whitespace-nowrap'>e-commerce</span>
 							<br />
-							&gt; czy stylowa <span className='text-gradient'>strona internetowa?</span>
+							&gt; czy stylowa{' '}
+							<span className='text-gradient'>strona internetowa?</span>
 							<br />
 						</h1>
 
@@ -55,13 +64,21 @@ const HomePage = () => {
 								offset={140}
 							/>
 						</div>
-						
+
 						<p>
-							Szybka, <i><strong>darmowa wycena </strong></i><span className='whitespace-nowrap'>i prosty kontakt online. </span> <br /> Jeśli wolisz się spotkać <span className='whitespace-nowrap'>- <a href='/kontakt'>Skontaktuj się</a></span>
+							Szybka,{' '}
+							<i>
+								<strong>darmowa wycena </strong>
+							</i>
+							<span className='whitespace-nowrap'>i prosty kontakt online. </span>{' '}
+							<br /> Jeśli wolisz się spotkać{' '}
+							<span className='whitespace-nowrap'>
+								- <a href='/kontakt'>Skontaktuj się</a>
+							</span>
 						</p>
-						
+
 						<BouncingButton targetId='OfferBoxes'>
-							<HiArrowCircleDown size={32}  />
+							<HiArrowCircleDown size={32} />
 							Oferta
 						</BouncingButton>
 					</div>
@@ -74,13 +91,16 @@ const HomePage = () => {
 				))}
 			</div>
 			<div className='w-full bg-amber-100 p-6 flex justify-between items-center'>
-				<p className='text-black!'>Mamy <u>wolne terminy</u> na marzec!</p>
-				<Button linkTo={'/kontakt'} buttonText={'Umów się na wycenę'} theme={'btn-primary'} />
+				<p className='text-black!'>
+					Mamy <u>wolne terminy</u> na marzec!
+				</p>
+				<Button
+					linkTo={'/kontakt'}
+					buttonText={'Umów się na wycenę'}
+					theme={'btn-primary'}
+				/>
 			</div>
-			<section
-				className='my-6 text-center mb-24'
-				id='realizacje'
-			>
+			<section className='my-6 text-center mb-24' id='realizacje'>
 				<div className='text-center py-6 px-2 '>
 					<p>
 						Jestesmy na rynku od ponad <strong>5 lat</strong>
@@ -134,31 +154,31 @@ const HomePage = () => {
 				))}
 			</div>
 
-			<section className="py-8 grid grid-cols-1 md:grid-cols-2 gap-4 border-1 rounded-2xl border-[var(--color-background-60)] m-8 p-8">
-				<div className="flex flex-col items-center">
+			<section className='py-8 grid grid-cols-1 md:grid-cols-2 gap-4 border-1 rounded-2xl border-[var(--color-background-60)] m-8 p-8'>
+				<div className='flex flex-col items-center'>
 					<h3>Tworzymy integracje do:</h3>
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center mt-8">
-					{_integrationsContents.map((integration, index) => (
-						<img
-						key={index}
-						src={integration.url}
-						alt={integration.alt}
-						className="p-2"
-						/>
-					))}
+					<div className='grid grid-cols-2 md:grid-cols-4 gap-4 justify-center mt-8'>
+						{_integrationsContents.map((integration, index) => (
+							<img
+								key={index}
+								src={integration.url}
+								alt={integration.alt}
+								className='p-2'
+							/>
+						))}
 					</div>
 				</div>
-				<div className="flex flex-col items-center">
+				<div className='flex flex-col items-center'>
 					<h3>Technologia, na której się znamy:</h3>
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center mt-8">
-					{_technologyContents.map((technology, index) => (
-						<img
-						key={index}
-						src={technology.url}
-						alt={technology.alt}
-						className="p-2"
-						/>
-					))}
+					<div className='grid grid-cols-2 md:grid-cols-4 gap-4 justify-center mt-8'>
+						{_technologyContents.map((technology, index) => (
+							<img
+								key={index}
+								src={technology.url}
+								alt={technology.alt}
+								className='p-2'
+							/>
+						))}
 					</div>
 				</div>
 			</section>
@@ -172,18 +192,17 @@ const HomePage = () => {
 					</p>
 					<p>Zaufali nam m.in:</p>
 				</div>
-				<div className="grid grid-cols-4 md:grid-cols-8 gap-2 justify-center mt-8">
+				<div className='grid grid-cols-4 md:grid-cols-8 gap-2 justify-center mt-8'>
 					{_clientsContents.map((integration, index) => (
 						<img
-						key={index}
-						src={integration.url}
-						alt={integration.alt}
-						className="p-2"
+							key={index}
+							src={integration.url}
+							alt={integration.alt}
+							className='p-2'
 						/>
 					))}
-					</div>
+				</div>
 			</section>
-				
 		</>
 	);
 };

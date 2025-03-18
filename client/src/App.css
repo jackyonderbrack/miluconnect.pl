@@ -12,5 +12,5 @@
 #Client {
 	.client-outlet {
 		margin: var(--nav-height) auto 0;
-	}	
+	}
 }

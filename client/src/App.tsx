@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
-import { createBrowserRouter, Outlet, RouterProvider, useLocation } from 'react-router-dom';
+import {
+	createBrowserRouter,
+	Outlet,
+	RouterProvider,
+	useLocation,
+} from 'react-router-dom';
 import Form from './admin/components/Form/Form';
 import PrivateRoute from './admin/components/PrivateRoute/PrivateRoute';
 import Sidenav from './admin/components/Sidenav/Sidenav';
@@ -42,12 +47,11 @@ function ClientLayout() {
 		});
 	}, [location]);
 
-
 	const ScrollToTop = () => {
 		useEffect(() => {
 			window.scrollTo({
-			top: 0,
-			left: 0,
+				top: 0,
+				left: 0,
 			});
 		}, [location]);
 
@@ -90,13 +94,13 @@ const router = createBrowserRouter([
 			{ path: 'wyslano', element: <ContactPageSent /> },
 			{ path: 'polityka-prywatnosci', element: <PrivacyPolicyPage /> },
 			{ path: 'nowosci', element: <NewsPage /> },
-			{ path: 'blog', element: <BlogPage />},
-			{ path: 'strony-internetowe', element: <Websites />},
-			{ path: 'ecommerce', element: <Ecommerce />},
-			{ path: 'seo-i-google-ads', element: <SeoAndGoogleAds />},
-			{ path: 'projektowanie-graficzne', element: <GraphicDesign />},
-			{ path: 'domeny-i-hosting', element: <DomainsAndHosting />},
-			{ path: 'aplikacje-mobilne', element: <MobileApps />},
+			{ path: 'blog', element: <BlogPage /> },
+			{ path: 'strony-internetowe', element: <Websites /> },
+			{ path: 'ecommerce', element: <Ecommerce /> },
+			{ path: 'seo-i-google-ads', element: <SeoAndGoogleAds /> },
+			{ path: 'projektowanie-graficzne', element: <GraphicDesign /> },
+			{ path: 'domeny-i-hosting', element: <DomainsAndHosting /> },
+			{ path: 'aplikacje-mobilne', element: <MobileApps /> },
 		],
 	},
 	{

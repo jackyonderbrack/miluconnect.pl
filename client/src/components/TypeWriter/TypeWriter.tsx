@@ -1,53 +1,57 @@
 import React, { useState, useEffect } from 'react';
 
 interface TypewriterProps {
-  className?: string;
-  text: string;
-  speed?: number; // time in ms between each character
-  pause?: number; // pause time after finishing the text before restarting
+	className?: string;
+	text: string | string[];
+	speed?: number; // time in ms between each word
+	pause?: number; // pause time after finishing the text before restarting
 }
 
-const Typewriter: React.FC<TypewriterProps> = ({ 
-  text, 
-  speed = 100, 
-  pause = 2000,
-  className
+const Typewriter: React.FC<TypewriterProps> = ({
+	text,
+	speed = 300,
+	pause = 2000,
+	className,
 }) => {
- const processedText = text.replace(/ #/g, "\n#").trim();
+	const words = Array.isArray(text)
+		? text.flatMap((line) => line.split(/\s+/).concat('\n'))
+		: text.trim().split(/\s+/);
+	const [displayedText, setDisplayedText] = useState('');
+	const [currentIndex, setCurrentIndex] = useState(0);
 
-  const [displayedText, setDisplayedText] = useState('');
+	useEffect(() => {
+		if (words.length === 0) return;
 
-  useEffect(() => {
-    let currentIndex = 0;
-    let timeoutId: ReturnType<typeof setTimeout>;
+		if (currentIndex < words.length) {
+			const timeoutId = setTimeout(() => {
+				setDisplayedText(
+					words
+						.slice(0, currentIndex + 1)
+						.join(' ')
+						.replace(/ \n/g, '\n')
+				);
+				setCurrentIndex(currentIndex + 1);
+			}, speed);
+			return () => clearTimeout(timeoutId);
+		} else {
+			const pauseTimeout = setTimeout(() => {
+				setDisplayedText('');
+				setCurrentIndex(0);
+			}, pause);
+			return () => clearTimeout(pauseTimeout);
+		}
+	}, [currentIndex, words, speed, pause]);
 
-    const type = () => {
-      if (currentIndex <= processedText.length) {
-        setDisplayedText(processedText.substring(0, currentIndex));
-        currentIndex++;
-        timeoutId = setTimeout(type, speed);
-      } else {
-        timeoutId = setTimeout(() => {
-          currentIndex = 0;
-          type();
-        }, pause);
-      }
-    };
-
-    type();
-    return () => clearTimeout(timeoutId);
-  }, [processedText, speed, pause]);
-
-  return (
-    <p className={className}>
-      {displayedText.split('\n').map((line, index, arr) => (
-        <React.Fragment key={index}>
-          {line}
-          {index !== arr.length - 1 && <br />}
-        </React.Fragment>
-      ))}
-    </p>
-  );
+	return (
+		<span className={className}>
+			{displayedText.split('\n').map((line, index) => (
+				<React.Fragment key={index}>
+					{line}
+					<br />
+				</React.Fragment>
+			))}
+		</span>
+	);
 };
 
 export default Typewriter;
