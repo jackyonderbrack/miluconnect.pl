@@ -86,8 +86,13 @@ const HomePage = () => {
 				imgUrl={EarthImg}
 			/>
 			<div id='OfferBoxes' className='grid grid-cols-1 md:grid-cols-2 w-full'>
-				{offer_boxes.map((box) => (
-					<Box title={box.title} iconUrl={box.iconUrl} buttonLink={box.buttonLink} />
+				{offer_boxes.map((box, index) => (
+					<Box
+						key={index}
+						title={box.title}
+						iconUrl={box.iconUrl}
+						buttonLink={box.buttonLink}
+					/>
 				))}
 			</div>
 			<div className='w-full bg-amber-100 p-6 flex justify-between items-center'>
