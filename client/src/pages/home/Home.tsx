@@ -97,7 +97,7 @@ const HomePage = () => {
 			</div>
 			<div className='w-full bg-amber-100 p-6 flex justify-between items-center'>
 				<p className='text-black!'>
-					Mamy <u>wolne terminy</u> na kwiecień!
+					Mamy <u>wolne terminy</u> w czerwcu i lipcu 2025
 				</p>
 				<Button
 					linkTo={'/kontakt'}
