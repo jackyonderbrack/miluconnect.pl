@@ -41,13 +41,12 @@ const HomePage = () => {
 						/>
 
 						<h1 className='text-3xl! md:text-4xl! lg:text-5xl!'>
-							&gt; szybki <span className='whitespace-nowrap'>e-commerce</span>
+							Szybki <span className='whitespace-nowrap'>e-commerce</span>
 							<br />
-							&gt; czy stylowa{' '}
-							<span className='text-gradient'>strona internetowa?</span>
+							czy stylowa{' '}
+							<span className='text-gradient'>Strona internetowa?</span>
 							<br />
 						</h1>
-
 						<div className='flex gap-4'>
 							<Button
 								linkTo='#cennik'
@@ -64,8 +63,8 @@ const HomePage = () => {
 								offset={140}
 							/>
 						</div>
-
 						<p>
+							Rynek się zmienia, a my pomożemy Ci się dopasować. <br />
 							Szybka,{' '}
 							<i>
 								<strong>darmowa wycena </strong>
